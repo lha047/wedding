@@ -1,17 +1,771 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @use "fonts";
- *   | ^^^^^^^^^^^^
- *   '
- *   src/sass/style.scss 1:1  root stylesheet */
+@charset "UTF-8";
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Noto Sans JP Regular"), local("Noto-Sans-JP-Regular"), url("../fonts/noto-sans-regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans JP Bold"), local("Noto-Sans-JP-Bold"), url("../fonts/noto-sans-700.woff2") format("woff2");
+  font-display: swap;
+}
+/*
+Credit to Andy Bell's Modern CSS Reset
+@link https://piccalil.li/blog/a-modern-css-reset/
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+🟣 = additions by Stephanie Eckles
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  text-rendering: optimizeSpeed;
+}
+
+p,
+ul:not([class]):not([role]) li,
+ol:not([class]):not([role]) li {
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: max(0.08em, 1px);
+  text-underline-offset: 0.15em;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"fonts\";\a   \2502  ^^^^^^^^^^^^\a   \2575 \a   src/sass/style.scss 1:1  root stylesheet";
+  max-width: 100%;
+}
+
+/* 🟣 Give SVGs common baseline */
+svg {
+  fill: currentColor;
+  pointer-events: none;
+}
+
+/* 🟣 Scroll margin allowance above anchor links */
+[id] {
+  scroll-margin-top: 2rem;
+}
+
+/* 🟣 Scroll margin allowance below focused elements 
+to ensure they are clearly in view */
+*:focus {
+  scroll-margin-bottom: 8vh;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* 🛑 STOP!
+  Do not change this file directly.
+  Modify colors in src/sass/colors.cjs
+ */
+/* 🚫 Contrast fails against primary */
+/* 🚫 Contrast fails against secodary */
+:root {
+  --color-primary: #9b89a4;
+  /* 🚫 Contrast fails against primary */
+  --color-on-primary: white;
+  --color-secodary: rgba(139, 105, 206, 0.99);
+  /* 🚫 Contrast fails against secodary */
+  --color-on-secodary: white;
+  --color-error: #df2040;
+  --color-on-error: #fff7f8;
+  --color-text: rgba(168, 168, 168, 0.99);
+  --color-on-text: #3d3d3d;
+  --color-links: var(--color-primary);
+  --grey-medium: hsl(280deg, 15%, 50%);
+  --grey-light: hsl(280deg, 20%, 85%);
+  --background-body: #fdfdfd;
+  --font-weight-bold: 700;
+}
+
+body {
+  background-color: #000;
+  color: var(--color-text);
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+}
+
+h4,
+.h4 {
+  font-size: 1.333rem;
+  font-size: clamp(
+        1rem,
+        4.333vw + 1rem,
+        1.333rem
+      );
+}
+
+h3,
+.h3 {
+  font-size: 1.776889rem;
+  font-size: clamp(
+        1.19051563rem,
+        4.58637337vw + 1rem,
+        1.776889rem
+      );
+}
+
+h2,
+.h2 {
+  font-size: 2.368593037rem;
+  font-size: clamp(
+        1.5869573348rem,
+        4.7816357022vw + 1rem,
+        2.368593037rem
+      );
+}
+
+h1,
+.h1 {
+  font-size: 3.1573345183rem;
+  font-size: clamp(
+        2.1154141273rem,
+        5.041920391vw + 1rem,
+        3.1573345183rem
+      );
+}
+
+:is(h1, h2, h3, h4, .h1, .h2, .h3, .h4) {
+  margin-bottom: 0.65em;
+  font-weight: var(--font-weight-bold);
+  line-height: calc(2px + 2ex + 2px);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+article, .content {
+  --content-spacer: 1em;
+}
+article > * + *,
+article ul:not([class]) li + li,
+article ol:not([class]) li + li, .content > * + *,
+.content ul:not([class]) li + li,
+.content ol:not([class]) li + li {
+  margin-top: var(--content-spacer);
+}
+article :is(h2, h3:not(h2 + *)):not(:first-child), .content :is(h2, h3:not(h2 + *)):not(:first-child) {
+  margin-top: 2em;
+}
+article ul + p, .content ul + p {
+  margin-top: calc(var(--content-spacer) * 2);
+}
+article > a:not([class]), .content > a:not([class]) {
+  display: inline-block;
+}
+article blockquote, .content blockquote {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 0.5em 1.5em;
+  border-left: 2px solid var(--color-primary);
+  font-size: 1.333rem;
+}
+article hr, .content hr {
+  margin: 8vh 5vw;
+  border-style: dashed;
+  border-color: var(--color-primary);
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+a {
+  color: var(--color-links);
+}
+
+a,
+button,
+input,
+textarea {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-size);
+}
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-size);
+}
+
+.navbar {
+  padding: 1rem;
+}
+.navbar ul {
+  --gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.navbar a:not([class]) {
+  color: inherit;
+  text-decoration: none;
+}
+.navbar a:not([class]):hover {
+  text-decoration: underline;
+}
+.navbar a.navbar-image {
+  color: inherit;
+}
+.navbar--centered {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.navbar--divided {
+  --breakpoint: 70ch;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.navbar--divided::before {
+  content: "";
+  flex-basis: calc((var(--breakpoint) - 100%) * 500);
+  flex-grow: 100;
+}
+.navbar--divided > :first-child {
+  order: -1;
+}
+
+.hero {
+  --hero-min-height: 30vh;
+  --hero-padding: 2rem;
+  display: grid;
+  min-height: var(--hero-min-height);
+  padding: var(--hero-padding);
+}
+.hero a:not([class]) {
+  color: inherit;
+}
+.hero--centered {
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.hero--image-stack {
+  --hero-height: max(40vh, 15rem);
+  --hero-min-height: 0;
+  --hero-padding: 0;
+  height: var(--hero-height);
+}
+.hero--image-stack img {
+  width: 100%;
+  height: var(--hero-height);
+  object-fit: cover;
+}
+.hero__content {
+  --content-text-align: center;
+  --content-padding: 1rem;
+  padding-right: var(--content-padding);
+  padding-left: var(--content-padding);
+  text-align: var(--content-text-align);
+}
+.hero__content :only-child {
+  margin: 0;
+}
+
+.button {
+  --button-background: var(--color-primary);
+  --button-color: var(--color-on-primary);
+  --outline-color: transparent;
+  text-decoration: none;
+  padding: 0.25em 0.75em;
+  border: 2px solid transparent;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25em;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  min-width: 10ch;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-weight: var(--font-weight-bold);
+  transition: none 180ms ease-in-out;
+  transition-property: background-color, color, border-color;
+}
+.button:hover, .button:active {
+  background-color: var(--button-color);
+  color: var(--button-background);
+}
+.button:hover:not(.button--outlined), .button:active:not(.button--outlined) {
+  border-color: currentColor;
+}
+.button:focus {
+  box-shadow: 0 0 0 max(0.15em, 2px) var(--button-focus-inner, var(--button-color)), 0 0 0 max(0.3em, 2px) var(--button-focus-outer, var(--button-background));
+}
+.button--error {
+  --button-background: var(--color-error);
+  --button-color: var(--color-on-error);
+}
+.button--text {
+  --button-background: var(--color-text);
+  --button-color: var(--color-on-text);
+}
+.button--outlined {
+  --button-focus-inner: var(--button-background);
+  --button-focus-outer: var(--button-color);
+  border-color: var(--button-color);
+}
+.button__icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+.button:not(.button-icon) .button__icon {
+  margin-right: 0.5em;
+}
+.button-icon {
+  border-radius: 50%;
+  min-width: unset;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--card-gap, 1rem);
+  border-radius: var(--card-radius, 0.25rem);
+  background-color: var(--card-background, #fff);
+  box-shadow: 0 0.25rem 0.45rem -0.15rem rgba(0, 0, 0, 0.5);
+}
+.card > :is(*, #override):not(:first-child) {
+  margin-top: 0;
+}
+.card > :is(h1, h2, h3, h4) {
+  margin-bottom: 0;
+}
+.card > :is(h1, h2, h3, h4) a {
+  text-decoration: none;
+}
+.card > :is(h1, h2, h3, h4) a:hover {
+  text-decoration: underline;
+}
+.card > :is(h1, h2, h3, h4) a::before,
+.card > .button::before,
+.card > a:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.card > *:not(img) {
+  margin-right: var(--card-gutter, 1.5rem);
+  margin-left: var(--card-gutter, 1.5rem);
+}
+.card > :first-child:not(img) {
+  margin-top: var(--card-gutter, 1.5rem);
+}
+.card > img:first-child {
+  border-radius: var(--card-radius, 0.25rem) var(--card-radius, 0.25rem) 0 0;
+}
+.card > :last-child:not(img) {
+  margin-bottom: var(--card-gutter, 1.5rem);
+}
+.card > img:last-child {
+  border-radius: 0 0 var(--card-radius, 0.25rem) var(--card-radius, 0.25rem);
+}
+.card > :is(.button, ul, a, #override):last-child {
+  margin-top: auto;
+}
+.card .layout-flex {
+  --gap: 1rem;
+}
+.card .form-group {
+  --form-field-width: 100%;
+  align-self: stretch;
+}
+.card .form-group + .form-group {
+  margin-top: 0;
+}
+
+form {
+  --form-group-spacer: 1.5rem;
+  --form-field-width: 30ch;
+  --form-text-color: var(--color-text);
+  --border-color: var(--grey-medium);
+  --border-radius: 0.25em;
+  --form-outline-style: dashed;
+  --form-outline-color: currentColor;
+  color: var(--form-text-color);
+}
+
+.form-group + .form-group {
+  margin-top: var(--form-group-spacer);
+}
+.form-group label {
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+.form-group label:not(.form-control) {
+  display: block;
+}
+.form-group label + .form-field {
+  margin-top: 0.5em;
+}
+
+.form-field {
+  --outline-style: var(--form-outline-style);
+  --outline-color: var(--form-outline-color);
+  width: 100%;
+  max-width: var(--form-field-width, 30ch);
+  padding: 0.25em 0.5em;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  color: inherit;
+  font-family: inherit;
+}
+
+.form-field.select {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: var(--form-outline-style);
+  --outline-color: var(--form-outline-color);
+  display: grid;
+  position: relative;
+  grid-template-areas: "select";
+  align-items: center;
+}
+.form-field.select select, .form-field.select::after {
+  grid-area: select;
+}
+.form-field.select::after {
+  content: "";
+  justify-self: end;
+  width: 0.8em;
+  height: 0.5em;
+  background-color: currentColor;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+.form-field.select select {
+  appearance: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 1em 0 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: inherit;
+}
+.form-field.select select::-ms-expand {
+  display: none;
+}
+@supports selector(:focus-within) {
+  .form-field.select select {
+    outline: none;
+  }
+  .form-field.select:focus-within {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-size);
+  }
+}
+
+.form-control {
+  display: inline-grid;
+  grid-template-columns: 1em 1fr;
+  gap: 0.5em;
+}
+.form-control input {
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  opacity: 0;
+}
+.form-control input:focus + .input__control {
+  box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.15em var(--color-primary);
+}
+.form-control__input {
+  display: grid;
+  grid-template-areas: "input";
+  place-content: center;
+  font-size: 1em;
+}
+.form-control__input > * {
+  grid-area: input;
+}
+.form-control .input__control {
+  display: grid;
+  place-content: center;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid var(--border-color);
+}
+
+.checkbox .input__control {
+  border-radius: var(--border-radius);
+  color: var(--color-primary);
+}
+.checkbox .input__control svg {
+  width: 0.65em;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+}
+.checkbox input:checked + .input__control svg {
+  transform: scale(1);
+}
+
+.radio .input__control {
+  border-radius: 50%;
+}
+.radio .input__control::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  border-radius: 50%;
+  box-shadow: inset 1em 1em var(--color-primary);
+}
+.radio input:checked + .input__control::before {
+  transform: scale(1);
+}
+
+.form-error {
+  --form-outline-color: var(--color-error);
+}
+.form-error label, .form-error-text {
+  color: var(--color-error);
+}
+.form-error-text {
+  display: block;
+  margin-top: 0.25em;
+}
+
+.background-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-on-primary {
+  color: var(--color-on-primary);
+}
+
+.background-secodary {
+  background-color: var(--color-secodary);
+  color: var(--color-on-secodary);
+}
+
+.color-secodary {
+  color: var(--color-secodary);
+}
+
+.color-on-secodary {
+  color: var(--color-on-secodary);
+}
+
+.background-error {
+  background-color: var(--color-error);
+  color: var(--color-on-error);
+}
+
+.color-error {
+  color: var(--color-error);
+}
+
+.color-on-error {
+  color: var(--color-on-error);
+}
+
+.background-text {
+  background-color: var(--color-text);
+  color: var(--color-on-text);
+}
+
+.color-text {
+  color: var(--color-text);
+}
+
+.color-on-text {
+  color: var(--color-on-text);
+}
+
+.background-grey-medium {
+  background-color: var(--grey-medium);
+  color: #fff;
+}
+
+.background-grey-light {
+  background-color: var(--grey-light);
+}
+
+.container {
+  width: min(var(--container-width, 80ch), 100vw - 3rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+section,
+.section {
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+}
+
+.section--padded {
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
+
+.layout-flex {
+  --gap: 2rem;
+  --wrap: wrap;
+  display: flex;
+  flex-wrap: var(--wrap);
+  gap: var(--gap);
+}
+
+.inclusively-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+.layout-grid {
+  --gap: 1rem;
+  display: grid;
+  gap: var(--gap);
+}
+.layout-grid--column {
+  grid-auto-flow: column;
+}
+.layout-grid--auto-fit {
+  --min: 20ch;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min), 100%), 1fr));
+}
+.layout-grid--sidebar {
+  --sidebar-max: 35ch;
+  --content-min: 30ch;
+  grid-template-columns: fit-content(var(--sidebar-max)) minmax(min(50vw, var(--content-min)), 1fr);
+}
+.layout-grid--centered {
+  place-content: center;
+}
+.layout-grid--stack {
+  grid-template-areas: "stack";
+  place-items: center;
+}
+.layout-grid--stack > * {
+  grid-area: stack;
+  place-self: var(--place-self);
+  align-self: var(--align-self, var(--place-self));
+  justify-self: var(--justify-self, var(--place-self));
+}
+
+img[width] {
+  height: auto;
+}
+
+.image {
+  aspect-ratio: var(--image-aspect-ratio);
+  max-height: var(--image-max-height);
+  object-fit: cover;
+}
+@supports not (aspect-ratio: 1) {
+  .image {
+    height: var(--ratio-unsupported-height) !important;
+  }
+}
+.image--fullwidth {
+  width: 100%;
 }

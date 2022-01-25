@@ -1,0 +1,43 @@
+/* 🛑 STOP!
+  Do not change this file directly.
+  Modify colors in src/sass/colors.cjs
+ */
+
+$color-primary: hsl(280,13%,59%) !default;
+/* 🚫 Contrast fails against primary */
+$color-on-primary: hsl(0, 0%, 100%) !default;
+$color-secodary: hsla(260,51%,61%,0.99) !default;
+/* 🚫 Contrast fails against secodary */
+$color-on-secodary: hsl(0, 0%, 100%) !default;
+$color-error: hsl(350, 75%, 50%) !default;
+$color-on-error: hsl(352.5, 100%, 98.4%) !default;
+$color-text: hsla(0,0%,66%,0.99) !default;
+$color-on-text: rgb(61, 61, 61) !default;
+
+$base-color-tokens: ("primary", "secodary", "error", "text");
+
+$color-tokens: (
+  "color-primary": $color-primary,
+  /* 🚫 Contrast fails against primary */
+"color-on-primary": $color-on-primary,
+  "color-secodary": $color-secodary,
+  /* 🚫 Contrast fails against secodary */
+"color-on-secodary": $color-on-secodary,
+  "color-error": $color-error,
+  "color-on-error": $color-on-error,
+  "color-text": $color-text,
+  "color-on-text": $color-on-text
+) !default;
+
+@mixin color-tokens() {
+  --color-primary: #{$color-primary};
+  /* 🚫 Contrast fails against primary */
+--color-on-primary: #{$color-on-primary};
+  --color-secodary: #{$color-secodary};
+  /* 🚫 Contrast fails against secodary */
+--color-on-secodary: #{$color-on-secodary};
+  --color-error: #{$color-error};
+  --color-on-error: #{$color-on-error};
+  --color-text: #{$color-text};
+  --color-on-text: #{$color-on-text};
+}

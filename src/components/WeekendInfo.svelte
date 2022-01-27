@@ -1,7 +1,7 @@
 <div class="weekend-info">
 	<!--	<a href="/program">Detaljert program</a>-->
 	<h1>Program</h1>
-	<p>Vi inviterer til festlig lag helgen 1. til 3. Juli 2022.</p>
+	<!-- <p>Vi inviterer til festlig lag helgen 1. til 3. Juli 2022.</p>
 	<section>
 		<h2>Fredag</h2>
 		<p>Fredag: Ankomst og grilling på kvelden</p>
@@ -13,7 +13,7 @@
 	<section>
 		<h2>Søndag</h2>
 		<p>Søndag: Frokost</p>
-	</section>
+	</section> -->
 </div>
 
 <style lang="scss">

@@ -8,9 +8,9 @@
 		<p>Lisa og Ståle</p>
 		<p>02.07.2021</p>
 	</div>
-	<div class="layout-grid layout-grid--stack hero hero--image-stack ">
-		<img src="/korea_portrait.jpg" alt="Lisa og ståle" />
-	</div>
+	<!-- <div class="layout-grid layout-grid--stack hero hero--image-stack "> -->
+		<!-- <img src="/korea_portrait.jpg" alt="Lisa og ståle" /> -->
+	<!-- </div> -->
 </div>
 
 <style lang="scss">

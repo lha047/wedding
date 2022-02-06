@@ -155,41 +155,25 @@ body {
 h4,
 .h4 {
   font-size: 1.333rem;
-  font-size: clamp(
-        1rem,
-        4.333vw + 1rem,
-        1.333rem
-      );
+  font-size: clamp(1rem, 4.333vw + 1rem, 1.333rem);
 }
 
 h3,
 .h3 {
   font-size: 1.776889rem;
-  font-size: clamp(
-        1.19051563rem,
-        4.58637337vw + 1rem,
-        1.776889rem
-      );
+  font-size: clamp(1.19051563rem, 4.58637337vw + 1rem, 1.776889rem);
 }
 
 h2,
 .h2 {
   font-size: 2.368593037rem;
-  font-size: clamp(
-        1.5869573348rem,
-        4.7816357022vw + 1rem,
-        2.368593037rem
-      );
+  font-size: clamp(1.5869573348rem, 4.7816357022vw + 1rem, 2.368593037rem);
 }
 
 h1,
 .h1 {
   font-size: 3.1573345183rem;
-  font-size: clamp(
-        2.1154141273rem,
-        5.041920391vw + 1rem,
-        3.1573345183rem
-      );
+  font-size: clamp(2.1154141273rem, 5.041920391vw + 1rem, 3.1573345183rem);
 }
 
 :is(h1, h2, h3, h4, .h1, .h2, .h3, .h4) {
@@ -407,68 +391,6 @@ textarea:focus-visible {
   min-width: unset;
 }
 
-.card {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--card-gap, 1rem);
-  border-radius: var(--card-radius, 0.25rem);
-  background-color: var(--card-background, #fff);
-  box-shadow: 0 0.25rem 0.45rem -0.15rem rgba(0, 0, 0, 0.5);
-}
-.card > :is(*, #override):not(:first-child) {
-  margin-top: 0;
-}
-.card > :is(h1, h2, h3, h4) {
-  margin-bottom: 0;
-}
-.card > :is(h1, h2, h3, h4) a {
-  text-decoration: none;
-}
-.card > :is(h1, h2, h3, h4) a:hover {
-  text-decoration: underline;
-}
-.card > :is(h1, h2, h3, h4) a::before,
-.card > .button::before,
-.card > a:last-child::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.card > *:not(img) {
-  margin-right: var(--card-gutter, 1.5rem);
-  margin-left: var(--card-gutter, 1.5rem);
-}
-.card > :first-child:not(img) {
-  margin-top: var(--card-gutter, 1.5rem);
-}
-.card > img:first-child {
-  border-radius: var(--card-radius, 0.25rem) var(--card-radius, 0.25rem) 0 0;
-}
-.card > :last-child:not(img) {
-  margin-bottom: var(--card-gutter, 1.5rem);
-}
-.card > img:last-child {
-  border-radius: 0 0 var(--card-radius, 0.25rem) var(--card-radius, 0.25rem);
-}
-.card > :is(.button, ul, a, #override):last-child {
-  margin-top: auto;
-}
-.card .layout-flex {
-  --gap: 1rem;
-}
-.card .form-group {
-  --form-field-width: 100%;
-  align-self: stretch;
-}
-.card .form-group + .form-group {
-  margin-top: 0;
-}
-
 form {
   --form-group-spacer: 1.5rem;
   --form-field-width: 30ch;
@@ -498,7 +420,6 @@ form {
   --outline-style: var(--form-outline-style);
   --outline-color: var(--form-outline-color);
   width: 100%;
-  max-width: var(--form-field-width, 30ch);
   padding: 0.25em 0.5em;
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
@@ -598,20 +519,48 @@ form {
   transform: scale(1);
 }
 
-.radio .input__control {
-  border-radius: 50%;
+.radio-group + .radio-group {
+  margin-top: 1em;
 }
-.radio .input__control::before {
+
+.radio-group {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+.radio-group input[type=radio] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: purple;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+.radio-group input[type=radio]::before {
   content: "";
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  border-radius: 50%;
-  box-shadow: inset 1em 1em var(--color-primary);
+  box-shadow: inset 1em 1em var(--form-control-color);
 }
-.radio input:checked + .input__control::before {
+.radio-group input[type=radio]:checked::before {
   transform: scale(1);
+}
+.radio-group input[type=radio]:focus {
+  outline: max(2px, 0.15em) solid purple;
+  outline-offset: max(2px, 0.15em);
 }
 
 .form-error {

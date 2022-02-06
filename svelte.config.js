@@ -9,7 +9,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: netlify({split:false}),
+		adapter: netlify({ split: false }),
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		vite: {

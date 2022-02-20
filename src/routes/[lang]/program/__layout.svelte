@@ -1,14 +1,10 @@
 <script>
 </script>
 
-<main>
+<main class="container info">
 	<slot />
 </main>
 
 <style lang="scss">
-	main {
-		width: min(1440px, 95vw);
-		margin-left: auto;
-		margin-right: auto;
-	}
+	@import '../../../public/css/style.css';
 </style>

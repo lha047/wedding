@@ -5,11 +5,11 @@
 <heading>
 	<Navbar />
 </heading>
-<main>
+<main class="">
 	<slot />
 </main>
 <footer />
 
-<style lang="scss">
+<style lang="scss" global>
 	@import '../../public/css/style.css';
 </style>

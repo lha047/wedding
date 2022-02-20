@@ -1,224 +1,274 @@
 // stylelint-disable no-descending-specificity
+@use "../theme" as *;
 
-$form-group-spacer: 1.5rem !default;
-$form-field-width: 30ch !default;
-$form-text-color: 'var(--color-text)' !default;
-$form-border-color: 'currentColor' !default;
+$form-group-spacer: $spacer-large !default;
+$form-field-width: 50ch !default;
+$form-text-color: "var(--color-medium-green)" !default;
+$form-border-color: $color-primary !default;
 $form-border-radius: 0.25em !default;
 $form-outline-style: dashed !default;
 $form-outline-color: currentColor !default;
 
 form {
-	--form-group-spacer: #{$form-group-spacer};
-	--form-field-width: #{$form-field-width};
-	--form-text-color: #{$form-text-color};
-	--border-color: #{$form-border-color};
-	--border-radius: #{$form-border-radius};
-	--form-outline-style: #{$form-outline-style};
-	--form-outline-color: #{$form-outline-color};
+  --form-group-spacer: #{$form-group-spacer};
+  --form-field-width: #{$form-field-width};
+  --form-text-color: #{$form-text-color};
+  --border-color: #{$form-border-color};
+  --border-radius: #{$form-border-radius};
+  --form-outline-style: #{$form-outline-style};
+  --form-outline-color: #{$form-outline-color};
 
-	color: var(--form-text-color);
+  color: var(--form-text-color);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group {
-	+ .form-group {
-		margin-top: var(--form-group-spacer);
-	}
+  + .form-group {
+    margin-top: var(--form-group-spacer);
+  }
 
-	label {
-		font-weight: var(--font-weight-bold);
-		line-height: 1;
+  label {
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
 
-		&:not(.form-control) {
-			display: block;
-		}
+    &:not(.form-control) {
+      display: block;
+    }
 
-		+ .form-field {
-			margin-top: 0.5em;
-		}
-	}
+    + .form-field {
+      margin-top: 0.5em;
+    }
+  }
 }
 
 .form-field {
-	--outline-style: var(--form-outline-style);
-	--outline-color: var(--form-outline-color);
+  --outline-style: var(--form-outline-style);
+  --outline-color: var(--form-outline-color);
 
-	width: 100%;
-	// max-width: var(--form-field-width, 30ch);
-	padding: 0.25em 0.5em;
-	border: 2px solid var(--border-color);
-	border-radius: var(--border-radius);
-	background-color: #fff;
-	color: inherit;
-	font-family: inherit;
+  width: 100%;
+  max-width: var(--form-field-width, 30ch);
+  padding: 0.25em 0.5em;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  color: inherit;
+  font-family: inherit;
 }
 
 .form-field.select {
-	--outline-size: max(2px, 0.08em);
-	--outline-style: var(--form-outline-style);
-	--outline-color: var(--form-outline-color);
+  --outline-size: max(2px, 0.08em);
+  --outline-style: var(--form-outline-style);
+  --outline-color: var(--form-outline-color);
 
-	display: grid;
-	position: relative;
-	grid-template-areas: 'select';
-	align-items: center;
+  display: grid;
+  position: relative;
+  grid-template-areas: "select";
+  align-items: center;
 
-	select,
-	&::after {
-		grid-area: select;
-	}
+  select,
+  &::after {
+    grid-area: select;
+  }
 
-	&::after {
-		content: '';
-		justify-self: end;
-		width: 0.8em;
-		height: 0.5em;
-		background-color: currentColor;
-		clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-	}
+  &::after {
+    content: "";
+    justify-self: end;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: currentColor;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
 
-	select {
-		appearance: none;
-		width: 100%;
-		margin: 0;
-		padding: 0 1em 0 0;
-		border: none;
-		background-color: transparent;
-		color: inherit;
-		font-family: inherit;
-		font-size: inherit;
-		line-height: inherit;
-		cursor: inherit;
+  select {
+    appearance: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 1em 0 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: inherit;
 
-		// Remove dropdown arrow in IE10 & IE11
-		// @link https://www.filamentgroup.com/lab/select-css.html
-		&::-ms-expand {
-			display: none;
-		}
-	}
-
-	@supports selector(:focus-within) {
-		select {
-			outline: none;
-		}
-
-		&:focus-within {
-			outline: var(--outline-size) var(--outline-style) var(--outline-color);
-			outline-offset: var(--outline-size);
-		}
-	}
+    // Remove dropdown arrow in IE10 & IE11
+    // @link https://www.filamentgroup.com/lab/select-css.html
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  //
+  //@supports selector(:focus-within) {
+  //  select {
+  //    outline: none;
+  //  }
+  //
+  //  &:focus-within {
+  //    outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  //    outline-offset: var(--outline-size);
+  //  }
+  //}
 }
 
 .form-control {
-	display: inline-grid;
-	grid-template-columns: 1em 1fr;
-	gap: 0.5em;
+  display: inline-grid;
+  grid-template-columns: 1em 1fr;
+  gap: 0.5em;
 
-	input {
-		width: 1em;
-		height: 1em;
-		margin: 0;
-		opacity: 0;
+  input {
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    opacity: 0;
 
-		&:focus + .input__control {
-			box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.15em var(--color-primary);
-		}
-	}
+    &:focus + .input__control {
+      box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.15em var(--color-primary);
+    }
+  }
 
-	&__input {
-		display: grid;
-		grid-template-areas: 'input';
-		place-content: center;
-		font-size: 1em;
+  &__input {
+    display: grid;
+    grid-template-areas: "input";
+    place-content: center;
+    font-size: 1em;
 
-		> * {
-			grid-area: input;
-		}
-	}
+    > * {
+      grid-area: input;
+    }
+  }
 
-	.input__control {
-		display: grid;
-		place-content: center;
-		width: 1em;
-		height: 1em;
-		border: 0.15em solid var(--border-color);
-	}
+  .input__control {
+    display: grid;
+    place-content: center;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid var(--border-color);
+  }
 }
 
 .checkbox {
-	.input__control {
-		border-radius: var(--border-radius);
-		color: var(--color-primary);
-	}
+  .input__control {
+    border-radius: var(--border-radius);
+    color: var(--color-primary);
+  }
 
-	.input__control svg {
-		width: 0.65em;
-		transform: scale(0);
-		transform-origin: bottom left;
-		transition: 120ms transform ease-in-out;
-	}
+  .input__control svg {
+    width: 0.65em;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+  }
 
-	input:checked + .input__control svg {
-		transform: scale(1);
-	}
+  input:checked + .input__control svg {
+    transform: scale(1);
+  }
 }
 .radio-group + .radio-group {
 	margin-top: 1em;
 }
 
-.radio-group {
-	display: grid;
-  	grid-template-columns: 1em auto;
-	gap: 0.5em;
-	  
-	input[type="radio"] {
-		/* Add if not using autoprefixer */
-		-webkit-appearance: none;
-		appearance: none;
-		/* For iOS < 15 to remove gradient background */
-		background-color: #fff;
-		/* Not removed via appearance */
-		margin: 0;
-		font: inherit;
-		color: purple;
-		width: 1.15em;
-		height: 1.15em;
-		border: 0.15em solid currentColor;
-		border-radius: 50%;
-		transform: translateY(-0.075em);
-		display: grid;
-		place-content: center;
-	}
-	  
-	  input[type="radio"]::before {
-		content: "";
-		width: 0.65em;
-		height: 0.65em;
-		border-radius: 50%;
-		transform: scale(0);
-		transition: 120ms transform ease-in-out;
-		box-shadow: inset 1em 1em var(--form-control-color);
-	  }
-	  
-	  input[type="radio"]:checked::before {
-		transform: scale(1);
-	  }
-	  input[type="radio"]:focus {
-		outline: max(2px, 0.15em) solid purple;
-		outline-offset: max(2px, 0.15em);
-	  }
+.radio {
+  .input__control {
+    border-radius: 50%;
+  }
+
+  .input__control::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    border-radius: 50%;
+    box-shadow: inset 1em 1em var(--color-primary);
+  }
+
+  input:checked + .input__control::before {
+    transform: scale(1);
+  }
 }
 
 .form-error {
-	--form-outline-color: var(--color-error);
+  --form-outline-color: var(--color-error);
 
-	label,
-	&-text {
-		color: var(--color-error);
-	}
+  label,
+  &-text {
+    color: var(--color-error);
+  }
 
-	&-text {
-		display: block;
-		margin-top: 0.25em;
-	}
+  &-text {
+    display: block;
+    margin-top: 0.25em;
+  }
+}
+
+[type='checkbox'],
+[type='radio'] {
+  width: 1em;
+  height: 1em;
+  margin: 0;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid var(--border-color);
+  appearance: none;
+  float: left;
+
+  &:disabled,
+  &[disabled] {
+    pointer-events: none;
+    filter: none;
+    opacity: 0.5;
+
+    ~ label {
+      opacity: 0.5;
+    }
+  }
+}
+
+[type='radio'] {
+  border-radius: 50%;
+}
+
+[type='radio']:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23075A78'/%3e%3c/svg%3e");
+}
+
+[type='checkbox']:checked {
+  background-color: var(--border-color);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  label {
+    font-weight: normal;
+    line-height: 1;
+  }
+
+  legend {
+    font-weight: var(--font-weight-bold);
+    padding-inline: 0;
+  }
+  .radio-group {
+    display: flex;
+    margin-top: $spacer-small;
+  }
+  input[type=radio] {
+    margin-right: $spacer-small;
+  }
+
+  .form-control {
+    margin-top: 1rem;
+  }
 }

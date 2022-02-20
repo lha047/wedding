@@ -1,0 +1,15 @@
+dl {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  dt {
+    text-align: right;
+    margin-right: 1rem;
+    &::after {
+      content: ':';
+    }
+  }
+  dt,
+  dd {
+    margin-top: 1rem;
+  }
+}

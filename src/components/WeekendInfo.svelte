@@ -1,53 +1,43 @@
-<div class="weekend-info">
-	<!--	<a href="/program">Detaljert program</a>-->
-	<h1>Program</h1>
-	<p>Vi inviterer til festlig lag helgen 1. til 3. Juli 2022.</p>
-	<section>
-		<h2>Fredag</h2>
-		<p>Fredag: Ankomst og grilling på kvelden</p>
-	</section>
-	<section>
-		<h2>Lørdag</h2>
-		<p>Lørdag: Bryllup</p>
-		<dl>
-			<dt>Vielse kl: </dt>
-			<dd>13:00</dd>
-			
-			<dt>Foto kl:</dt>
-			<dd>14:00</dd>
+<script>
+	import { translate } from '$lib/translate';
+</script>
 
-			<dt>Apretiff kl:</dt>
-			<dd>15:00</dd>
+<article class="weekend-info">
+	<h1 class="m-t__large text-center color-primary">{translate('program')}</h1>
+	<p>{translate('programDescription')}</p>
 
-			<dt>Middag kl:</dt>
-			<dd>16:00</dd>
+	<h2 id="friday" class="m-t__medium color-primary">{translate('friday')}</h2>
 
-			<dt>Kaffe og kaker kl:</dt>
-			<dd>20:00</dd>
+	<h2 id="saturday" class="m-t__medium color-primary">{translate('saturday')}</h2>
+	<p>{translate('dressCode')}</p>
+	<dl>
+		<dt>{translate('breakfastTime')}</dt>
+		<dd>{translate('breakfast')}</dd>
+		<dt>{translate('ceremonyTime')}</dt>
+		<dd>{translate('ceremony')}</dd>
+		<dt>{translate('apretifTime')}</dt>
+		<dd>{translate('apretif')}</dd>
+		<dt>{translate('dinnerTime')}</dt>
+		<dd>{translate('dinner')}</dd>
+		<dt>{translate('cakeTime')}</dt>
+		<dd>{translate('cake')}</dd>
+		<dt>{translate('danceTime')}</dt>
+		<dd>{translate('dance')}</dd>
+		<dt>{translate('nightFoodTime')}</dt>
+		<dd>{translate('nightFood')}</dd>
+		<dt>{translate('goodNightTime')}</dt>
+		<dd>{translate('goodNight')}</dd>
+	</dl>
 
-			<dt>Dans kl:</dt>
-			<dd>21:00</dd>
-
-			<dt>Nattmat kl:</dt>
-			<dd>00:00</dd>
-
-			<dt>Stenger kl:</dt>
-			<dd>02:00</dd>
-		</dl>
-		<p>Vielse kl 13</p>
-		<p>Foto</p>
-	</section>
-	<section>
-		<h2>Søndag</h2>
-		<p>Søndag: Frokost</p>
-	</section>
-</div>
+	<h2 id="sunday" class="m-t__medium color-primary">{translate('sunday')}</h2>
+	<dl>
+		<dt>{translate('breakfastTime')}</dt>
+		<dd>{translate('breakfast')}</dd>
+	</dl>
+</article>
 
 <style lang="scss">
 	.weekend-info {
 		padding: 0 1rem;
-	}
-	h1 {
-		text-align: center;
 	}
 </style>

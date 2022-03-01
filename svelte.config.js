@@ -10,14 +10,18 @@ const config = {
 
 	kit: {
 		adapter: netlify({ split: false }),
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
 		vite: {
 			resolve: {
 				alias: {
 					$components: path.resolve('./src/components')
 				}
 			}
+		},
+		prerender: {
+			crawl: true,
+			enabled: true,
+			onError: 'continue',
+			entries: ['*']
 		}
 	}
 };

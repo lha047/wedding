@@ -1,5 +1,4 @@
 <script lang="ts" context="module">
-	import { language } from '$lib/stores/language';
 	export const prerender = true;
 
 	// /** @type {import('@sveltejs/kit').Load} */
@@ -18,7 +17,18 @@
 	// }
 </script>
 
-<form name="test" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<script>
+	import { language } from '$lib/stores/language';
+</script>
+
+<form
+	name="test"
+	method="POST"
+	netlify
+	netlify-honeypot="bot-field"
+	action="`${$language}/success`"
+>
+	<input type="hidden" name="form-name" value="test" />
 	<label for="name">Name</label>
 	<input id="name" name="name" type="text" />
 	<button type="submit">Send inn</button>

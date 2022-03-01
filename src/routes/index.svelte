@@ -6,10 +6,10 @@
 	<div class="text">
 		<h1>Vi gifter oss</h1>
 		<p>Lisa og Ståle</p>
-		<p>02.07.2021</p>
+		<p>02.07.2022</p>
 	</div>
 	<!-- <div class="layout-grid layout-grid--stack hero hero--image-stack "> -->
-		<!-- <img src="/korea_portrait.jpg" alt="Lisa og ståle" /> -->
+	<!-- <img src="/korea_portrait.jpg" alt="Lisa og ståle" /> -->
 	<!-- </div> -->
 </div>
 

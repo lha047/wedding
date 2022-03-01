@@ -1,5 +1,5 @@
 <script>
-	import {language} from '$lib/stores/language.ts'
+	import { language } from '$lib/stores/language.ts';
 </script>
 
 <nav class="navbar navbar--centered">

@@ -1,15 +1,8 @@
 <script lang="ts">
-	import WeekendInfo from '../../components/WeekendInfo.svelte';
-	import {browser} from '$app/env'
-	import {language} from '$lib/stores/language.ts'
+	import { language } from '$lib/stores/language';
+	import { page } from '$app/stores';
 
-	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ params, fetch, session, stuff }) {
-		console.log('params', params.lang);
-        if(browser && params.lang === 'en') {
-			language.set('en')
-        } 
-	}
+	language.set($page.params.lang);
 </script>
 
 <div class="wrapper">
@@ -18,9 +11,6 @@
 		<p>Lisa og Ståle</p>
 		<p>02.07.2021</p>
 	</div>
-	<!-- <div class="layout-grid layout-grid--stack hero hero--image-stack "> -->
-	<!-- <img src="/korea_portrait.jpg" alt="Lisa og ståle" /> -->
-	<!-- </div> -->
 </div>
 
 <style lang="scss">
@@ -29,7 +19,7 @@
 		object-position: center; /* Center the image within the element */
 		height: 10rem;
 		width: 100%;
-		
+
 		@media only screen and (min-width: 768px) {
 			height: 30rem;
 		}

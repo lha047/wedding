@@ -6,7 +6,8 @@ module.exports = [
 		// color: "#008A00", // Green
 		// color: "#B12793", // Magenta
 		onColor: 'hsl(0, 0%, 100%)'
-	},{
+	},
+	{
 		name: 'secodary',
 		color: 'hsla(260,51%,61%,0.99)',
 		// color: "#2B51A2", // Blue

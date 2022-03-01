@@ -24,11 +24,11 @@
 
 <div class="wrapper">
 	<div class="layout-grid layout-grid--stack hero hero--image-stack ">
-		<img src="/hart2.jpg" alt="Lisa og ståle" />
+		<img src="/hart.jpg" alt="Lisa og ståle" />
 		<div class="text">
 			<h1>Vi gifter oss</h1>
 			<p class="lisa-staale">Lisa og Ståle</p>
-			<p class="date">02.07.2021</p>
+			<p class="date">02.07.2022</p>
 		</div>
 	</div>
 	<div class="container">
@@ -48,12 +48,11 @@
 
 <style lang="scss">
 	img {
-		//object-fit: none; /* Do not scale the image */
 		object-position: center; /* Center the image within the element */
-		height: 10rem;
+		//height: 20rem;
 		width: 100%;
 		@media only screen and (min-width: 768px) {
-			height: 30rem;
+			//height: 30rem;
 		}
 	}
 	.date {
@@ -92,7 +91,6 @@
 	}
 	.container {
 		margin-top: var(--spacer-large);
-		//margin-top: 13rem;
 	}
 	.wrapper {
 		width: 100%;

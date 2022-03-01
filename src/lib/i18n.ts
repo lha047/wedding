@@ -1,4 +1,8 @@
 export const i18n = {
+	menu: {
+		no: 'Meny',
+		en: 'Menu'
+	},
 	home: {
 		no: 'Til forsiden',
 		en: 'Home'
@@ -14,6 +18,10 @@ export const i18n = {
 	accommodation: {
 		no: 'Overnatting',
 		en: 'Accommodation'
+	},
+	gjesvold: {
+		no: 'Gjesvold',
+		en: 'Gjesvold'
 	},
 	register: {
 		no: 'Påmelding',
@@ -56,8 +64,8 @@ export const i18n = {
 		en: '8:00-10:00'
 	},
 	breakfast: {
-		no: 'Frokost',
-		en: 'Breakfast'
+		no: 'Frokost (for oss som bor på Sundvollen Hotell)',
+		en: 'Breakfast (for us staying at Sundvollen Hotel)'
 	},
 	ceremonyTime: {
 		no: '13:00',
@@ -114,5 +122,57 @@ export const i18n = {
 	goodNight: {
 		no: 'God natt',
 		en: 'Good night'
+	},
+	submit: {
+		no: 'Send inn',
+		en: 'Submit'
+	},
+	nameText: {
+		no: 'Ditt navn/navn på følge'
+	},
+	willYouAttend: {
+		no: 'Har du mulighet til å komme?'
+	},
+	canComeText: {
+		no: 'Jeg/vi har mulighet til å delta på festen'
+	},
+	canNotComeText: {
+		no: 'Jeg/vi har desverre ikke mulighet til å komme'
+	},
+	nrOfPersonsText: {
+		no: 'Antall personer i følge'
+	},
+	phoneNumberText: {
+		no: 'Ditt teltefonnummer'
+	},
+	mailText: {
+		no: 'Din mailadressse'
+	},
+	sleepingArrangementsText: {
+		no: 'Planlegger du å bo på Sundvollen Hotell?'
+	},
+	noText: {
+		no: 'Nei'
+	},
+	yesText: {
+		no: 'Ja'
+	},
+	fridayToSunday: {
+		no: 'Ja, fredag til søndag'
+	},
+	saturdayToSunday: {
+		no: 'Ja, lørdag til søndag'
+	},
+	sleepingArrangementsSpecialNeeds: {
+		no: 'Har du noen spesielle behov emed hensyn til overnattingen?'
+	},
+	fridayBBQText: {
+		no: 'Ønsker du å delta på grilling på fredag?'
+	},
+	allergiesText: {
+		no: 'Har du noen allergier?'
+	},
+	questionsText: {
+		no: 'Har du noen spørsmål?'
 	}
 };

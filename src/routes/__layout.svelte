@@ -1,15 +1,11 @@
 <script>
-	import Navbar from '../components/Navbar.svelte';
 </script>
 
-<heading>
-	<Navbar />
-</heading>
-<main>
-	<slot />
-</main>
-<footer />
+<slot />
 
-<style lang="scss">
+<style lang="scss" global>
 	@import '../../public/css/style.css';
+	footer {
+		margin-bottom: 13rem;
+	}
 </style>

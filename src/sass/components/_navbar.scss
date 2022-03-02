@@ -1,51 +1,64 @@
 .navbar {
-	padding: 1rem;
+  padding: 1rem;
 
-	ul {
-		--gap: 1rem;
+  @media only screen and (min-width: 768px) {
+    //padding: 1rem;
+  }
 
-		align-items: center;
-		justify-content: center;
-	}
+  ul {
+    --gap: 1rem;
 
-	a:not([class]) {
-		color: inherit;
-		text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-		&:hover {
-			text-decoration: underline;
-		}
-	}
+  a:not([class]) {
+    color: inherit;
+    text-decoration: none;
 
-	a.navbar-image {
-		color: inherit;
-	}
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
-	&--centered {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-		gap: 2rem;
-	}
+  a.navbar-image {
+    color: inherit;
+  }
 
-	&--divided {
-		--breakpoint: 70ch;
+  &--centered {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &--end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
 
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-		gap: 1rem;
+  &--divided {
+    --breakpoint: 70ch;
 
-		&::before {
-			content: '';
-			flex-basis: calc((var(--breakpoint) - 100%) * 500);
-			flex-grow: 100;
-		}
+    display: flex;
+    //flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 
-		> :first-child {
-			order: -1;
-		}
-	}
+    &::before {
+      content: "";
+      flex-basis: calc((var(--breakpoint) - 100%) * 500);
+      flex-grow: 100;
+    }
+
+    > :first-child {
+      order: -1;
+    }
+  }
+  
 }

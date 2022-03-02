@@ -1,26 +1,33 @@
-@use 'color-tokens' as *;
+@use "color-tokens" as *;
 
-$color-links: 'var(--color-primary)' !default;
+$color-links: "var(--color-primary)" !default;
 $color-grey-hue: $color-primary !default;
 $color-background-body: scale-color($color-grey-hue, $lightness: 98%) !default;
 $color-grey-hue: hue($color-grey-hue);
 
-$font-family: 'Noto Sans JP', sans-serif !default;
+$font-family: "arial", sans-serif !default;
 $font-weight-bold: 700 !default;
 
-:root {
-	@include color-tokens();
+$spacer-small: 1rem;
+$spacer-medium: 1.5rem;
+$spacer-large: 2rem;
 
-	--color-links: #{$color-links};
-	--grey-medium: hsl(#{$color-grey-hue}, 15%, 50%);
-	--grey-light: hsl(#{$color-grey-hue}, 20%, 85%);
-	--background-body: #{$color-background-body};
-	--font-weight-bold: #{$font-weight-bold};
+:root {
+  @include color-tokens();
+
+  --color-links: #{$color-links};
+  --grey-medium: hsl(#{$color-grey-hue}, 15%, 50%);
+  --grey-light: hsl(#{$color-grey-hue}, 20%, 85%);
+  --background-body: #{$color-background-body};
+  --font-weight-bold: #{$font-weight-bold};
+  --spacer-small: #{$spacer-small};
+  --spacer-medium: #{$spacer-medium};
+  --spacer-large: #{$spacer-large};
 }
 
 body {
-	background-color: #000;
-	color: var(--color-text);
-	font-family: $font-family;
-	margin: 0;
+  background-color: var(--color-ivory);
+  color: var(--color-medium-green);
+  font-family: $font-family;
+  margin: 0;
 }

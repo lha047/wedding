@@ -1,18 +1,32 @@
 module.exports = [
 	{
 		name: 'primary',
-		color: 'hsl(280,13%,59%)',
-		// color: "#2B51A2", // Blue
-		// color: "#008A00", // Green
-		// color: "#B12793", // Magenta
+		// color: 'hsl(29,57%,46%)',
+		color: 'hsl(17,35%,51%)',
+		onColor: 'hsl(40,54%,85%)'
+
+	},{
+		name: 'ivory',
+		color: 'hsl(37,43%,87%)'
+
+	},{
+		name: 'green',
+		color: 'hsl(164,92%,19%)',
+		// color: 'hsl(141,75%,20%)',
+		onColor: 'hsl(0, 0%, 100%)'
+	},{
+		name: 'medium-green',
+		color: 'hsl(167,100%,15%)',
 		onColor: 'hsl(0, 0%, 100%)'
 	},
 	{
-		name: 'secodary',
-		color: 'hsla(260,51%,61%,0.99)',
-		// color: "#2B51A2", // Blue
-		// color: "#008A00", // Green
-		// color: "#B12793", // Magenta
+		name: 'dark-green',
+		color: 'hsl(164,43%,10%)',
+		onColor: 'hsl(0, 0%, 100%)'
+	},
+	{
+		name: 'brown',
+		color: 'hsl(10,27%,25%)',
 		onColor: 'hsl(0, 0%, 100%)'
 	},
 	{
@@ -21,6 +35,7 @@ module.exports = [
 	},
 	{
 		name: 'text',
-		color: 'hsla(0,0%,66%,0.99)'
+		color: 'hsl(40,54%,85%)'
+		// color: 'hsla(0,0%,66%,0.99)'
 	}
 ];

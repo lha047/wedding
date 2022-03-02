@@ -3,26 +3,40 @@
   Modify colors in src/sass/colors.cjs
  */
 
-$color-primary: hsl(280,13%,59%) !default;
+$color-primary: hsl(17,35%,51%) !default;
 /* 🚫 Contrast fails against primary */
-$color-on-primary: hsl(0, 0%, 100%) !default;
-$color-secodary: hsla(260,51%,61%,0.99) !default;
-/* 🚫 Contrast fails against secodary */
-$color-on-secodary: hsl(0, 0%, 100%) !default;
+$color-on-primary: hsl(40,54%,85%) !default;
+$color-ivory: hsl(37,43%,87%) !default;
+$color-on-ivory: hsl(35.19999999999999, 15%, 37.8%) !default;
+$color-green: hsl(164,92%,19%) !default;
+$color-on-green: hsl(0, 0%, 100%) !default;
+$color-medium-green: hsl(167,100%,15%) !default;
+$color-on-medium-green: hsl(0, 0%, 100%) !default;
+$color-dark-green: hsl(164,43%,10%) !default;
+$color-on-dark-green: hsl(0, 0%, 100%) !default;
+$color-brown: hsl(10,27%,25%) !default;
+$color-on-brown: hsl(0, 0%, 100%) !default;
 $color-error: hsl(350, 75%, 50%) !default;
 $color-on-error: hsl(352.5, 100%, 98.4%) !default;
-$color-text: hsla(0,0%,66%,0.99) !default;
-$color-on-text: rgb(61, 61, 61) !default;
+$color-text: hsl(40,54%,85%) !default;
+$color-on-text: hsl(41.10000000000002, 20.7%, 36.1%) !default;
 
-$base-color-tokens: ("primary", "secodary", "error", "text");
+$base-color-tokens: ("primary", "ivory", "green", "medium-green", "dark-green", "brown", "error", "text");
 
 $color-tokens: (
   "color-primary": $color-primary,
   /* 🚫 Contrast fails against primary */
 "color-on-primary": $color-on-primary,
-  "color-secodary": $color-secodary,
-  /* 🚫 Contrast fails against secodary */
-"color-on-secodary": $color-on-secodary,
+  "color-ivory": $color-ivory,
+  "color-on-ivory": $color-on-ivory,
+  "color-green": $color-green,
+  "color-on-green": $color-on-green,
+  "color-medium-green": $color-medium-green,
+  "color-on-medium-green": $color-on-medium-green,
+  "color-dark-green": $color-dark-green,
+  "color-on-dark-green": $color-on-dark-green,
+  "color-brown": $color-brown,
+  "color-on-brown": $color-on-brown,
   "color-error": $color-error,
   "color-on-error": $color-on-error,
   "color-text": $color-text,
@@ -33,9 +47,16 @@ $color-tokens: (
   --color-primary: #{$color-primary};
   /* 🚫 Contrast fails against primary */
 --color-on-primary: #{$color-on-primary};
-  --color-secodary: #{$color-secodary};
-  /* 🚫 Contrast fails against secodary */
---color-on-secodary: #{$color-on-secodary};
+  --color-ivory: #{$color-ivory};
+  --color-on-ivory: #{$color-on-ivory};
+  --color-green: #{$color-green};
+  --color-on-green: #{$color-on-green};
+  --color-medium-green: #{$color-medium-green};
+  --color-on-medium-green: #{$color-on-medium-green};
+  --color-dark-green: #{$color-dark-green};
+  --color-on-dark-green: #{$color-on-dark-green};
+  --color-brown: #{$color-brown};
+  --color-on-brown: #{$color-on-brown};
   --color-error: #{$color-error};
   --color-on-error: #{$color-on-error};
   --color-text: #{$color-text};

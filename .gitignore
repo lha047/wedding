@@ -2,7 +2,7 @@
 .idea
 node_modules
 /build
-/img
+img
 .svelte-kit
 .netlify
 /package

@@ -3,33 +3,34 @@
 	import { page } from '$app/stores';
 	import { translate } from '$lib/translate';
 	language.set($page.params.lang);
+	console.log('show me');
 </script>
 
+<!--<div class="wrapper">-->
+<!--	<div class="layout-grid layout-grid&#45;&#45;stack hero hero&#45;&#45;image-stack ">-->
+<!--		<img src="/hart.jpg" alt="Lisa og ståle" />-->
+<!--		<div class="text">-->
+<!--			<h1>Vi gifter oss</h1>-->
+<!--			<p class="lisa-staale">Lisa og Ståle</p>-->
+<!--			<p class="date">02.07.2022</p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div class="container">-->
+<!--		<p>{@html translate('inviteWeddingWeekend')}</p>-->
+<!--		<p>-->
+<!--			{@html translate('weddingDay')}-->
+<!--		</p>-->
+<!--	</div>-->
+<!--</div>-->
+
 <div class="wrapper">
-	<div class="layout-grid layout-grid--stack hero hero--image-stack ">
-		<img src="/hart.jpg" alt="Lisa og ståle" />
-		<div class="text">
-			<h1>Vi gifter oss</h1>
-			<p class="lisa-staale">Lisa og Ståle</p>
-			<p class="date">02.07.2022</p>
-		</div>
-	</div>
-	<div class="container">
-		<p>{@html translate('inviteWeddingWeekend')}</p>
-		<p>
-			{@html translate('weddingDay')}
-		</p>
+	<div class="text">
+		<h1>Vi gifter oss</h1>
+		<p>Lisa og Ståle</p>
+		<p>02.07.2022</p>
 	</div>
 </div>
 
-<!--<div class="wrapper">-->
-<!--	<div class="text">-->
-<!--		<h1>Vi gifter oss</h1>-->
-<!--		<p>Lisa og Ståle</p>-->
-<!--		<p>02.07.2021</p>-->
-<!--	</div>-->
-
-<!--</div>-->
 <style lang="scss">
 	img {
 		object-position: center; /* Center the image within the element */

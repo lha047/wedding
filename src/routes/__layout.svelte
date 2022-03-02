@@ -1,14 +1,7 @@
 <script>
-	import Navbar from '../components/Navbar.svelte';
 </script>
 
-<heading>
-	<Navbar />
-</heading>
-<main class="">
-	<slot />
-</main>
-<footer />
+<slot />
 
 <style lang="scss" global>
 	@import '../../public/css/style.css';

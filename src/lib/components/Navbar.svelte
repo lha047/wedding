@@ -12,21 +12,21 @@
 </script>
 
 <nav class="navbar navbar--divided">
-	<a class="home" href="/{$language}">{translate('home')}</a>
+	<!--	<a class="home" href="/{$language}">{translate('home')}</a>-->
 
-	<button
-		type="button"
-		class="button button__green"
-		use:clickOutside
-		on:outclick={hideMenu}
-		on:click={() => (showMenu = !showMenu)}>{translate('menu')}</button
-	>
-	<ul in:slide={{ duration: 300 }} class={showMenu ? 'show' : 'hide'}>
-		<li><a class="nav-item" href="/{$language}/program">{translate('program')}</a></li>
-		<li><a class="nav-item" href="/{$language}/sleeping">{translate('accommodation')}</a></li>
-		<li><a class="nav-item" href="/{$language}/gjesvold">{translate('gjesvold')}</a></li>
-		<li><a class="nav-item" href="/{$language}/registration">{translate('register')}</a></li>
-	</ul>
+	<!--	<button-->
+	<!--		type="button"-->
+	<!--		class="button button__green"-->
+	<!--		use:clickOutside-->
+	<!--		on:outclick={hideMenu}-->
+	<!--		on:click={() => (showMenu = !showMenu)}>{translate('menu')}</button-->
+	<!--	>-->
+	<!--	<ul in:slide={{ duration: 300 }} class={showMenu ? 'show' : 'hide'}>-->
+	<!--		<li><a class="nav-item" href="/{$language}/program">{translate('program')}</a></li>-->
+	<!--		<li><a class="nav-item" href="/{$language}/sleeping">{translate('accommodation')}</a></li>-->
+	<!--		<li><a class="nav-item" href="/{$language}/gjesvold">{translate('gjesvold')}</a></li>-->
+	<!--		<li><a class="nav-item" href="/{$language}/registration">{translate('register')}</a></li>-->
+	<!--	</ul>-->
 </nav>
 
 <style lang="scss">

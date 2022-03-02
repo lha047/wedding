@@ -1,51 +1,28 @@
 <script lang="ts" context="module">
 	export const prerender = true;
-
-	// /** @type {import('@sveltejs/kit').Load} */
-	// export async function load({ params, fetch, session, stuff }) {
-	// 	if (params?.lang === 'en') {
-	// 		language.set('en');
-	// 		return {
-	// 			status: 301,
-	// 			redirect: '/en'
-	// 		};
-	// 	}
-	// 	return {
-	// 		status: 301,
-	// 		redirect: '/no/'
-	// 	};
-	// }
+	console.log('index r route');
 </script>
 
 <script lang="ts">
-	import { translate } from '$lib/translate';
 	import { language } from '$lib/stores/language';
+
+	console.log('index rote');
 </script>
 
-<!--<div class="wrapper">-->
-<!--	<div class="layout-grid layout-grid&#45;&#45;stack hero hero&#45;&#45;image-stack ">-->
-<!--		<img src="/hart.jpg" alt="Lisa og ståle" />-->
-<!--		<div class="text">-->
-<!--			<h1>Vi gifter oss</h1>-->
-<!--			<p class="lisa-staale">Lisa og Ståle</p>-->
-<!--			<p class="date">02.07.2022</p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<div class="container">-->
-<!--		<p>{@html translate('inviteWeddingWeekend')}</p>-->
-<!--		<p>-->
-<!--			{@html translate('weddingDay')}-->
-<!--		</p>-->
-<!--	</div>-->
-<!--</div>-->
+<div class="wrapper">
+	<div class="text">
+		<h1>Vi gifter oss</h1>
+		<p>Lisa og Ståle</p>
+		<p>02.07.2021</p>
+	</div>
 
-<form name="test" method="POST" netlify netlify-honeypot="bot-field" action="{$language}/success">
-	<input type="hidden" name="form-name" value="test" />
-	<label for="name">Name</label>
-	<input id="name" name="name" type="text" />
-	<button type="submit">Send inn</button>
-</form>
-
+	<form name="test" method="POST" netlify netlify-honeypot="bot-field" action="{$language}/success">
+		<input type="hidden" name="form-name" value="test" />
+		<label for="name">Name</label>
+		<input id="name" name="name" type="text" />
+		<button type="submit">Send inn</button>
+	</form>
+</div>
 <!--<style lang="scss">-->
 <!--	img {-->
 <!--		object-position: center; /* Center the image within the element */-->

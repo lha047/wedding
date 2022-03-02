@@ -274,6 +274,24 @@ textarea:focus-visible {
   outline-offset: var(--outline-size);
 }
 
+[data-netlify-identity-menu] ul {
+  display: flex;
+  margin-left: 1rem;
+}
+[data-netlify-identity-menu] ul li {
+  margin-top: 2rem;
+}
+[data-netlify-identity-menu] ul li a {
+  padding: 1rem;
+  background-color: var(--color-medium-green);
+  width: max-content;
+  border-radius: 4px;
+  color: white;
+}
+[data-netlify-identity-menu] ul li + li {
+  margin-left: 1rem;
+}
+
 .button {
   --button-background: var(--color-primary);
   --button-color: var(--color-on-primary);

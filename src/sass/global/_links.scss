@@ -26,3 +26,24 @@ textarea {
     outline-offset: var(--outline-size);
   }
 }
+
+[data-netlify-identity-menu] {
+  ul {
+    display: flex;
+    margin-left: 1rem;
+
+    li {
+      margin-top: 2rem;
+      a {
+        padding: 1rem;
+        background-color: var(--color-medium-green);
+        width: max-content;
+        border-radius: 4px;
+        color: white;
+      }
+      &+li {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

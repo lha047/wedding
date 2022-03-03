@@ -6,6 +6,23 @@
 <script lang="ts">
 	import { language } from '$lib/stores/language';
 	let isLoggedIn = false;
+	let token = '';
+
+	netlifyIdentity.on('init', (user) => {
+		if (user) {
+			isLoggedIn = true;
+			token = user.token.access_token;
+		}
+	});
+	netlifyIdentity.on('login', (user) => {
+		isLoggedIn = true;
+		token = user.token.access_token;
+	});
+	netlifyIdentity.on('logout', (user) => {
+		isLoggedIn = false;
+		token = '';
+		//reset
+	});
 	console.log('index rote');
 </script>
 

@@ -1,12 +1,9 @@
-<script lang="ts" context="module">
-	export const prerender = true;
+<script context="module" lang="ts">
 	/** @type {import('./[slug]').Load} */
 	import { browser } from '$app/env';
 	import { addListener } from '$lib/stores/auth';
 
-	export async function load({}) {
-		// const url = `https://cms.example.com/article/${params.slug}.json`;
-		// const response = await fetch(url);
+	export async function load({ params, fetch, session, stuff }) {
 		if (browser) {
 			console.log('adds listerner');
 			addListener();
@@ -19,79 +16,88 @@
 
 <script lang="ts">
 	import { language } from '$lib/stores/language';
+	import { page } from '$app/stores';
+	import { translate } from '$lib/translate';
 	import { isLoggedIn } from '$lib/stores/auth';
-
-	console.log('index rote');
+	language.set($page.params.lang);
+	console.log('show me');
 </script>
+
+<!--<div class="wrapper">-->
+<!--	<div class="layout-grid layout-grid&#45;&#45;stack hero hero&#45;&#45;image-stack ">-->
+<!--		<img src="/hart.jpg" alt="Lisa og ståle" />-->
+<!--		<div class="text">-->
+<!--			<h1>Vi gifter oss</h1>-->
+<!--			<p class="lisa-staale">Lisa og Ståle</p>-->
+<!--			<p class="date">02.07.2022</p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<div class="container">-->
+<!--		<p>{@html translate('inviteWeddingWeekend')}</p>-->
+<!--		<p>-->
+<!--			{@html translate('weddingDay')}-->
+<!--		</p>-->
+<!--	</div>-->
+<!--</div>-->
 
 <div class="wrapper">
 	<div class="text">
 		<h1>Vi gifter oss</h1>
 		<p>Lisa og Ståle</p>
-		<p>02.07.2021</p>
+		<p>02.07.2022</p>
 	</div>
-	<!--{#if $isLoggedIn}-->
-	<!--	<form-->
-	<!--		name="test"-->
-	<!--		method="POST"-->
-	<!--		netlify-->
-	<!--		netlify-honeypot="bot-field"-->
-	<!--		action="{$language}/success"-->
-	<!--	>-->
-	<!--		<input type="hidden" name="form-name" value="test" />-->
-	<!--		<label for="name">Name</label>-->
-	<!--		<input id="name" name="name" type="text" />-->
-	<!--		<button type="submit">Send inn</button>-->
-	<!--	</form>-->
-	<!--{/if}-->
 </div>
-<!--<style lang="scss">-->
-<!--	img {-->
-<!--		object-position: center; /* Center the image within the element */-->
-<!--		//height: 20rem;-->
-<!--		width: 100%;-->
-<!--		@media only screen and (min-width: 768px) {-->
-<!--			//height: 30rem;-->
-<!--		}-->
-<!--	}-->
-<!--	.date {-->
-<!--		font-size: large;-->
-<!--	}-->
-<!--	.lisa-staale {-->
-<!--		font-size: xx-large;-->
-<!--	}-->
-<!--	.text {-->
-<!--		&#45;&#45;text-border: 2px solid var(&#45;&#45;color-dark-green);-->
+{#if $isLoggedIn}
+	<h1>Is logged in</h1>
+{/if}
 
-<!--		background-color: rgba(75, 67, 64, 0.5);-->
-<!--		//overflow: hidden;-->
-<!--		width: 100%;-->
-<!--		height: 100%;-->
-<!--		z-index: 2;-->
-<!--		display: flex;-->
-<!--		flex-direction: column;-->
-<!--		align-items: center;-->
-<!--		color: var(&#45;&#45;color-ivory);-->
-<!--		//color: var(&#45;&#45;color-primary);-->
-<!--		padding: 1rem 1rem 2rem 1rem;-->
-<!--		justify-content: center;-->
-<!--		//border-top: var(&#45;&#45;text-border);-->
-<!--		//border-bottom: var(&#45;&#45;text-border);-->
+<style lang="scss">
+	img {
+		object-position: center; /* Center the image within the element */
+		//height: 20rem;
+		width: 100%;
+		@media only screen and (min-width: 768px) {
+			//height: 30rem;
+		}
+	}
+	.date {
+		font-size: large;
+	}
+	.lisa-staale {
+		font-size: xx-large;
+	}
+	.text {
+		--text-border: 2px solid var(--color-dark-green);
 
-<!--		@media only screen and (min-width: 768px) {-->
-<!--			padding: 3rem 12rem;-->
-<!--		}-->
-<!--	}-->
-<!--	.hero {-->
-<!--		//&#45;&#45;text-border: 4px solid var(&#45;&#45;color-dark-green);-->
-<!--		&#45;&#45;text-border: 4px solid var(&#45;&#45;color-primary);-->
-<!--		border-top: var(&#45;&#45;text-border);-->
-<!--		border-bottom: var(&#45;&#45;text-border);-->
-<!--	}-->
-<!--	.container {-->
-<!--		margin-top: var(&#45;&#45;spacer-large);-->
-<!--	}-->
-<!--	.wrapper {-->
-<!--		width: 100%;-->
-<!--	}-->
-<!--</style>-->
+		background-color: rgba(75, 67, 64, 0.5);
+		//overflow: hidden;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: var(--color-ivory);
+		//color: var(--color-primary);
+		padding: 1rem 1rem 2rem 1rem;
+		justify-content: center;
+		//border-top: var(--text-border);
+		//border-bottom: var(--text-border);
+
+		@media only screen and (min-width: 768px) {
+			padding: 3rem 12rem;
+		}
+	}
+	.hero {
+		//--text-border: 4px solid var(--color-dark-green);
+		--text-border: 4px solid var(--color-primary);
+		border-top: var(--text-border);
+		border-bottom: var(--text-border);
+	}
+	.container {
+		margin-top: var(--spacer-large);
+	}
+	.wrapper {
+		width: 100%;
+	}
+</style>

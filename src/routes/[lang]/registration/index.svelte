@@ -1,8 +1,11 @@
 <script lang="ts">
 	import RegistrationForm from '$lib/components/register-form.svelte';
 	import { translate } from '$lib/translate';
+	import { isLoggedIn } from '$lib/stores/auth';
 </script>
 
-<h1 class="m-t__large text-center color-primary">{translate('registration')}</h1>
+{#if isLoggedIn}
+	<h1 class="m-t__large text-center color-primary">{translate('registration')}</h1>
 
-<RegistrationForm />
+	<RegistrationForm />
+{/if}

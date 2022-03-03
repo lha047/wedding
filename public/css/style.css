@@ -274,19 +274,24 @@ textarea:focus-visible {
   outline-offset: var(--outline-size);
 }
 
+[data-netlify-identity-menu] {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
 [data-netlify-identity-menu] ul {
   display: flex;
   margin-left: 1rem;
 }
 [data-netlify-identity-menu] ul li {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 [data-netlify-identity-menu] ul li a {
-  padding: 1rem;
-  background-color: var(--color-medium-green);
+  padding: 0.5rem 1rem;
+  background-color: var(--color-green);
   width: max-content;
   border-radius: 4px;
-  color: white;
+  color: var(--color-on-primary);
 }
 [data-netlify-identity-menu] ul li + li {
   margin-left: 1rem;

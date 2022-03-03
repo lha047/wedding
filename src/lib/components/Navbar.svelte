@@ -5,6 +5,7 @@
 	import { language } from '$lib/stores/language.ts';
 	import { isLoggedIn } from '$lib/stores/auth.ts';
 
+	$: console.log('nav ', $isLoggedIn);
 	let showMenu = false;
 
 	function hideMenu() {

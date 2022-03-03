@@ -1,5 +1,9 @@
 <script>
 	import WeekendInfo from '$lib/components/WeekendInfo.svelte';
+	import { isLoggedIn } from '$lib/stores/auth';
+	$: console.log('program', $isLoggedIn);
 </script>
 
-<WeekendInfo />
+{#if $isLoggedIn === true}
+	<WeekendInfo />
+{/if}

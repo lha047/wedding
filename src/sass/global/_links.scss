@@ -28,18 +28,21 @@ textarea {
 }
 
 [data-netlify-identity-menu] {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
   ul {
     display: flex;
     margin-left: 1rem;
 
     li {
-      margin-top: 2rem;
+      margin-top: 1rem;
       a {
-        padding: 1rem;
-        background-color: var(--color-medium-green);
+        padding: 0.5rem 1rem;
+        background-color: var(--color-green);
         width: max-content;
         border-radius: 4px;
-        color: white;
+        color: var(--color-on-primary);
       }
       &+li {
         margin-left: 1rem;

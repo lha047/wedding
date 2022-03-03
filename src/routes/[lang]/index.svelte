@@ -4,8 +4,6 @@
 	import { addListener } from '$lib/stores/auth';
 
 	export async function load({ params, fetch, session, stuff }) {
-		// const url = `https://cms.example.com/article/${params.slug}.json`;
-		// const response = await fetch(url);
 		if (browser) {
 			console.log('adds listerner');
 			addListener();

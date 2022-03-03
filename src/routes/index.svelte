@@ -30,20 +30,20 @@
 		<p>Lisa og Ståle</p>
 		<p>02.07.2021</p>
 	</div>
-	{#if $isLoggedIn}
-		<form
-			name="test"
-			method="POST"
-			netlify
-			netlify-honeypot="bot-field"
-			action="{$language}/success"
-		>
-			<input type="hidden" name="form-name" value="test" />
-			<label for="name">Name</label>
-			<input id="name" name="name" type="text" />
-			<button type="submit">Send inn</button>
-		</form>
-	{/if}
+	<!--{#if $isLoggedIn}-->
+	<!--	<form-->
+	<!--		name="test"-->
+	<!--		method="POST"-->
+	<!--		netlify-->
+	<!--		netlify-honeypot="bot-field"-->
+	<!--		action="{$language}/success"-->
+	<!--	>-->
+	<!--		<input type="hidden" name="form-name" value="test" />-->
+	<!--		<label for="name">Name</label>-->
+	<!--		<input id="name" name="name" type="text" />-->
+	<!--		<button type="submit">Send inn</button>-->
+	<!--	</form>-->
+	<!--{/if}-->
 </div>
 <!--<style lang="scss">-->
 <!--	img {-->

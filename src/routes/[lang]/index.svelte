@@ -1,7 +1,26 @@
+<script context="module" lang="ts">
+	/** @type {import('./[slug]').Load} */
+	import { browser } from '$app/env';
+	import { addListener } from '$lib/stores/auth';
+
+	export async function load({ params, fetch, session, stuff }) {
+		// const url = `https://cms.example.com/article/${params.slug}.json`;
+		// const response = await fetch(url);
+		if (browser) {
+			console.log('adds listerner');
+			addListener();
+		}
+		return {
+			props: {}
+		};
+	}
+</script>
+
 <script lang="ts">
 	import { language } from '$lib/stores/language';
 	import { page } from '$app/stores';
 	import { translate } from '$lib/translate';
+	import { isLoggedIn } from '$lib/stores/auth';
 	language.set($page.params.lang);
 	console.log('show me');
 </script>
@@ -30,6 +49,9 @@
 		<p>02.07.2022</p>
 	</div>
 </div>
+{#if $isLoggedIn}
+	<h1>Is logged in</h1>
+{/if}
 
 <style lang="scss">
 	img {

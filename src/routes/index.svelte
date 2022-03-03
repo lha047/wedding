@@ -1,28 +1,26 @@
 <script lang="ts" context="module">
 	export const prerender = true;
-	console.log('index r route');
+	/** @type {import('./[slug]').Load} */
+	import { browser } from '$app/env';
+	import { addListener } from '$lib/stores/auth';
+
+	export async function load({}) {
+		// const url = `https://cms.example.com/article/${params.slug}.json`;
+		// const response = await fetch(url);
+		if (browser) {
+			console.log('adds listerner');
+			addListener();
+		}
+		return {
+			props: {}
+		};
+	}
 </script>
 
 <script lang="ts">
 	import { language } from '$lib/stores/language';
-	let isLoggedIn = false;
-	let token = '';
+	import { isLoggedIn } from '$lib/stores/auth';
 
-	netlifyIdentity.on('init', (user) => {
-		if (user) {
-			isLoggedIn = true;
-			token = user.token.access_token;
-		}
-	});
-	netlifyIdentity.on('login', (user) => {
-		isLoggedIn = true;
-		token = user.token.access_token;
-	});
-	netlifyIdentity.on('logout', (user) => {
-		isLoggedIn = false;
-		token = '';
-		//reset
-	});
 	console.log('index rote');
 </script>
 
@@ -32,7 +30,7 @@
 		<p>Lisa og Ståle</p>
 		<p>02.07.2021</p>
 	</div>
-	{#if isLoggedIn}
+	{#if $isLoggedIn}
 		<form
 			name="test"
 			method="POST"

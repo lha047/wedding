@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { translate } from '$lib/translate'
+	import { language } from '$lib/stores/language'
 	let className = ''
 	export { className as class }
 
@@ -22,6 +23,7 @@
 	name="register"
 	class={className}
 	method="post"
+	action="/{$language}/success"
 	netlify-honeypot="bot-field"
 >
 	<input type="hidden" name="form-name" value="register" />

@@ -1,8 +1,8 @@
 <script lang="ts">
-	export const prerender = true;
+	export const prerender = true
 </script>
 
-<h1 class="m-t__large text-center">Overnatting</h1>
+<h1 class="m-t__large text-center color-primary">Overnatting</h1>
 
 <p>
 	Under bryllupshelgen kommer vi til å bo på <a href="https://www.">Sundvollen hotel</a> så vi kan tilbringe
@@ -18,7 +18,4 @@
 <p>Sikre plasser, 1 mnd før...</p>
 
 <style lang="scss">
-	h1 {
-		text-align: center;
-	}
 </style>

@@ -24,7 +24,7 @@
 			on:outclick={hideMenu}
 			on:click={() => (showMenu = !showMenu)}>{translate('menu')}</button
 		>
-		<ul in:slide={{ duration: 300 }} class={showMenu ? 'show' : 'hide'}>
+		<ul class={showMenu ? 'show' : 'hide'} in:slide={{ duration: 1000 }}>
 			<li><a class="nav-item" href="/{$language}/program">{translate('program')}</a></li>
 			<li><a class="nav-item" href="/{$language}/sleeping">{translate('accommodation')}</a></li>
 			<li><a class="nav-item" href="/{$language}/gjesvold">{translate('gjesvold')}</a></li>
@@ -49,10 +49,10 @@
 		}
 	}
 	ul {
-		//position: absolute;
-		position: fixed;
+		position: absolute;
+		//position: fixed;
 		left: -100%;
-		top: 4rem;
+		top: 3.5rem;
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacer-small);

@@ -1,26 +1,25 @@
 <script context="module" lang="ts">
 	/** @type {import('./[slug]').Load} */
-	import { browser } from '$app/env';
-	import { addListener } from '$lib/stores/auth';
+	import { browser } from '$app/env'
+	import { addListener } from '$lib/stores/auth'
 
 	export async function load() {
 		if (browser) {
-			console.log('adds listerner');
-			addListener();
+			console.log('adds listerner')
+			addListener()
 		}
 		return {
 			props: {}
-		};
+		}
 	}
 </script>
 
 <script lang="ts">
-	import { language } from '$lib/stores/language';
-	import { page } from '$app/stores';
-	import { isLoggedIn } from '$lib/stores/auth';
-	import { translate } from '$lib/translate';
-	language.set($page.params.lang);
-	console.log('show me');
+	// import { language } from '$lib/stores/language'
+	// import { page } from '$app/stores'
+	import { isLoggedIn } from '$lib/stores/auth'
+	import { translate } from '$lib/translate'
+	// language.set($page.params.lang)
 </script>
 
 {#if isLoggedIn}

@@ -1,7 +1,18 @@
-<script>
+<script lang="ts">
+	import Navbar from '$lib/components/Navbar.svelte'
+	import { language } from '$lib/stores/language'
+	import { page } from '$app/stores'
+
+	language.set($page.params.lang)
 </script>
 
-<slot />
+<heading>
+	<Navbar />
+</heading>
+<main class="">
+	<slot />
+</main>
+<footer />
 
 <style lang="scss" global>
 	@import '../../public/css/style.css';

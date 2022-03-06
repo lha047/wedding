@@ -15,11 +15,8 @@
 </script>
 
 <script lang="ts">
-	// import { language } from '$lib/stores/language'
-	// import { page } from '$app/stores'
 	import { isLoggedIn } from '$lib/stores/auth'
 	import { translate } from '$lib/translate'
-	// language.set($page.params.lang)
 </script>
 
 {#if isLoggedIn}
@@ -27,9 +24,9 @@
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />
 			<div class="text">
-				<h1>Vi gifter oss</h1>
-				<p class="lisa-staale">Lisa og Ståle</p>
-				<p class="date">02.07.2022</p>
+				<h1>{translate('gettingMarried')}</h1>
+				<p class="lisa-staale">{translate('lisaAndStaale')}</p>
+				<p class="date">{translate('theDate')}</p>
 			</div>
 		</div>
 		<div class="container">
@@ -42,9 +39,9 @@
 {:else}
 	<div class="wrapper">
 		<div class="text">
-			<h1>Vi gifter oss</h1>
-			<p>Lisa og Ståle</p>
-			<p>02.07.2022</p>
+			<h1>{translate('gettingMarried')}</h1>
+			<p>{translate('lisaAndStaale')}</p>
+			<p>{translate('theDate')}</p>
 		</div>
 	</div>
 {/if}

@@ -43,6 +43,18 @@ export const i18n = {
 		nb: 'Vi inviterer til festlig lag helgen 1. til 3. Juli 2022.',
 		en: 'July 1st to 3rd 2022 we invite you to a weekend of festivities.'
 	},
+	gettingMarried: {
+		nb: 'Vi gifter oss',
+		en: "We're getting married"
+	},
+	lisaAndStaale: {
+		nb: 'Lisa og Ståle',
+		en: 'Lisa and Ståle'
+	},
+	theDate: {
+		nb: '02.07.2022',
+		en: '02.07.2022'
+	},
 	friday: {
 		nb: 'Fredag',
 		en: 'Friday'

@@ -28,14 +28,18 @@
 		const body = encode({
 			'form-name': event.target.getAttribute('name'),
 			name: name,
-			'will-attend': willAttend,
-			'number-of-people': numberOfPeople,
+			willJoin: willAttend,
+			cantCome: willAttend,
+			nrOfPeople: numberOfPeople,
 			phone: phone,
 			email: email,
-			'stary-at-hotel': stayAtHotel,
-			'attending-friday-bbq': attendFridayBBQ,
+			sleepingNo: stayAtHotel,
+			sleepingFriToSun: stayAtHotel,
+			sleepingSatToSun: stayAtHotel,
+			fridayBBQYes: attendFridayBBQ,
+			fridayBBQNo: attendFridayBBQ,
 			allergies: allergies,
-			questions: questions
+			question: questions
 		})
 		console.log('body', body)
 		let href = `/${$language}/success`
@@ -120,12 +124,12 @@
 		<div class="radio-group">
 			<input
 				type="radio"
-				id="sleepingSatToSøn"
-				name="sleepingSatToSøn"
+				id="sleepingSatToSun"
+				name="sleepingSatToSun"
 				value="satToSun"
 				bind:group={stayAtHotel}
 			/>
-			<label for="sleepingSatToSøn">{translate('saturdayToSunday')}</label>
+			<label for="sleepingSatToSun">{translate('saturdayToSunday')}</label>
 		</div>
 	</fieldset>
 

@@ -12,12 +12,12 @@
 	let attendFridayBBQ: string
 	let allergies: string
 	let questions: string
-	function handleSubmit(e) {
-		console.log('handle submit', e)
-	}
+	// function handleSubmit(e) {
+	// 	console.log('handle submit', e)
+	// }
 </script>
 
-<form data-netlify="true" name="register" class={className} method="post" on:submit={handleSubmit}>
+<form data-netlify="true" name="register" class={className} method="post">
 	<input type="hidden" name="form-name" value="register" />
 	<div class="form-group">
 		<label for="name">{translate('nameText')}</label>

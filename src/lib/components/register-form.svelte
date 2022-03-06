@@ -28,17 +28,21 @@
 		const body = encode({
 			'form-name': event.target.getAttribute('name'),
 			name: name,
-			...(willAttend ? { 'will-join': willAttend } : { 'cant-come': willAttend }),
+			'will-attend': willAttend,
+			// ...(willAttend ? { 'will-join': willAttend } : { 'cant-come': willAttend }),
 			'nr-of-people': numberOfPeople,
 			phone: phone,
 			email: email,
-			sleepingNo: stayAtHotel,
-			sleepingFriToSun: stayAtHotel,
-			sleepingSatToSun: stayAtHotel,
-			fridayBBQYes: attendFridayBBQ,
-			fridayBBQNo: attendFridayBBQ,
+			sleeping: stayAtHotel,
+			// 'sleeping-no': stayAtHotel,
+			// 'sleeping-fri-to-sun': stayAtHotel,
+			// 'sleeping-sat-to-sun': stayAtHotel,
+			'friday-bbq': attendFridayBBQ,
+			// 'friday-bbq-yes': attendFridayBBQ,
+			// 'friday-bbq-no': attendFridayBBQ,
 			allergies: allergies,
-			question: questions
+			question: questions,
+			test: 'this is the test'
 		})
 		console.log('body', body)
 		let href = `/${$language}/success`
@@ -107,28 +111,28 @@
 	<fieldset class="form-group">
 		<legend>{translate('sleepingArrangementsText')}</legend>
 		<div class="radio-group">
-			<input type="radio" id="sleepingNo" name="sleepingNo" value="no" bind:group={stayAtHotel} />
-			<label for="sleepingNo">{translate('noText')}</label>
+			<input type="radio" id="sleeping-no" name="sleeping-no" value="no" bind:group={stayAtHotel} />
+			<label for="sleeping-no">{translate('noText')}</label>
 		</div>
 		<div class="radio-group">
 			<input
 				type="radio"
-				id="sleepingFriToSun"
-				name="sleepingFriToSun"
+				id="sleeping-fri-to-sun"
+				name="sleeping-fri-to-sun"
 				value="friToSun"
 				bind:group={stayAtHotel}
 			/>
-			<label for="sleepingFriToSun">{translate('fridayToSunday')}</label>
+			<label for="sleeping-fri-to-sun">{translate('fridayToSunday')}</label>
 		</div>
 		<div class="radio-group">
 			<input
 				type="radio"
-				id="sleepingSatToSun"
-				name="sleepingSatToSun"
+				id="sleeping-sat-to-sun"
+				name="sleeping-sat-to-sun"
 				value="satToSun"
 				bind:group={stayAtHotel}
 			/>
-			<label for="sleepingSatToSun">{translate('saturdayToSunday')}</label>
+			<label for="sleeping-sat-to-sun">{translate('saturdayToSunday')}</label>
 		</div>
 	</fieldset>
 
@@ -137,22 +141,22 @@
 		<div class="radio-group">
 			<input
 				type="radio"
-				id="fridayBBQYes"
-				name="fridayBBQYes"
+				id="friday-bbq-yes"
+				name="friday-bbq-yes"
 				value="ja"
 				bind:group={attendFridayBBQ}
 			/>
-			<label for="fridayBBQYes">{translate('yesText')}</label>
+			<label for="friday-bbq-yes">{translate('yesText')}</label>
 		</div>
 		<div class="radio-group">
 			<input
 				type="radio"
-				id="fridayBBQNo"
-				name="fridayBBQNo"
+				id="friday-bbq-no"
+				name="friday-bbq-no"
 				value="nei"
 				bind:group={attendFridayBBQ}
 			/>
-			<label for="fridayBBQNo">{translate('noText')}</label>
+			<label for="friday-bbq-no">{translate('noText')}</label>
 		</div>
 	</fieldset>
 

@@ -28,9 +28,8 @@
 		const body = encode({
 			'form-name': event.target.getAttribute('name'),
 			name: name,
-			willJoin: willAttend,
-			cantCome: willAttend,
-			nrOfPeople: numberOfPeople,
+			...(willAttend ? { 'will-join': willAttend } : { 'cant-come': willAttend }),
+			'nr-of-people': numberOfPeople,
 			phone: phone,
 			email: email,
 			sleepingNo: stayAtHotel,
@@ -75,21 +74,21 @@
 	<fieldset class="form-group">
 		<legend>{translate('willYouAttend')}</legend>
 		<div class="radio-group">
-			<input type="radio" name="willJoin" id="willJoin" value="ja" bind:group={willAttend} />
-			<label for="willJoin">{translate('canComeText')}</label>
+			<input type="radio" name="will-join" id="will-join" value="ja" bind:group={willAttend} />
+			<label for="will-join">{translate('canComeText')}</label>
 		</div>
 		<div class="radio-group">
-			<input type="radio" id="cantCome" name="cantCome" value="nei" bind:group={willAttend} />
-			<label for="cantCome">{translate('canNotComeText')}</label>
+			<input type="radio" id="cant-come" name="cant-come" value="nei" bind:group={willAttend} />
+			<label for="cant-come">{translate('canNotComeText')}</label>
 		</div>
 	</fieldset>
 
 	<div class="form-group">
-		<label for="nrOfPeople">{translate('nrOfPersonsText')}</label>
+		<label for="nr-of-people">{translate('nrOfPersonsText')}</label>
 		<input
 			class="form-field"
-			id="nrOfPeople"
-			name="nrOfPeople"
+			id="nr-of-people"
+			name="nr-of-people"
 			type="text"
 			bind:value={numberOfPeople}
 		/>

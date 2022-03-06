@@ -1,7 +1,8 @@
 <script lang="ts">
-	import RegistrationForm from '$lib/components/register-form.svelte';
-	import { translate } from '$lib/translate';
-	import { isLoggedIn } from '$lib/stores/auth';
+	import RegistrationForm from '$lib/components/register-form.svelte'
+	import { translate } from '$lib/translate'
+	import { isLoggedIn } from '$lib/stores/auth'
+	export const prerender = true
 </script>
 
 {#if isLoggedIn}
@@ -9,3 +10,4 @@
 
 	<RegistrationForm />
 {/if}
+<RegistrationForm class="inclusively-hidden" />

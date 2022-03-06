@@ -2,6 +2,7 @@
 	/** @type {import('./[slug]').Load} */
 	import { browser } from '$app/env'
 	import { addListener } from '$lib/stores/auth'
+	export const prerender = true
 
 	export async function load() {
 		if (browser) {
@@ -17,6 +18,7 @@
 <script lang="ts">
 	import { isLoggedIn } from '$lib/stores/auth'
 	import { translate } from '$lib/translate'
+	import RegistrationForm from '$lib/components/register-form.svelte'
 </script>
 
 {#if isLoggedIn}
@@ -45,6 +47,7 @@
 		</div>
 	</div>
 {/if}
+<RegistrationForm class="inclusively-hidden" />
 
 <style lang="scss">
 	img {

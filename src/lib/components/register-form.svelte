@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { translate } from '$lib/translate'
+	let className = ''
+	export { className as class }
 
 	let name: string
 	let willAttend: boolean
@@ -10,9 +12,13 @@
 	let attendFridayBBQ: string
 	let allergies: string
 	let questions: string
+	function handleSubmit(e) {
+		console.log('handle submit', e)
+	}
 </script>
 
-<form method="post">
+<form data-netlify="true" name="register" class={className} method="post" on:submit={handleSubmit}>
+	<input type="hidden" name="form-name" value="register" />
 	<div class="form-group">
 		<label for="name">{translate('nameText')}</label>
 		<input type="text" class="form-field" id="name" name="name" bind:value={name} />
@@ -77,11 +83,6 @@
 			<label for="sleepingSatToSøn">{translate('saturdayToSunday')}</label>
 		</div>
 	</fieldset>
-
-	<!--	<div class="form-group">-->
-	<!--		<label for="sleepingNeeds">{sleepingArrangementsSpecialNeeds}</label>-->
-	<!--		<textarea class="form-field" name="sleepingNeeds" id="sleepingNeeds" cols="30" rows="10" />-->
-	<!--	</div>-->
 
 	<fieldset class="form-group">
 		<legend>{translate('fridayBBQText')}</legend>

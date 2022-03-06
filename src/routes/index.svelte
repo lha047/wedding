@@ -2,6 +2,7 @@
 	/** @type {import('./[slug]').Load} */
 	import { browser } from '$app/env'
 	import { addListener } from '$lib/stores/auth'
+	export const prerender = true
 
 	export async function load() {
 		if (browser) {
@@ -15,11 +16,9 @@
 </script>
 
 <script lang="ts">
-	// import { language } from '$lib/stores/language';
-	// import { page } from '$app/stores';
 	import { translate } from '$lib/translate'
 	import { isLoggedIn } from '$lib/stores/auth'
-	// language.set($page.params.lang);
+
 	console.log('show me')
 </script>
 

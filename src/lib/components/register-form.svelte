@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { translate } from '$lib/translate'
 	import { language } from '$lib/stores/language'
+	import { goto } from '$app/navigation'
 	let className = ''
 	export { className as class }
 
@@ -13,9 +14,39 @@
 	let attendFridayBBQ: string
 	let allergies: string
 	let questions: string
-	// function handleSubmit(e) {
-	// 	console.log('handle submit', e)
-	// }
+
+	function encode(data) {
+		return Object.keys(data)
+			.map((key) => {
+				return encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+			})
+			.join('&')
+	}
+
+	function handleSubmit(event) {
+		console.log('event', event)
+		const body = encode({
+			'form-name': event.target.getAttribute('name'),
+			name: name,
+			'will-attend': willAttend,
+			'number-of-people': numberOfPeople,
+			phone: phone,
+			email: email,
+			'stary-at-hotel': stayAtHotel,
+			'attending-friday-bbq': attendFridayBBQ,
+			allergies: allergies,
+			questions: questions
+		})
+		console.log('body', body)
+		let href = `/${$language}/success`
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body
+		})
+			.then(() => goto(href))
+			.catch((error) => alert(error))
+	}
 </script>
 
 <form
@@ -25,6 +56,7 @@
 	method="post"
 	action="/{$language}/success"
 	netlify-honeypot="bot-field"
+	on:submit|preventDefault={handleSubmit}
 >
 	<input type="hidden" name="form-name" value="register" />
 	<p class="inclusively-hidden">

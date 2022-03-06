@@ -17,8 +17,19 @@
 	// }
 </script>
 
-<form data-netlify="true" name="register" class={className} method="post">
+<form
+	data-netlify="true"
+	name="register"
+	class={className}
+	method="post"
+	netlify-honeypot="bot-field"
+>
 	<input type="hidden" name="form-name" value="register" />
+	<p class="inclusively-hidden">
+		<label>
+			Don’t fill this out if you’re human: <input name="bot-field" />
+		</label>
+	</p>
 	<div class="form-group">
 		<label for="name">{translate('nameText')}</label>
 		<input type="text" class="form-field" id="name" name="name" bind:value={name} />

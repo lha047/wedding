@@ -1,5 +1,2 @@
-<script>
-	import { isLoggedIn } from '$lib/stores/auth';
+<script lang="ts">
 </script>
-
-{#if isLoggedIn}{/if}

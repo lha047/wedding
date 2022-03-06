@@ -1,15 +1,15 @@
-<script>
-	import { translate } from '$lib/translate';
+<script lang="ts">
+	import { translate } from '$lib/translate'
 
-	let name = '';
-	let willAttend;
-	let numberOfPeople;
-	let phone;
-	let email;
-	let stayAtHotel;
-	let attendFridayBBQ;
-	let allergies;
-	let questions;
+	let name: string
+	let willAttend: boolean
+	let numberOfPeople: number
+	let phone: string
+	let email: string
+	let stayAtHotel: string
+	let attendFridayBBQ: string
+	let allergies: string
+	let questions: string
 </script>
 
 <form method="post">
@@ -134,7 +134,7 @@
 	<button type="submit" class="button">{translate('submit')}</button>
 </form>
 
-<style>
+<style lang="scss">
 	button {
 		margin-top: var(--spacer-large);
 		width: fit-content;

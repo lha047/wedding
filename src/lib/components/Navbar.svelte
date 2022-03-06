@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { translate } from '$lib/translate';
-	import { clickOutside } from '$lib/clickOutside';
-	import { slide } from 'svelte/transition';
-	import { language } from '$lib/stores/language.ts';
-	import { isLoggedIn } from '$lib/stores/auth.ts';
+	import { translate } from '$lib/translate'
+	import { clickOutside } from '$lib/clickOutside'
+	import { slide } from 'svelte/transition'
+	import { language } from '$lib/stores/language'
+	import { isLoggedIn } from '$lib/stores/auth'
 
-	$: console.log('nav ', $isLoggedIn);
-	let showMenu = false;
+	$: console.log('nav ', $isLoggedIn)
+	let showMenu = false
 
 	function hideMenu() {
-		showMenu = false;
+		showMenu = false
 	}
 </script>
 
@@ -41,8 +41,6 @@
 			flex: none;
 		}
 
-		button {
-		}
 		@media only screen and (min-width: 768px) {
 			position: initial;
 			button {

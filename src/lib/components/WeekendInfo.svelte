@@ -1,5 +1,5 @@
-<script>
-	import { translate } from '$lib/translate';
+<script lang="ts">
+	import { translate } from '$lib/translate'
 </script>
 
 <article class="weekend-info">

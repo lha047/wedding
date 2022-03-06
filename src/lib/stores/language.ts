@@ -1,3 +1,3 @@
-import { writable } from 'svelte/store';
+import { writable } from 'svelte/store'
 
-export const language = writable('no')
+export const language = writable('nb')

@@ -1,178 +1,178 @@
 export const i18n = {
 	menu: {
-		no: 'Meny',
+		nb: 'Meny',
 		en: 'Menu'
 	},
 	home: {
-		no: 'Til forsiden',
+		nb: 'Til forsiden',
 		en: 'Home'
 	},
 	inviteWeddingWeekend: {
-		no: 'Vi inviterer til byrllupsfest helgen 1. til 3. juli',
+		nb: 'Vi inviterer til byrllupsfest helgen 1. til 3. juli',
 		en: 'We invite you to our wedding weekend July 1st to 3rd'
 	},
 	weddingDay: {
-		no: `Vielsen og festen blir <a href="/program#staturday">lørdag 2. juli</a> på <a href="/gjesvold">Gjesvold gård</a>`,
+		nb: `Vielsen og festen blir <a href="/program#staturday">lørdag 2. juli</a> på <a href="/gjesvold">Gjesvold gård</a>`,
 		en: `Ceremonya and the party will be <a href="/program#staturday">Saturday July 2nd</a> at <a href="/gjesvold">Gjesvold gård</a>`
 	},
 	accommodation: {
-		no: 'Overnatting',
+		nb: 'Overnatting',
 		en: 'Accommodation'
 	},
 	gjesvold: {
-		no: 'Gjesvold',
+		nb: 'Gjesvold',
 		en: 'Gjesvold'
 	},
 	register: {
-		no: 'Påmelding',
+		nb: 'Påmelding',
 		en: 'Register'
 	},
 	registration: {
-		no: 'Påmelding',
+		nb: 'Påmelding',
 		en: 'Registration'
 	},
 	couple: {
-		no: 'LiSt',
+		nb: 'LiSt',
 		en: 'LiSt'
 	},
 	program: {
-		no: 'Program',
+		nb: 'Program',
 		en: 'Program'
 	},
 	programDescription: {
-		no: 'Vi inviterer til festlig lag helgen 1. til 3. Juli 2022.',
+		nb: 'Vi inviterer til festlig lag helgen 1. til 3. Juli 2022.',
 		en: 'July 1st to 3rd 2022 we invite you to a weekend of festivities.'
 	},
 	friday: {
-		no: 'Fredag',
+		nb: 'Fredag',
 		en: 'Friday'
 	},
 	saturday: {
-		no: 'Lørdag',
+		nb: 'Lørdag',
 		en: 'Saturday'
 	},
 	sunday: {
-		no: 'Søndag',
+		nb: 'Søndag',
 		en: 'Sunday'
 	},
 	dressCode: {
-		no: 'Kleskode: pent, sommerlig',
+		nb: 'Kleskode: pent, sommerlig',
 		en: 'Dress code:  '
 	},
 	breakfastTime: {
-		no: '8:00-10:00',
+		nb: '8:00-10:00',
 		en: '8:00-10:00'
 	},
 	breakfast: {
-		no: 'Frokost (for oss som bor på Sundvollen Hotell)',
+		nb: 'Frokost (for oss som bor på Sundvollen Hotell)',
 		en: 'Breakfast (for us staying at Sundvollen Hotel)'
 	},
 	ceremonyTime: {
-		no: '13:00',
+		nb: '13:00',
 		en: '13:00'
 	},
 	ceremony: {
-		no: 'Vielsen',
+		nb: 'Vielsen',
 		en: 'Wedding ceremony'
 	},
 	apretifTime: {
-		no: '14:00',
+		nb: '14:00',
 		en: '14:00'
 	},
 	apretif: {
-		no: 'Apretif',
+		nb: 'Apretif',
 		en: 'Apretif'
 	},
 	dinnerTime: {
-		no: '16:00',
+		nb: '16:00',
 		en: '16:00'
 	},
 	dinner: {
-		no: 'Middag',
+		nb: 'Middag',
 		en: 'Dinner'
 	},
 	cakeTime: {
-		no: '20:00',
+		nb: '20:00',
 		en: '20:00'
 	},
 	cake: {
-		no: 'Kake og kaffe',
+		nb: 'Kake og kaffe',
 		en: 'Cake and coffee'
 	},
 	danceTime: {
-		no: '21:00',
+		nb: '21:00',
 		en: '21:00'
 	},
 	dance: {
-		no: 'Første dans',
+		nb: 'Første dans',
 		en: 'First dance'
 	},
 	nightFoodTime: {
-		no: '00:00',
+		nb: '00:00',
 		en: '00:00'
 	},
 	nightFood: {
-		no: 'Nattmat',
+		nb: 'Nattmat',
 		en: 'Night food'
 	},
 	goodNightTime: {
-		no: '02:30',
+		nb: '02:30',
 		en: '02:30'
 	},
 	goodNight: {
-		no: 'God natt',
+		nb: 'God natt',
 		en: 'Good night'
 	},
 	submit: {
-		no: 'Send inn',
+		nb: 'Send inn',
 		en: 'Submit'
 	},
 	nameText: {
-		no: 'Ditt navn/navn på følge'
+		nb: 'Ditt navn/navn på følge'
 	},
 	willYouAttend: {
-		no: 'Har du mulighet til å komme?'
+		nb: 'Har du mulighet til å komme?'
 	},
 	canComeText: {
-		no: 'Jeg/vi har mulighet til å delta på festen'
+		nb: 'Jeg/vi har mulighet til å delta på festen'
 	},
 	canNotComeText: {
-		no: 'Jeg/vi har desverre ikke mulighet til å komme'
+		nb: 'Jeg/vi har desverre ikke mulighet til å komme'
 	},
 	nrOfPersonsText: {
-		no: 'Antall personer i følge'
+		nb: 'Antall personer i følge'
 	},
 	phoneNumberText: {
-		no: 'Ditt teltefonnummer'
+		nb: 'Ditt teltefonnummer'
 	},
 	mailText: {
-		no: 'Din mailadressse'
+		nb: 'Din mailadressse'
 	},
 	sleepingArrangementsText: {
-		no: 'Planlegger du å bo på Sundvollen Hotell?'
+		nb: 'Planlegger du å bo på Sundvollen Hotell?'
 	},
 	noText: {
-		no: 'Nei'
+		nb: 'Nei'
 	},
 	yesText: {
-		no: 'Ja'
+		nb: 'Ja'
 	},
 	fridayToSunday: {
-		no: 'Ja, fredag til søndag'
+		nb: 'Ja, fredag til søndag'
 	},
 	saturdayToSunday: {
-		no: 'Ja, lørdag til søndag'
+		nb: 'Ja, lørdag til søndag'
 	},
 	sleepingArrangementsSpecialNeeds: {
-		no: 'Har du noen spesielle behov emed hensyn til overnattingen?'
+		nb: 'Har du noen spesielle behov emed hensyn til overnattingen?'
 	},
 	fridayBBQText: {
-		no: 'Ønsker du å delta på grilling på fredag?'
+		nb: 'Ønsker du å delta på grilling på fredag?'
 	},
 	allergiesText: {
-		no: 'Har du noen allergier?'
+		nb: 'Har du noen allergier?'
 	},
 	questionsText: {
-		no: 'Har du noen spørsmål?'
+		nb: 'Har du noen spørsmål?'
 	}
-};
+}

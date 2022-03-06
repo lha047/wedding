@@ -3,7 +3,7 @@
 	import { browser } from '$app/env';
 	import { addListener } from '$lib/stores/auth';
 
-	export async function load({ params, fetch, session, stuff }) {
+	export async function load() {
 		if (browser) {
 			console.log('adds listerner');
 			addListener();
@@ -17,38 +17,37 @@
 <script lang="ts">
 	import { language } from '$lib/stores/language';
 	import { page } from '$app/stores';
-	import { translate } from '$lib/translate';
 	import { isLoggedIn } from '$lib/stores/auth';
+	import { translate } from '$lib/translate';
 	language.set($page.params.lang);
 	console.log('show me');
 </script>
 
-<!--<div class="wrapper">-->
-<!--	<div class="layout-grid layout-grid&#45;&#45;stack hero hero&#45;&#45;image-stack ">-->
-<!--		<img src="/hart.jpg" alt="Lisa og ståle" />-->
-<!--		<div class="text">-->
-<!--			<h1>Vi gifter oss</h1>-->
-<!--			<p class="lisa-staale">Lisa og Ståle</p>-->
-<!--			<p class="date">02.07.2022</p>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<div class="container">-->
-<!--		<p>{@html translate('inviteWeddingWeekend')}</p>-->
-<!--		<p>-->
-<!--			{@html translate('weddingDay')}-->
-<!--		</p>-->
-<!--	</div>-->
-<!--</div>-->
-
-<div class="wrapper">
-	<div class="text">
-		<h1>Vi gifter oss</h1>
-		<p>Lisa og Ståle</p>
-		<p>02.07.2022</p>
+{#if isLoggedIn}
+	<div class="wrapper">
+		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
+			<img src="/hart.jpg" alt="Lisa og ståle" />
+			<div class="text">
+				<h1>Vi gifter oss</h1>
+				<p class="lisa-staale">Lisa og Ståle</p>
+				<p class="date">02.07.2022</p>
+			</div>
+		</div>
+		<div class="container">
+			<p>{@html translate('inviteWeddingWeekend')}</p>
+			<p>
+				{@html translate('weddingDay')}
+			</p>
+		</div>
 	</div>
-</div>
-{#if $isLoggedIn}
-	<h1>Is logged in</h1>
+{:else}
+	<div class="wrapper">
+		<div class="text">
+			<h1>Vi gifter oss</h1>
+			<p>Lisa og Ståle</p>
+			<p>02.07.2022</p>
+		</div>
+	</div>
 {/if}
 
 <style lang="scss">

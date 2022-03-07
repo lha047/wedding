@@ -8,12 +8,12 @@ export const i18n = {
 		en: 'Home'
 	},
 	inviteWeddingWeekend: {
-		nb: 'Vi inviterer til bryllupsfest helgen 1. til 3. juli.',
+		nb: 'Vi inviterer til bryllupsfest <a href="/nb/program">helgen 1. til 3. juli.</a> Håper du/dere har lyst til å feire med oss 🍻.',
 		en: 'We invite you to our wedding weekend July 1st to 3rd'
 	},
 	weddingDay: {
-		nb: `Vielsen og festen blir <a href="/program#staturday">lørdag 2. juli</a> på <a href="/gjesvold">Gjesvold gård</a>`,
-		en: `Ceremonya and the party will be <a href="/program#staturday">Saturday July 2nd</a> at <a href="/gjesvold">Gjesvold gård</a>`
+		nb: `Vielsen og festen blir <a href="/nb/program#staturday">lørdag 2. juli</a> på <a href="/gjesvold">Gjesvold gård</a>`,
+		en: `Ceremony and the party will be <a href="/program#staturday">Saturday July 2nd</a> at <a href="/gjesvold">Gjesvold gård</a>`
 	},
 	accommodation: {
 		nb: 'Overnatting',

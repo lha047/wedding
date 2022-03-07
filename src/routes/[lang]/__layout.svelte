@@ -26,8 +26,8 @@
 </main>
 <footer />
 
-<style lang="scss" global>
+<style lang="scss">
 	footer {
-		margin-bottom: 13rem;
+		margin-bottom: 20rem;
 	}
 </style>

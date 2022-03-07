@@ -8,7 +8,7 @@ export const i18n = {
 		en: 'Home'
 	},
 	inviteWeddingWeekend: {
-		nb: 'Vi inviterer til byrllupsfest helgen 1. til 3. juli',
+		nb: 'Vi inviterer til bryllupsfest helgen 1. til 3. juli.',
 		en: 'We invite you to our wedding weekend July 1st to 3rd'
 	},
 	weddingDay: {
@@ -21,13 +21,12 @@ export const i18n = {
 	},
 	accommodationText: {
 		nb: `<p>Under bryllupshelgen kommer vi til å bo på 
-<a href="https://www.">Sundvollen hotel</a> så vi kan tilbringe mest mulig tid sammen med dere
-</p>
-<p>For de som ønsker har vi inngått en avtale med <a href="https://www.">Sundvollen hotel</a></p>
-<p>Dere kan booke direkte med hotellet. Da har vi fått koden: <b /></p>
-<p>Eller så kan vi ta mot bestilling for dere. Bare fyll ut at dere ønsker at vi skal reservere rom til dere.
-</p>
-<p>Sikre plasser, 1 mnd før...</p>
+<a href="https://www.">Sundvollen hotel</a>, slik at vi kan tilbringe mest mulig tid sammen med dere.</p>
+<p>For de som ønsker har vi inngått en avtale med <a href="https://www.">Sundvollen hotel</a>.</p>
+<p>Hotellet har holdt av rom til oss frem til 31.05.2022. Bestiller dere før den tid er dere sikret rom.</p>
+<p>Dere kan booke direkte med hotellet, da har vi fått koden: <b>???</b></p>
+<p class='m-t'>E-post adressen til Sundvolden er: <a href='mailto:sundvolden@sundvolden.no'>sundvolden@sundvolden.no</a></p>
+<p>Telefon: <a href='tel:+4732162100'>(+47) 32 16 21 00</a></p>
 `,
 		en: ``
 	},

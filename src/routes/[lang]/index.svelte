@@ -26,7 +26,7 @@
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />
 			<div class="text">
-				<p class="getting">{translate('gettingMarried')}</p>
+				<h1 class="getting">{translate('gettingMarried')}</h1>
 				<p class="lisa-staale">{translate('lisaAndStaale')}</p>
 				<p class="date">{translate('theDate')}</p>
 			</div>

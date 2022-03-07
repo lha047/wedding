@@ -19,6 +19,18 @@ export const i18n = {
 		nb: 'Overnatting',
 		en: 'Accommodation'
 	},
+	accommodationText: {
+		nb: `<p>Under bryllupshelgen kommer vi til å bo på 
+<a href="https://www.">Sundvollen hotel</a> så vi kan tilbringe mest mulig tid sammen med dere
+</p>
+<p>For de som ønsker har vi inngått en avtale med <a href="https://www.">Sundvollen hotel</a></p>
+<p>Dere kan booke direkte med hotellet. Da har vi fått koden: <b /></p>
+<p>Eller så kan vi ta mot bestilling for dere. Bare fyll ut at dere ønsker at vi skal reservere rom til dere.
+</p>
+<p>Sikre plasser, 1 mnd før...</p>
+`,
+		en: ``
+	},
 	gjesvold: {
 		nb: 'Gjesvold',
 		en: 'Gjesvold'
@@ -70,6 +82,30 @@ export const i18n = {
 	dressCode: {
 		nb: 'Kleskode: pent, sommerlig',
 		en: 'Dress code:  '
+	},
+	fridayBBQTime: {
+		nb: '?',
+		en: '?'
+	},
+	fridayBBQ: {
+		nb: 'BBQ',
+		en: 'BBQ'
+	},
+	checkInTime: {
+		nb: '?',
+		en: '?'
+	},
+	checkIn: {
+		nb: 'Innsjekk på Sundvolden',
+		en: 'Check in at Sundvolden'
+	},
+	checkOutTime: {
+		nb: '?',
+		en: '?'
+	},
+	checkOut: {
+		nb: 'Utsjekk fra Sundvolden',
+		en: 'Check out at Sundvolden'
 	},
 	breakfastTime: {
 		nb: '8:00-10:00',
@@ -140,51 +176,71 @@ export const i18n = {
 		en: 'Submit'
 	},
 	nameText: {
-		nb: 'Ditt navn/navn på følge'
+		nb: 'Ditt navn/navn på følge',
+		en: 'Your name/name of partner'
 	},
 	willYouAttend: {
-		nb: 'Har du mulighet til å komme?'
+		nb: 'Har du mulighet til å komme?',
+		en: 'Are you able to join?'
 	},
 	canComeText: {
-		nb: 'Jeg/vi har mulighet til å delta på festen'
+		nb: 'Jeg/vi har mulighet til å delta på festen',
+		en: 'I/we, want to join the celebration'
 	},
 	canNotComeText: {
-		nb: 'Jeg/vi har desverre ikke mulighet til å komme'
+		nb: 'Jeg/vi har desverre ikke mulighet til å komme',
+		en: 'I/we, can not make it'
 	},
 	nrOfPersonsText: {
-		nb: 'Antall personer i følge'
+		nb: 'Antall personer i følge',
+		en: 'Number of people'
 	},
 	phoneNumberText: {
-		nb: 'Ditt teltefonnummer'
+		nb: 'Ditt teltefonnummer',
+		en: 'Your phone number'
 	},
 	mailText: {
-		nb: 'Din mailadressse'
+		nb: 'Din mailadressse',
+		en: 'Your email address'
 	},
 	sleepingArrangementsText: {
-		nb: 'Planlegger du å bo på Sundvollen Hotell?'
+		nb: 'Planlegger du å bo på Sundvollen Hotell?',
+		en: 'Do you plan to stay at Sundvollen Hotell?'
 	},
 	noText: {
-		nb: 'Nei'
+		nb: 'Nei',
+		en: 'No'
 	},
 	yesText: {
-		nb: 'Ja'
+		nb: 'Ja',
+		en: 'Yes'
 	},
 	fridayToSunday: {
-		nb: 'Ja, fredag til søndag'
+		nb: 'Ja, fredag til søndag',
+		en: 'Yes, Friday to Sunday'
 	},
 	saturdayToSunday: {
-		nb: 'Ja, lørdag til søndag'
-	},
-	sleepingArrangementsSpecialNeeds: {
-		nb: 'Har du noen spesielle behov emed hensyn til overnattingen?'
+		nb: 'Ja, lørdag til søndag',
+		en: 'Yes, Saturday to Sunday'
 	},
 	fridayBBQText: {
-		nb: 'Ønsker du å delta på grilling på fredag?'
+		nb: 'Ønsker du å delta på grilling på fredag?',
+		en: 'Do you want to join the friday BBQ?'
 	},
 	allergiesText: {
-		nb: 'Har du noen allergier?'
+		nb: 'Har du noen allergier?',
+		en: 'Do you have any allergies?'
 	},
 	questionsText: {
-		nb: 'Har du noen spørsmål?'
+		nb: 'Har du noen spørsmål?',
+		en: 'Do you have any questions?'
+	},
+	registrationSuccess: {
+		nb: 'Påmelding registrert',
+		en: 'Registration successful'
+	},
+	seeProgram: {
+		nb: 'Se programmet',
+		en: 'See program'
 	}
 }

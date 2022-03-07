@@ -24,7 +24,6 @@
 	}
 
 	function handleSubmit(event) {
-		console.log('event', event)
 		const body = encode({
 			'form-name': event.target.getAttribute('name'),
 			name: name,

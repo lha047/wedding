@@ -6,7 +6,7 @@
 </script>
 
 {#if isLoggedIn}
-	<h1 class="m-t__large text-center color-primary">{translate('registration')}</h1>
+	<h1 class="m-t__large color-primary">{translate('registration')}</h1>
 
 	<RegistrationForm />
 {/if}

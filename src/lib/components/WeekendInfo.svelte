@@ -3,10 +3,16 @@
 </script>
 
 <article class="weekend-info">
-	<h1 class="m-t__large text-center color-primary">{translate('program')}</h1>
+	<h1 class="m-t__large color-primary">{translate('program')}</h1>
 	<p>{translate('programDescription')}</p>
 
 	<h2 id="friday" class="m-t__medium color-primary">{translate('friday')}</h2>
+	<dl>
+		<dt>{translate('checkInTime')}</dt>
+		<dd>{translate('checkIn')}</dd>
+		<dt>{translate('fridayBBQTime')}</dt>
+		<dd>{translate('fridayBBQ')}</dd>
+	</dl>
 
 	<h2 id="saturday" class="m-t__medium color-primary">{translate('saturday')}</h2>
 	<p>{translate('dressCode')}</p>
@@ -33,6 +39,8 @@
 	<dl>
 		<dt>{translate('breakfastTime')}</dt>
 		<dd>{translate('breakfast')}</dd>
+		<dt>{translate('checkOutTime')}</dt>
+		<dd>{translate('checkOut')}</dd>
 	</dl>
 </article>
 

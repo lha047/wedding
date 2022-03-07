@@ -26,7 +26,7 @@
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />
 			<div class="text">
-				<h1>{translate('gettingMarried')}</h1>
+				<p class="getting">{translate('gettingMarried')}</p>
 				<p class="lisa-staale">{translate('lisaAndStaale')}</p>
 				<p class="date">{translate('theDate')}</p>
 			</div>
@@ -57,6 +57,9 @@
 		@media only screen and (min-width: 768px) {
 			//height: 30rem;
 		}
+	}
+	.getting {
+		font-size: x-large;
 	}
 	.date {
 		font-size: large;

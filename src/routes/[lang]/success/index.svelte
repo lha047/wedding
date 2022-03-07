@@ -20,7 +20,7 @@
 	import { isLoggedIn } from '$lib/stores/auth'
 </script>
 
-{#if isLoggedIn}
+{#if $isLoggedIn}
 	<h1 class="m-t__large color-primary">{translate('registrationSuccess')}</h1>
 	<a href="/{$language}/program">{translate('seeProgram')}</a>
 {/if}

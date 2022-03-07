@@ -1,8 +1,8 @@
 <script>
-	import { isLoggedIn } from '$lib/stores/auth';
+	import { isLoggedIn } from '$lib/stores/auth'
 </script>
 
-{#if isLoggedIn}
+{#if $isLoggedIn}
 	<article>
 		<h1 class="color-primary">Lisa og Ståle</h1>
 		<section class="background-dark-green">

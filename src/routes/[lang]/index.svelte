@@ -21,7 +21,7 @@
 	import RegistrationForm from '$lib/components/register-form.svelte'
 </script>
 
-{#if isLoggedIn}
+{#if $isLoggedIn}
 	<div class="wrapper">
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />

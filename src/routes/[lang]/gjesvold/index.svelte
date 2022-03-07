@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { ADDRESS_GJESVOLD, LINK_GJESVOLD, LINK_SUNDVOLDEN } from '$lib/constants';
-	import { isLoggedIn } from '$lib/stores/auth';
+	import { ADDRESS_GJESVOLD, LINK_GJESVOLD, LINK_SUNDVOLDEN } from '$lib/constants'
+	import { isLoggedIn } from '$lib/stores/auth'
 </script>
 
-{#if isLoggedIn}
+{#if $isLoggedIn}
 	<h1 class="color-primary">Gjesvold gård</h1>
 	<p>
 		Vielsen og festen lørdag 2. Juli vil bli holdt på {@html LINK_GJESVOLD}. Gården ligger ca. 3 km

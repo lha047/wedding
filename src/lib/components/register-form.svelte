@@ -29,15 +29,11 @@
 			'form-name': event.target.getAttribute('name'),
 			name: name,
 			'will-join': willAttend,
-			'cant-come': willAttend,
 			'nr-of-people': numberOfPeople,
 			phone: phone,
 			email: email,
-			'sleeping-no': stayAtHotel,
-			'sleeping-fri-to-sun': stayAtHotel,
-			'sleeping-sat-to-sun': stayAtHotel,
-			'friday-bbq-yes': attendFridayBBQ,
-			'friday-bbq-no': attendFridayBBQ,
+			sleeping: stayAtHotel,
+			'friday-bbq': attendFridayBBQ,
 			allergies: allergies,
 			question: questions,
 			test: 'this is the test'
@@ -76,12 +72,12 @@
 	<fieldset class="form-group">
 		<legend>{translate('willYouAttend')}</legend>
 		<div class="radio-group">
-			<input type="radio" name="will-join" id="will-join" value="ja" bind:group={willAttend} />
-			<label for="will-join">{translate('canComeText')}</label>
+			<input type="radio" id="join-yes" name="will-join" value="ja" bind:group={willAttend} />
+			<label for="join-yes"> {translate('canComeText')}</label>
 		</div>
 		<div class="radio-group">
-			<input type="radio" id="cant-come" name="cant-come" value="nei" bind:group={willAttend} />
-			<label for="cant-come">{translate('canNotComeText')}</label>
+			<input type="radio" id="join-no" name="will-join" value="nei" bind:group={willAttend} />
+			<label for="join-no">{translate('canNotComeText')}</label>
 		</div>
 	</fieldset>
 
@@ -109,14 +105,14 @@
 	<fieldset class="form-group">
 		<legend>{translate('sleepingArrangementsText')}</legend>
 		<div class="radio-group">
-			<input type="radio" id="sleeping-no" name="sleeping-no" value="no" bind:group={stayAtHotel} />
+			<input type="radio" id="sleeping-no" name="sleeping" value="no" bind:group={stayAtHotel} />
 			<label for="sleeping-no">{translate('noText')}</label>
 		</div>
 		<div class="radio-group">
 			<input
 				type="radio"
 				id="sleeping-fri-to-sun"
-				name="sleeping-fri-to-sun"
+				name="sleeping"
 				value="friToSun"
 				bind:group={stayAtHotel}
 			/>
@@ -126,7 +122,7 @@
 			<input
 				type="radio"
 				id="sleeping-sat-to-sun"
-				name="sleeping-sat-to-sun"
+				name="sleeping"
 				value="satToSun"
 				bind:group={stayAtHotel}
 			/>
@@ -140,7 +136,7 @@
 			<input
 				type="radio"
 				id="friday-bbq-yes"
-				name="friday-bbq-yes"
+				name="friday-bbq"
 				value="ja"
 				bind:group={attendFridayBBQ}
 			/>
@@ -150,7 +146,7 @@
 			<input
 				type="radio"
 				id="friday-bbq-no"
-				name="friday-bbq-no"
+				name="friday-bbq"
 				value="nei"
 				bind:group={attendFridayBBQ}
 			/>

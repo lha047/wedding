@@ -34,30 +34,31 @@
 		<div class="container">
 			<p>{@html translate('inviteWeddingWeekend')}</p>
 			<p>
-				Vielsen blir lørdag 2. juli <b>kl. 13:00</b> på <a>Gjesvold Gård</a>. Se mer informasjon om
-				<a>programmet for helgen</a>.
+				Vielsen blir lørdag 2. juli <b>kl. 13:00</b> på <a href="/nb/gjesvold">Gjesvold Gård</a>. Se
+				mer informasjon om
+				<a href="/nb/program">programmet for helgen</a>.
 			</p>
 			<p>
 				Vi kommer til å bo på Sundvolden Hotell hele helgen. For de av dere som har lyst til å ta
-				overnattingen der sammen med oss, se <a>informasjon om overnatting</a>.
+				overnattingen der sammen med oss, se <a href="/nb/sleeping">informasjon om overnatting</a>.
 			</p>
-			<p>
+			<p class="dresscode">
 				Kleskode - Det er midt på sommeren og vi ønsker alt alle skal ha det konfortabelt. Pynt deg
 				gjerne. Stikkord: Sommerlig, smart, uformelt.
 			</p>
-			<p>
+			<p class="gifts">
 				Gaver - Vi ønsker oss at du/dere blir med å feire sammen med oss. Som de fleste veletablerte
 				par har vi det vi trenger, og har ingen store ønsker. Men hvis du føler at tradisjon tilsier
 				at du må gi oss noe...
 			</p>
-			<p>
+			<p class="toastmaster">
 				Taler/Toastmaster - Har du lyst til å holde tale, ber vi om at du sier fra til toastmaster:
 				Torbjørn Tessem <a href="mailto:torbjorn.tessem@gmail.com?subject=Lisa og Ståles bryllup"
 					>torbjorn.tessem@gmail.com</a
 				>
 			</p>
-			<p>
-				<a>Påmelding</a>
+			<p class="rsvp">
+				<a href="/nb/registration">Svar på invitasjon</a>
 			</p>
 		</div>
 	</div>

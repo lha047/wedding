@@ -21,8 +21,8 @@ export const i18n = {
 	},
 	accommodationText: {
 		nb: `<p>Under bryllupshelgen kommer vi til å bo på 
-<a href="https://www.">Sundvollen hotel</a>, slik at vi kan tilbringe mest mulig tid sammen med dere.</p>
-<p>For de som ønsker har vi inngått en avtale med <a href="https://www.">Sundvollen hotel</a>.</p>
+<a href="https://www.">Sundvolden hotel</a>, slik at vi kan tilbringe mest mulig tid sammen med dere.</p>
+<p>For de som ønsker har vi inngått en avtale med <a href="https://www.">Sundvolden hotel</a>.</p>
 <p>Hotellet har holdt av rom til oss frem til 31.05.2022. Bestiller dere før den tid er dere sikret rom.</p>
 <p>Dere kan booke direkte med hotellet, da har vi fått koden: <b>???</b></p>
 <p class='m-t'>E-post adressen til Sundvolden er: <a href='mailto:sundvolden@sundvolden.no'>sundvolden@sundvolden.no</a></p>
@@ -31,16 +31,16 @@ export const i18n = {
 		en: ``
 	},
 	gjesvold: {
-		nb: 'Gjesvold',
-		en: 'Gjesvold'
+		nb: 'Bryllupslokasjon',
+		en: 'Wedding location'
 	},
 	register: {
-		nb: 'Påmelding',
-		en: 'Register'
+		nb: 'Svar på invitasjon',
+		en: 'RSVP'
 	},
 	registration: {
-		nb: 'Påmelding',
-		en: 'Registration'
+		nb: 'Svar på invitasjon',
+		en: 'RSVP'
 	},
 	couple: {
 		nb: 'LiSt',
@@ -95,8 +95,8 @@ export const i18n = {
 		en: '?'
 	},
 	checkIn: {
-		nb: 'Innsjekk på Sundvolden',
-		en: 'Check in at Sundvolden'
+		nb: 'Mulighet for innsjekk på Sundvolden',
+		en: 'Possible check in at Sundvolden'
 	},
 	checkOutTime: {
 		nb: '?',
@@ -111,8 +111,8 @@ export const i18n = {
 		en: '8:00-10:00'
 	},
 	breakfast: {
-		nb: 'Frokost (for oss som bor på Sundvollen Hotell)',
-		en: 'Breakfast (for us staying at Sundvollen Hotel)'
+		nb: 'Frokost (for oss som bor på Sundvolden Hotell)',
+		en: 'Breakfast (for us staying at Sundvolden Hotel)'
 	},
 	ceremonyTime: {
 		nb: '13:00',
@@ -175,36 +175,41 @@ export const i18n = {
 		en: 'Submit'
 	},
 	nameText: {
-		nb: 'Ditt navn/navn på følge',
-		en: 'Your name/name of partner'
+		nb: 'Ditt navn (og evt. de du tar med deg)',
+		en: 'Your name (and name of partner)'
 	},
+	// partnerText: {
+	// 	nb: 'Navn på følge',
+	// 	en: 'Your name/name of partner'
+	// },
+	// Legg til person - kanpp
 	willYouAttend: {
 		nb: 'Har du mulighet til å komme?',
 		en: 'Are you able to join?'
 	},
 	canComeText: {
-		nb: 'Jeg/vi har mulighet til å delta på festen',
-		en: 'I/we, want to join the celebration'
+		nb: 'Ja, jeg/vi har mulighet til å delta på festen',
+		en: 'Yes, I/we will join the celebration'
 	},
 	canNotComeText: {
-		nb: 'Jeg/vi har desverre ikke mulighet til å komme',
-		en: 'I/we, can not make it'
+		nb: 'Nei, jeg/vi har desverre ikke mulighet til å komme',
+		en: 'No, I/we can not make it'
 	},
 	nrOfPersonsText: {
-		nb: 'Antall personer i følge',
+		nb: 'Hvor mange er dere? Antall personer i følge',
 		en: 'Number of people'
 	},
-	phoneNumberText: {
-		nb: 'Ditt teltefonnummer',
-		en: 'Your phone number'
-	},
-	mailText: {
-		nb: 'Din mailadressse',
-		en: 'Your email address'
-	},
+	// phoneNumberText: { //????
+	// 	nb: 'Ditt teltefonnummer',
+	// 	en: 'Your phone number'
+	// },
+	// mailText: {
+	// 	nb: 'Din mailadressse',
+	// 	en: 'Your email address'
+	// },
 	sleepingArrangementsText: {
-		nb: 'Planlegger du å bo på Sundvollen Hotell?',
-		en: 'Do you plan to stay at Sundvollen Hotell?'
+		nb: 'Planlegger du å bo på Sundvolden Hotell? <a href="/nb/sleeoping">Se informasjon om overnatting</a>',
+		en: 'Do you plan to stay at Sundvolden Hotell? <a href="/en/sleeping">See intformation on accomodation</a>'
 	},
 	noText: {
 		nb: 'Nei',
@@ -241,5 +246,9 @@ export const i18n = {
 	seeProgram: {
 		nb: 'Se programmet',
 		en: 'See program'
+	},
+	toHomePage: {
+		nb: 'Til forsiden',
+		en: 'To homepage'
 	}
 }

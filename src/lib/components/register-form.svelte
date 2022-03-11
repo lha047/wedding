@@ -91,18 +91,8 @@
 		/>
 	</div>
 
-	<div class="form-group">
-		<label for="phone">{translate('phoneNumberText')}</label>
-		<input class="form-field" id="phone" name="phone" type="text" bind:value={phone} />
-	</div>
-
-	<div class="form-group">
-		<label for="email">{translate('mailText')}</label>
-		<input class="form-field" id="email" name="email" type="text" bind:value={email} />
-	</div>
-
 	<fieldset class="form-group">
-		<legend>{translate('sleepingArrangementsText')}</legend>
+		<legend>{@html translate('sleepingArrangementsText')}</legend>
 		<div class="radio-group">
 			<input type="radio" id="sleeping-no" name="sleeping" value="no" bind:group={stayAtHotel} />
 			<label for="sleeping-no">{translate('noText')}</label>

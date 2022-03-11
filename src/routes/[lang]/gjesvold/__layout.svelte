@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<main class="container info">
+<main class="info">
 	<slot />
 </main>
 

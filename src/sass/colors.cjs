@@ -12,11 +12,22 @@ module.exports = [
 	},{
 		name: 'green',
 		color: 'hsl(164,92%,19%)',
-		// color: 'hsl(141,75%,20%)',
 		onColor: 'hsl(0, 0%, 100%)'
-	},{
+	}
+	,
+	{
+		name: 'green-50',
+		color: 'hsla(164,92%,19%,0.5)',
+		onColor: 'hsl(0, 0%, 100%)'
+	}
+	,{
 		name: 'medium-green',
 		color: 'hsl(167,100%,15%)',
+		onColor: 'hsl(0, 0%, 100%)'
+	},
+	{
+		name: 'medium-green-50',
+		color: 'hsla(167,100%,15%,0.5)',
 		onColor: 'hsl(0, 0%, 100%)'
 	},
 	{

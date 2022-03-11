@@ -10,8 +10,12 @@ $color-ivory: hsl(37,43%,87%) !default;
 $color-on-ivory: hsl(35.19999999999999, 15%, 37.8%) !default;
 $color-green: hsl(164,92%,19%) !default;
 $color-on-green: hsl(0, 0%, 100%) !default;
+$color-green-50: hsla(164,92%,19%,0.5) !default;
+$color-on-green-50: hsl(0, 0%, 100%) !default;
 $color-medium-green: hsl(167,100%,15%) !default;
 $color-on-medium-green: hsl(0, 0%, 100%) !default;
+$color-medium-green-50: hsla(167,100%,15%,0.5) !default;
+$color-on-medium-green-50: hsl(0, 0%, 100%) !default;
 $color-dark-green: hsl(164,43%,10%) !default;
 $color-on-dark-green: hsl(0, 0%, 100%) !default;
 $color-brown: hsl(10,27%,25%) !default;
@@ -21,7 +25,7 @@ $color-on-error: hsl(352.5, 100%, 98.4%) !default;
 $color-text: hsl(40,54%,85%) !default;
 $color-on-text: hsl(41.10000000000002, 20.7%, 36.1%) !default;
 
-$base-color-tokens: ("primary", "ivory", "green", "medium-green", "dark-green", "brown", "error", "text");
+$base-color-tokens: ("primary", "ivory", "green", "green-50", "medium-green", "medium-green-50", "dark-green", "brown", "error", "text");
 
 $color-tokens: (
   "color-primary": $color-primary,
@@ -31,8 +35,12 @@ $color-tokens: (
   "color-on-ivory": $color-on-ivory,
   "color-green": $color-green,
   "color-on-green": $color-on-green,
+  "color-green-50": $color-green-50,
+  "color-on-green-50": $color-on-green-50,
   "color-medium-green": $color-medium-green,
   "color-on-medium-green": $color-on-medium-green,
+  "color-medium-green-50": $color-medium-green-50,
+  "color-on-medium-green-50": $color-on-medium-green-50,
   "color-dark-green": $color-dark-green,
   "color-on-dark-green": $color-on-dark-green,
   "color-brown": $color-brown,
@@ -51,8 +59,12 @@ $color-tokens: (
   --color-on-ivory: #{$color-on-ivory};
   --color-green: #{$color-green};
   --color-on-green: #{$color-on-green};
+  --color-green-50: #{$color-green-50};
+  --color-on-green-50: #{$color-on-green-50};
   --color-medium-green: #{$color-medium-green};
   --color-on-medium-green: #{$color-on-medium-green};
+  --color-medium-green-50: #{$color-medium-green-50};
+  --color-on-medium-green-50: #{$color-on-medium-green-50};
   --color-dark-green: #{$color-dark-green};
   --color-on-dark-green: #{$color-on-dark-green};
   --color-brown: #{$color-brown};

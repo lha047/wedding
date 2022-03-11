@@ -141,8 +141,12 @@ select {
   --color-on-ivory: #6f6352;
   --color-green: #045d45;
   --color-on-green: white;
+  --color-green-50: rgba(4, 93, 69, 0.5);
+  --color-on-green-50: white;
   --color-medium-green: #004d3c;
   --color-on-medium-green: white;
+  --color-medium-green-50: rgba(0, 77, 60, 0.5);
+  --color-on-medium-green-50: white;
   --color-dark-green: #0f241f;
   --color-on-dark-green: white;
   --color-brown: #51342f;
@@ -369,6 +373,33 @@ textarea:focus-visible {
   background-color: var(--color-green);
   border: 2px solid var(--color-green);
   border-radius: 4px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-medium-green-50);
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  flex-basis: 20rem;
+  padding: 1rem;
+}
+.card.ivory {
+  color: var(--color-medium-green);
+  background-color: var(--color-ivory);
+}
+.card.green {
+  color: var(--color-ivory);
+  background-color: var(--color-medium-green);
+}
+.card .card-title {
+  border-bottom: 1px solid var(--color-primary);
+}
+.card li + li {
+  margin-top: 0.5rem;
 }
 
 form {
@@ -730,6 +761,19 @@ dl dd {
   color: var(--color-on-green);
 }
 
+.background-green-50 {
+  background-color: var(--color-green-50);
+  color: var(--color-on-green-50);
+}
+
+.color-green-50 {
+  color: var(--color-green-50);
+}
+
+.color-on-green-50 {
+  color: var(--color-on-green-50);
+}
+
 .background-medium-green {
   background-color: var(--color-medium-green);
   color: var(--color-on-medium-green);
@@ -741,6 +785,19 @@ dl dd {
 
 .color-on-medium-green {
   color: var(--color-on-medium-green);
+}
+
+.background-medium-green-50 {
+  background-color: var(--color-medium-green-50);
+  color: var(--color-on-medium-green-50);
+}
+
+.color-medium-green-50 {
+  color: var(--color-medium-green-50);
+}
+
+.color-on-medium-green-50 {
+  color: var(--color-on-medium-green-50);
 }
 
 .background-dark-green {
@@ -855,6 +912,14 @@ section,
   overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
 }
 
 .layout-grid {

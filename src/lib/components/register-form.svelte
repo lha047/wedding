@@ -56,6 +56,7 @@
 	method="post"
 	action="/{$language}/success"
 	netlify-honeypot="bot-field"
+	data-netlify-recaptcha="true"
 	on:submit|preventDefault={handleSubmit}
 >
 	<input type="hidden" name="form-name" value="register" />
@@ -166,7 +167,7 @@
 			bind:value={questions}
 		/>
 	</div>
-
+	<div data-netlify-recaptcha="true" />
 	<button type="submit" class="button">{translate('submit')}</button>
 </form>
 

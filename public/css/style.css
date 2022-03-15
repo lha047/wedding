@@ -375,33 +375,6 @@ textarea:focus-visible {
   border-radius: 4px;
 }
 
-.card-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--color-medium-green-50);
-  justify-content: center;
-  padding: 2rem;
-}
-
-.card {
-  flex-basis: 20rem;
-  padding: 1rem;
-}
-.card.ivory {
-  color: var(--color-medium-green);
-  background-color: var(--color-ivory);
-}
-.card.green {
-  color: var(--color-ivory);
-  background-color: var(--color-medium-green);
-}
-.card .card-title {
-  border-bottom: 1px solid var(--color-primary);
-}
-.card li + li {
-  margin-top: 0.5rem;
-}
-
 form {
   --form-group-spacer: 2rem;
   --form-field-width: 50ch;
@@ -912,14 +885,6 @@ section,
   overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-}
-
-p + p {
-  margin-top: 1rem;
-}
-
-h2 {
-  margin-top: 2rem;
 }
 
 .layout-grid {

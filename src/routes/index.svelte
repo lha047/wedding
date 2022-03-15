@@ -2,15 +2,25 @@
 	/** @type {import('./[slug]').Load} */
 	import { browser } from '$app/env'
 	import { addListener } from '$lib/stores/auth'
+	import { language } from '$lib/stores/language'
 	export const prerender = true
 
-	export async function load() {
+	export async function load({ params }) {
 		if (browser) {
-			console.log('adds listerner')
 			addListener()
+			if (params.lang === undefined) {
+				console.log('adds listerner', params)
+				language.set('nb')
+				return {
+					status: 300,
+					redirect: '/nb'
+				}
+			}
 		}
 		return {
-			props: {}
+			props: {
+				params
+			}
 		}
 	}
 </script>
@@ -18,6 +28,12 @@
 <script lang="ts">
 	import { translate } from '$lib/translate'
 	import { isLoggedIn } from '$lib/stores/auth'
+	export let params
+
+	if (params.lang === undefined) {
+		console.log('adds listerner', params)
+		language.set('nb')
+	}
 
 	console.log('show me')
 </script>
@@ -27,17 +43,12 @@
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />
 			<div class="text">
-				<h1>Vi gifter oss</h1>
-				<p class="lisa-staale">Lisa og Ståle</p>
-				<p class="date">02.07.2022</p>
+				<h1 class="getting">{translate('gettingMarried')}</h1>
+				<p class="lisa-staale">{translate('lisaAndStaale')}</p>
+				<p class="date">{translate('theDate')}</p>
 			</div>
 		</div>
-		<div class="container">
-			<p>{@html translate('inviteWeddingWeekend')}</p>
-			<p>
-				{@html translate('weddingDay')}
-			</p>
-		</div>
+		<div class="container" />
 	</div>
 {:else}
 	<div class="wrapper">

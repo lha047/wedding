@@ -4,6 +4,7 @@
 	import { slide } from 'svelte/transition'
 	import { language } from '$lib/stores/language'
 	import { isLoggedIn } from '$lib/stores/auth'
+	import CheersIcon from '$lib/components/CheersIcon.svelte'
 
 	$: console.log('nav ', $isLoggedIn)
 	let showMenu = false
@@ -15,7 +16,11 @@
 
 {#if $isLoggedIn}
 	<nav class="navbar navbar--divided">
-		<a class="home" href="/{$language}">{translate('home')}</a>
+		<a class="home backlash" href="/{$language}">
+			<!--{translate('home')}-->
+			<CheersIcon />
+			<!--			L&S-->
+		</a>
 
 		<button
 			type="button"
@@ -39,8 +44,11 @@
 
 		.home {
 			flex: none;
+			padding: 0 1rem;
+			font-size: 3rem;
+			text-decoration: none;
+			line-height: 2rem;
 		}
-
 		@media only screen and (min-width: 768px) {
 			position: initial;
 			button {
@@ -72,6 +80,9 @@
 		&.hide {
 			display: none;
 		}
+		li {
+			padding: 0.3rem;
+		}
 		@media only screen and (min-width: 768px) {
 			width: 100%;
 			position: inherit;
@@ -82,6 +93,9 @@
 			box-shadow: none;
 			&.hide {
 				display: flex;
+			}
+			li {
+				padding: 0;
 			}
 		}
 	}

@@ -17,9 +17,85 @@
   font-family: "XTypewriter-Regular";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/XTypewriter-Regular.tff") format("tff");
+  src: url("/fonts/XTypewriter-Regular.otf");
   font-display: swap;
 }
+@font-face {
+  font-family: "BacklashScript";
+  src: url("/fonts/BacklashScript.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "BacklashScriptAlt";
+  src: url("/fonts/BacklashScriptAlt.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "BacklashScriptSmall";
+  src: url("/fonts/BacklashSmallCaps.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LFScript";
+  src: url("/fonts/LFScript-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LFSans";
+  src: url("/fonts/LFSans-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LFSerif";
+  src: url("/fonts/LFSerif-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Paprika";
+  src: url("/fonts/Paprika-Regular.otf");
+}
+@font-face {
+  font-family: "Musette";
+  src: url("font/MusetteScriptItalicAlt2-Reg.otf");
+}
+.backlash-small {
+  font-family: "BacklashScriptSmall";
+}
+
+.backlash {
+  font-family: "BacklashScript";
+}
+
+.backlash-alt {
+  font-family: "BacklashScriptAlt";
+}
+
+h2.backlash-alt {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.lf-script {
+  font-family: "LFScript";
+}
+
+.lf-sans {
+  font-family: "LFSans";
+}
+
+.lf-serif {
+  font-family: "LFSerif";
+}
+
+.type-writer {
+  font-family: "XTypewriter-Regular";
+}
+
+.paprika {
+  font-family: "Paprika";
+  font-size: 6rem;
+}
+
 /*
 Credit to Andy Bell's Modern CSS Reset
 @link https://piccalil.li/blog/a-modern-css-reset/
@@ -373,6 +449,44 @@ textarea:focus-visible {
   background-color: var(--color-green);
   border: 2px solid var(--color-green);
   border-radius: 4px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-medium-green-50);
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  flex-basis: 20rem;
+  padding: 1rem;
+}
+.card__person {
+  grid-template-columns: 1fr max-content;
+  flex-basis: 30rem;
+  margin: 1rem;
+}
+.card__person h3 {
+  margin-bottom: 0;
+}
+.card__person img {
+  width: 10rem;
+}
+.card.ivory {
+  color: var(--color-medium-green);
+  background-color: var(--color-ivory);
+}
+.card.green {
+  color: var(--color-ivory);
+  background-color: var(--color-medium-green);
+}
+.card .card-title {
+  border-bottom: 1px solid var(--color-primary);
+}
+.card li + li {
+  margin-top: 0.5rem;
 }
 
 form {
@@ -885,6 +999,23 @@ section,
   overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.with-icon svg {
+  width: 1.2rem;
 }
 
 .layout-grid {

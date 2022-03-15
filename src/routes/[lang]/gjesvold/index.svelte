@@ -1,6 +1,30 @@
 <script lang="ts">
 	import { ADDRESS_GJESVOLD, LINK_GJESVOLD, LINK_SUNDVOLDEN } from '$lib/constants'
 	import { isLoggedIn } from '$lib/stores/auth'
+	import Card from '$lib/components/Card.svelte'
+
+	const cards = [
+		{
+			title: `<h3 class='card-title'>Fra Hønefoss</h3>`,
+			list: [
+				'Buss nr 200 til Oslo.',
+				'Gå av på Vik (E16)',
+				'xx min gåtur fra Vik.',
+				`<a href="https://www.brakar.no/">Rutetider</a>`
+			],
+			cardClass: 'ivory'
+		},
+		{
+			title: "<h3 class='card-title'>Fra Oslo</h3>",
+			list: [
+				'Buss nr 200 til Hønefoss',
+				'Gå av på Vik (E16)',
+				'xx min gåtur fra Vik',
+				`<a href="https://www.brakar.no/">Rutetider</a>`
+			],
+			cardClass: 'green'
+		}
+	]
 </script>
 
 {#if $isLoggedIn}
@@ -13,41 +37,44 @@
 		</p>
 		<p>Addressen er {@html ADDRESS_GJESVOLD}</p>
 		<p>Det er mulighet for parkering på stedet.</p>
-
-		<h2 class="color-primary">Offentlig transport</h2>
 	</div>
+
+	<div class="container m-t__large">
+		<div class="mapouter">
+			<div class="gmap_canvas">
+				<iframe
+					width="1000"
+					height="500"
+					id="gmap"
+					src="https://maps.google.com/maps?q=gjesvold&t=&z=13&ie=UTF8&iwloc=&output=embed"
+					frameborder="0"
+					scrolling="no"
+					marginheight="0"
+					marginwidth="0"
+				/>
+			</div>
+		</div>
+		<h2 class="">Offentlig transport</h2>
+	</div>
+
 	<div class="card-wrapper">
-		<div class="card ivory">
-			<h3 class="card-title">Fra Hønefoss</h3>
-			<ul>
-				<li>Buss nr 200 til Oslo.</li>
-				<li><a href="https://www.brakar.no/">Rutetider</a></li>
-				<li>Gå av på Vik (E16).</li>
-				<li>xx min gåtur fra Vik.</li>
-			</ul>
-		</div>
-		<div class="card green">
-			<h3 class="card-title">Fra Oslo</h3>
-			<ul>
-				<li>Buss nr 200 til Hønefoss</li>
-				<li><a href="https://www.brakar.no/">Rutetider</a></li>
-				<li>Gå av på Vik (E16)</li>
-				<li>xx min gåtur fra Vik</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="container">
-		<iframe
-			width="450"
-			height="250"
-			frameborder="0"
-			style="border:0"
-			src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&PARAMETERS"
-			allowfullscreen
-		/>
+		{#each cards as card}
+			<Card {card} />
+		{/each}
 	</div>
 {/if}
 
 <style lang="scss">
+	.mapouter {
+		position: relative;
+		text-align: right;
+		height: 500px;
+		width: 100%;
+	}
+	#gmap {
+		overflow: hidden;
+		background: none !important;
+		height: 500px;
+		width: 100%;
+	}
 </style>

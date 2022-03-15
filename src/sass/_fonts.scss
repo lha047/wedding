@@ -19,8 +19,79 @@
   font-family: "XTypewriter-Regular";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/XTypewriter-Regular.tff") format("tff");
+  src: url("/fonts/XTypewriter-Regular.otf");
   font-display: swap;
+}
+@font-face {
+  font-family: "BacklashScript";
+  src: url("/fonts/BacklashScript.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "BacklashScriptAlt";
+  src: url("/fonts/BacklashScriptAlt.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "BacklashScriptSmall";
+  src: url("/fonts/BacklashSmallCaps.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LFScript";
+  src: url("/fonts/LFScript-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LFSans";
+  src: url("/fonts/LFSans-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LFSerif";
+  src: url("/fonts/LFSerif-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+	font-family: 'Paprika';
+	src: url('/fonts/Paprika-Regular.otf');
+}
+@font-face {
+	font-family: 'Musette';
+	src: url('font/MusetteScriptItalicAlt2-Reg.otf');
+}
+.backlash-small {
+	font-family: 'BacklashScriptSmall';
+}
+.backlash {
+	font-family: 'BacklashScript';
+}
+.backlash-alt {
+	font-family: 'BacklashScriptAlt';
+}
+h2 {
+	&.backlash-alt {
+		font-size: 5rem;
+		margin-bottom: 1rem;
+	}
+}
+.lf-script {
+	font-family: 'LFScript';
+	//font-size: 6rem;
+}.lf-sans {
+	font-family: 'LFSans';
+	//font-size: 6rem;
+}.lf-serif {
+	font-family: 'LFSerif';
+	//font-size: 6rem;
+}
+.type-writer {
+	font-family: 'XTypewriter-Regular';
+	//font-size: 6rem;
+}
+.paprika {
+	font-family: 'Paprika';
+	font-size: 6rem;
 }
 //@font-face{
 //  font-family: 'yourFont';

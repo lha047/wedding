@@ -4,7 +4,11 @@
 	import { page } from '$app/stores'
 	export const prerender = true
 
-	language.set($page.params.lang)
+	if ($page.params.lang === undefined) {
+		language.set('nb')
+	} else {
+		language.set($page.params.lang)
+	}
 </script>
 
 <heading>
@@ -17,7 +21,4 @@
 
 <style lang="scss" global>
 	@import '../../public/css/style.css';
-	footer {
-		margin-bottom: 13rem;
-	}
 </style>

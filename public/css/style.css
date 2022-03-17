@@ -320,6 +320,16 @@ strong {
   text-align: center;
 }
 
+.script-large {
+  font-size: clamp(6rem, 10vw + 1rem, 10rem);
+  line-height: clamp(5rem, 11vw + 1rem, 10rem);
+}
+
+.script-medium {
+  font-size: clamp(6rem, 10vw + 1rem, 10rem);
+  line-height: clamp(5rem, 11vw + 1rem, 10rem);
+}
+
 a {
   color: var(--color-links);
 }
@@ -989,6 +999,16 @@ section,
 }
 .m-t__medium {
   margin-top: 1.5rem;
+}
+
+.m-b__0 {
+  margin-bottom: 0;
+}
+.m-b__large {
+  margin-bottom: 2rem;
+}
+.m-b__medium {
+  margin-bottom: 1.5rem;
 }
 
 .inclusively-hidden {

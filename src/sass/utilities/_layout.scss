@@ -43,6 +43,17 @@ section,
     margin-top: 1.5rem;
   }
 }
+.m-b{
+  &__0 {
+    margin-bottom: 0;
+  }
+  &__large {
+    margin-bottom: 2rem;
+  }
+  &__medium {
+    margin-bottom: 1.5rem;
+  }
+}
 .inclusively-hidden {
   position: absolute;
   width: 1px;

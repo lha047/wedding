@@ -1,26 +1,27 @@
 <script lang="ts">
-	import { ADDRESS_GJESVOLD, LINK_GJESVOLD, LINK_SUNDVOLDEN } from '$lib/constants'
+	import { ADDRESS_GJESVOLD } from '$lib/constants'
 	import { isLoggedIn } from '$lib/stores/auth'
 	import Card from '$lib/components/Card.svelte'
+	import { translate } from '$lib/translate'
 
 	const cards = [
 		{
-			title: `<h3 class='card-title'>Fra Hønefoss</h3>`,
+			title: `<h3 class="card-title">${translate('fromHfs')}</h3>`,
 			list: [
-				'Buss nr 200 til Oslo.',
-				'Gå av på Vik (E16)',
-				'xx min gåtur fra Vik.',
-				`<a href="https://www.brakar.no/">Rutetider</a>`
+				`${translate('bussToOslo')}`,
+				`${translate('exitVik')}`,
+				`${translate('walkVik')}`,
+				`<a href="https://www.brakar.no/">${translate('timeTable')}</a>`
 			],
 			cardClass: 'ivory'
 		},
 		{
-			title: "<h3 class='card-title'>Fra Oslo</h3>",
+			title: `<h3 class="card-title">${translate('fromOslo')}</h3>`,
 			list: [
-				'Buss nr 200 til Hønefoss',
-				'Gå av på Vik (E16)',
-				'xx min gåtur fra Vik',
-				`<a href="https://www.brakar.no/">Rutetider</a>`
+				`${translate('bussToHfs')}`,
+				`${translate('exitVik')}`,
+				`${translate('walkVik')}`,
+				`<a href="https://www.brakar.no/">${translate('timeTable')}</a>`
 			],
 			cardClass: 'green'
 		}
@@ -29,14 +30,12 @@
 
 {#if $isLoggedIn}
 	<div class="container">
-		<h1 class="color-primary">Gjesvold gård</h1>
+		<h1 class="color-primary script-medium backlash-alt m-b__0">{translate('gjesvold')}</h1>
 		<p>
-			Vielsen og festen lørdag 2. Juli vil bli holdt på {@html LINK_GJESVOLD}. Gården ligger ca. 3
-			km fra
-			{@html LINK_SUNDVOLDEN} og ca 16 km fra Hønefoss sentrum.
+			{@html translate('locationText')}
 		</p>
-		<p>Addressen er {@html ADDRESS_GJESVOLD}</p>
-		<p>Det er mulighet for parkering på stedet.</p>
+		<p>{translate('locationAddress')} {@html ADDRESS_GJESVOLD}</p>
+		<p>{translate('parkingOptions')}</p>
 	</div>
 
 	<div class="container m-t__large">
@@ -54,7 +53,7 @@
 				/>
 			</div>
 		</div>
-		<h2 class="">Offentlig transport</h2>
+		<h2 class="">{translate('publicTransport')}</h2>
 	</div>
 
 	<div class="card-wrapper">

@@ -6,7 +6,7 @@
 </script>
 
 {#if $isLoggedIn}
-	<h1 class="m-t__large color-primary">{translate('registration')}</h1>
+	<h1 class="color-primary script-medium backlash-alt m-b__0">{translate('registration')}</h1>
 
 	<RegistrationForm />
 {/if}

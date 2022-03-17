@@ -143,3 +143,12 @@ strong {
 .text-center {
   text-align: center;
 }
+
+.script-large {
+	font-size: clamp(6rem, 10vw + 1rem, 10rem);
+	line-height: clamp(5rem, 11vw + 1rem, 10rem);
+}
+.script-medium {
+	font-size: clamp(6rem, 10vw + 1rem, 10rem);
+	line-height: clamp(5rem, 11vw + 1rem, 10rem);
+}

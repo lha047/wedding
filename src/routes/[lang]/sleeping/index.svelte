@@ -30,7 +30,7 @@
 
 {#if $isLoggedIn}
 	<div class="container">
-		<h1 class="m-t__large color-primary">{translate('accommodation')}</h1>
+		<h1 class="color-primary script-medium backlash-alt m-b__0">{translate('accommodation')}</h1>
 		{@html translate('accommodationText')}
 		<div>
 			<h2>{translate('sundvoldenContactInfo')}</h2>
@@ -40,8 +40,8 @@
 			<p>Telefon: <a href="tel:+4732162100">(+47) 32 16 21 00</a></p>
 		</div>
 		<h2>{translate('accommodationGettingThere')}</h2>
-		<p>{translate('accommodationGettingThereText')}</p>
-		<h2 class="">Offentlig transport</h2>
+		<p>{@html translate('accommodationGettingThereText')}</p>
+		<h2 class="">{translate('publicTransport')}</h2>
 	</div>
 	<div class="card-wrapper">
 		{#each cards as card}

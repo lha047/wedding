@@ -3,11 +3,11 @@
 </script>
 
 <article class="weekend-info">
-	<h1 class="m-t__large color-primary">{translate('program')}</h1>
+	<h1 class="color-primary script-medium backlash-alt m-b__0">{translate('program')}</h1>
 	<p>{translate('programDescription')}</p>
 
 	<article aria-labelledby="friday">
-		<h2 id="friday" class="m-t__medium color-primary">{translate('friday')}</h2>
+		<h2 id="friday" class="m-t__medium">{translate('friday')}</h2>
 		<dl>
 			<dt>{translate('checkInTime')}</dt>
 			<dd>{translate('checkIn')}</dd>
@@ -40,7 +40,7 @@
 		</dl>
 	</article>
 	<article aria-labelledby="sunday">
-		<h2 id="sunday" class="m-t__medium color-primary">{translate('sunday')}</h2>
+		<h2 id="sunday" class="m-t__medium">{translate('sunday')}</h2>
 		<dl>
 			<dt>{translate('breakfastTime')}</dt>
 			<dd>{translate('breakfast')}</dd>

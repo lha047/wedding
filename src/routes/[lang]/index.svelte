@@ -28,17 +28,13 @@
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />
 			<div class="text">
-				<h1 class="getting type-writer">{translate('gettingMarried')}</h1>
-				<p class="lisa-staale backlash-alt">{translate('lisaAndStaale')}</p>
-				<p class="date type-writer">{translate('theDate')}</p>
+				<h1 class="getting h3 type-writer">{translate('gettingMarried')}</h1>
+				<p class="lisa-staale script-large backlash-alt">{translate('lisaAndStaale')}</p>
+				<p class="date h4 type-writer">{translate('theDate')}</p>
 			</div>
 		</div>
 		<div class="container">
-			<!--			<h2 class="lf-script">{translate('welcomeWedding')}</h2>-->
-			<!--			<h2 class="backlash-small">{translate('welcomeWedding')}</h2>-->
 			<h2 class="backlash-alt">{translate('welcomeWedding')}</h2>
-			<!--			<h2 class="paprika">{translate('welcomeWedding')}</h2>-->
-			<!--			<h2 class="type-writer">{translate('welcomeWedding')}</h2>-->
 			{@html translate('inviteWeddingWeekend')}
 			{@html translate('ceremonyDay')}
 
@@ -46,13 +42,13 @@
 				{translate('dressCodeText')}
 			</p>
 			<p class="rsvp">
-				<a href="/nb/registration">Svar på invitasjon</a>
+				<a href="/nb/registration">{translate('registration')}</a>
 			</p>
 		</div>
 		<div class="card-wrapper m-t__large">
 			<div class="card card__person ivory layout-grid layout-grid--column">
 				<div class="layout-grid">
-					<h3 class="card-person__title backlash-alt">Brud</h3>
+					<h3 class="card-person__title backlash-alt">{translate('bride')}</h3>
 					<span>Lisa Halvorsen</span>
 					<div class="with-icon">
 						<EmailIcon />
@@ -64,12 +60,12 @@
 					</div>
 				</div>
 				<div class="image-wrapper">
-					<img src="/hart.jpg" alt="Lisa Halvorsen" />
+					<img src="/lisa.jpg" alt="Lisa Halvorsen" />
 				</div>
 			</div>
 			<div class="card card__person ivory layout-grid layout-grid--column">
 				<div class="layout-grid" style="row-gap: 0">
-					<h3 class="card-person__title backlash-alt">Brudgom</h3>
+					<h3 class="card-person__title backlash-alt">{translate('groom')}</h3>
 					<span>Ståle Berg</span>
 					<div class="with-icon">
 						<EmailIcon />
@@ -100,28 +96,26 @@
 					</div>
 				</div>
 				<div class="image-wrapper">
-					<img src="/hart.jpg" alt="Lisa Halvorsen" />
+					<img src="/torbjorn.jpg" alt="Lisa Halvorsen" />
 				</div>
 			</div>
 		</div>
 		<div class="container">
-			<h3>Overnatting</h3>
+			<h3>{translate('accommodation')}</h3>
 			<p>
-				Vi kommer til å bo på Sundvolden Hotell hele helgen. For de av dere som har lyst til å ta
-				overnattingen der sammen med oss, se <a href="/nb/sleeping">informasjon om overnatting</a>.
+				{@html translate('accommodationIndexText')}
 			</p>
-			<h3>Gaveliste</h3>
+			<h3>{translate('giftlist')}</h3>
 			<p class="gifts">
-				Den største gaven dere kan gi er å bli med å feire sammen med oss. Som de fleste
-				veletablerte par har vi det vi trenger, og har ingen store ønsker. Men hvis du føler at
-				tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.
+				{translate('giftlistText')}
 			</p>
-			<h3>Taler</h3>
+			<h3>{translate('speech')}</h3>
 			<p class="toastmaster">
-				Har du lyst til å holde tale, ber vi om at du sier fra til toastmaster: Torbjørn Tessem <a
-					href="mailto:torbjorn.tessem@gmail.com?subject=Lisa og Ståles bryllup"
+				{translate('toastMasterText')}
+				<a href="mailto:torbjorn.tessem@gmail.com?subject=Lisa og Ståles bryllup"
 					>torbjorn.tessem@gmail.com</a
 				>
+				{translate('speechText')}
 			</p>
 		</div>
 
@@ -171,14 +165,13 @@
 		margin-top: 1rem;
 	}
 	.getting {
-		font-size: x-large;
+		//font-size: x-large;
 	}
 	.date {
-		font-size: large;
+		//font-size: large;
 	}
 	.lisa-staale {
-		font-size: 10rem;
-		line-height: 7rem;
+		//line-height: clamp(5rem, 11vw + 1rem, 10rem);
 	}
 	.text {
 		--text-border: 2px solid var(--color-dark-green);

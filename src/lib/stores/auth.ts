@@ -3,8 +3,8 @@ import { browser } from '$app/env'
 
 const login = browser ? localStorage.getItem('gotrue.user') : null
 
-const loadJS = false
-export const isLoggedIn = writable({ user: '' })
+const loadJS = login
+export const isLoggedIn = writable(loadJS)
 
 export function addListener() {
 	if (loadJS) {
@@ -20,7 +20,7 @@ export function addListener() {
 		})
 		netlifyIdentity.on('logout', (user) => {
 			console.log('on log out ', user)
-			isLoggedIn.set(user)
+			isLoggedIn.set(null)
 		})
 	}
 }

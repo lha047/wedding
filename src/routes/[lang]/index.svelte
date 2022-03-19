@@ -1,26 +1,29 @@
 <script context="module" lang="ts">
 	/** @type {import('./[slug]').Load} */
-	import { browser } from '$app/env'
-	import { addListener } from '$lib/stores/auth'
 	export const prerender = true
 
-	export async function load() {
-		if (browser) {
-			console.log('adds listerner')
-			addListener()
-		}
-		return {
-			props: {}
-		}
-	}
+	// export async function load() {
+	// 	if (browser) {
+	// 		addListener()
+	// 	}
+	// 	return {
+	// 		props: {}
+	// 	}
+	// }
 </script>
 
 <script lang="ts">
-	import { isLoggedIn } from '$lib/stores/auth'
+	import { addListener, isLoggedIn } from '$lib/stores/auth'
 	import { translate } from '$lib/translate'
 	import RegistrationForm from '$lib/components/register-form.svelte'
 	import EmailIcon from '$lib/components/EmailIcon.svelte'
 	import PhoneIcon from '$lib/components/PhoneIcon.svelte'
+	import { onMount } from 'svelte'
+
+	console.log('isLoggedIn', $isLoggedIn)
+	onMount(() => {
+		addListener()
+	})
 </script>
 
 {#if $isLoggedIn}
@@ -124,9 +127,9 @@
 {:else}
 	<div class="wrapper">
 		<div class="text">
-			<h1>{translate('gettingMarried')}</h1>
-			<p>{translate('lisaAndStaale')}</p>
-			<p>{translate('theDate')}</p>
+			<h1 class="getting h3 type-writer">{translate('gettingMarried')}</h1>
+			<p class="lisa-staale script-large backlash-alt">{translate('lisaAndStaale')}</p>
+			<p class="date h4 type-writer">{translate('theDate')}</p>
 		</div>
 	</div>
 {/if}

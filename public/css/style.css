@@ -329,6 +329,17 @@ textarea:focus-visible {
   margin-left: 1rem;
 }
 
+[data-netlify-identity-button] {
+  padding: 1rem;
+}
+[data-netlify-identity-button] .netlify-identity-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-green);
+  width: max-content;
+  border-radius: 4px;
+  color: var(--color-on-primary);
+}
+
 .button {
   --button-background: var(--color-primary);
   --button-color: var(--color-on-primary);

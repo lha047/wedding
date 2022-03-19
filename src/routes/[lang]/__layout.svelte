@@ -27,7 +27,4 @@
 <footer />
 
 <style lang="scss">
-	//footer {
-	//	margin-bottom: 20rem;
-	//}
 </style>

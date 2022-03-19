@@ -11,6 +11,7 @@
 	}
 </script>
 
+<div data-netlify-identity-button />
 <heading>
 	<Navbar />
 </heading>

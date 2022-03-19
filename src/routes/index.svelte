@@ -31,11 +31,8 @@
 	export let params
 
 	if (params.lang === undefined) {
-		console.log('adds listerner', params)
 		language.set('nb')
 	}
-
-	console.log('show me')
 </script>
 
 {#if $isLoggedIn}
@@ -87,18 +84,14 @@
 		flex-direction: column;
 		align-items: center;
 		color: var(--color-ivory);
-		//color: var(--color-primary);
 		padding: 1rem 1rem 2rem 1rem;
 		justify-content: center;
-		//border-top: var(--text-border);
-		//border-bottom: var(--text-border);
 
 		@media only screen and (min-width: 768px) {
 			padding: 3rem 12rem;
 		}
 	}
 	.hero {
-		//--text-border: 4px solid var(--color-dark-green);
 		--text-border: 4px solid var(--color-primary);
 		border-top: var(--text-border);
 		border-bottom: var(--text-border);

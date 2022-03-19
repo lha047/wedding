@@ -8,7 +8,7 @@
 </script>
 
 <heading>
-	<div data-netlify-identity-button />
+	<!--	<div data-netlify-identity-button />-->
 	<Navbar />
 </heading>
 <main class="">

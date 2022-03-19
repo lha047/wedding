@@ -19,10 +19,23 @@
   font-family: "XTypewriter-Regular";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/XTypewriter-Regular.tff") format("tff");
+  src: url("/fonts/XTypewriter-Regular.otf");
   font-display: swap;
 }
-//@font-face{
-//  font-family: 'yourFont';
-//  src: url('/fonts/yourFont.woff') format('woff');
-//}
+@font-face {
+  font-family: "BacklashScriptAlt";
+  src: url("/fonts/BacklashScriptAlt.ttf");
+  font-display: swap;
+}
+.backlash-alt {
+	font-family: 'BacklashScriptAlt';
+}
+h2 {
+	&.backlash-alt {
+		font-size: 5rem;
+		margin-bottom: 1rem;
+	}
+}
+.type-writer {
+	font-family: 'XTypewriter-Regular';
+}

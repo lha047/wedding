@@ -6,6 +6,5 @@ export function translate(key: string): string {
 	language.subscribe((value) => {
 		lang = value
 	})
-	console.log('lang', lang)
 	return i18n[key][lang]
 }

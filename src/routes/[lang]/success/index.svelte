@@ -21,6 +21,8 @@
 </script>
 
 {#if $isLoggedIn}
-	<h1 class="m-t__large color-primary">{translate('registrationSuccess')}</h1>
+	<h1 class="color-primary script-medium backlash-alt m-b__0">
+		{translate('registrationSuccess')}
+	</h1>
 	<a href="/{$language}/program">{translate('seeProgram')}</a>
 {/if}

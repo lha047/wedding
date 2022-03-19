@@ -2,15 +2,25 @@
 	/** @type {import('./[slug]').Load} */
 	import { browser } from '$app/env'
 	import { addListener } from '$lib/stores/auth'
+	import { language } from '$lib/stores/language'
 	export const prerender = true
 
-	export async function load() {
+	export async function load({ params }) {
 		if (browser) {
-			console.log('adds listerner')
 			addListener()
+			if (params.lang === undefined) {
+				console.log('adds listerner', params)
+				language.set('nb')
+				return {
+					status: 300,
+					redirect: '/nb'
+				}
+			}
 		}
 		return {
-			props: {}
+			props: {
+				params
+			}
 		}
 	}
 </script>
@@ -18,8 +28,11 @@
 <script lang="ts">
 	import { translate } from '$lib/translate'
 	import { isLoggedIn } from '$lib/stores/auth'
+	export let params
 
-	console.log('show me')
+	if (params.lang === undefined) {
+		language.set('nb')
+	}
 </script>
 
 {#if $isLoggedIn}
@@ -27,17 +40,12 @@
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />
 			<div class="text">
-				<h1>Vi gifter oss</h1>
-				<p class="lisa-staale">Lisa og Ståle</p>
-				<p class="date">02.07.2022</p>
+				<h1 class="getting">{translate('gettingMarried')}</h1>
+				<p class="lisa-staale">{translate('lisaAndStaale')}</p>
+				<p class="date">{translate('theDate')}</p>
 			</div>
 		</div>
-		<div class="container">
-			<p>{@html translate('inviteWeddingWeekend')}</p>
-			<p>
-				{@html translate('weddingDay')}
-			</p>
-		</div>
+		<div class="container" />
 	</div>
 {:else}
 	<div class="wrapper">
@@ -76,18 +84,14 @@
 		flex-direction: column;
 		align-items: center;
 		color: var(--color-ivory);
-		//color: var(--color-primary);
 		padding: 1rem 1rem 2rem 1rem;
 		justify-content: center;
-		//border-top: var(--text-border);
-		//border-bottom: var(--text-border);
 
 		@media only screen and (min-width: 768px) {
 			padding: 3rem 12rem;
 		}
 	}
 	.hero {
-		//--text-border: 4px solid var(--color-dark-green);
 		--text-border: 4px solid var(--color-primary);
 		border-top: var(--text-border);
 		border-bottom: var(--text-border);

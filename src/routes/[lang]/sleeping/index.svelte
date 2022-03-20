@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { translate } from '$lib/translate'
-	import { isLoggedIn } from '$lib/stores/auth'
+	import {isLoggedInNetlify,userStore} from '$lib/stores/netlifyStore'
 	import Card from '$lib/components/Card.svelte'
 
 	export const prerender = true
@@ -28,7 +28,7 @@
 	]
 </script>
 
-{#if $isLoggedIn}
+{#if $isLoggedInNetlify}
 	<div class="container">
 		<h1 class="color-primary script-medium backlash-alt m-b__0">{translate('accommodation')}</h1>
 		{@html translate('accommodationText')}

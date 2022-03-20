@@ -1,17 +1,7 @@
 <script context="module" lang="ts">
 	/** @type {import('./[slug]').Load} */
 	import { browser } from '$app/env'
-	import { addListener } from '$lib/stores/auth'
 
-	export async function load({}) {
-		if (browser) {
-			console.log('adds listerner')
-			addListener()
-		}
-		return {
-			props: {}
-		}
-	}
 </script>
 
 <script lang="ts">

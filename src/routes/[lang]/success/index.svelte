@@ -1,26 +1,15 @@
 <script context="module" lang="ts">
-	/** @type {import('./[slug]').Load} */
-	import { browser } from '$app/env'
-	import { addListener } from '$lib/stores/auth'
 	export const prerender = true
 
-	export async function load() {
-		if (browser) {
-			addListener()
-		}
-		return {
-			props: {}
-		}
-	}
 </script>
 
 <script lang="ts">
 	import { translate } from '$lib/translate'
 	import { language } from '$lib/stores/language'
-	import { isLoggedIn } from '$lib/stores/auth'
+	import {isLoggedInNetlify} from '$lib/stores/netlifyStore'
 </script>
 
-{#if $isLoggedIn}
+{#if $isLoggedInNetlify}
 	<h1 class="color-primary script-medium backlash-alt m-b__0">
 		{translate('registrationSuccess')}
 	</h1>

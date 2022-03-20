@@ -2,31 +2,19 @@
 	/** @type {import('./[slug]').Load} */
 	export const prerender = true
 
-	// export async function load() {
-	// 	if (browser) {
-	// 		addListener()
-	// 	}
-	// 	return {
-	// 		props: {}
-	// 	}
-	// }
+
 </script>
 
 <script lang="ts">
-	import { addListener, isLoggedIn } from '$lib/stores/auth'
 	import { translate } from '$lib/translate'
 	import RegistrationForm from '$lib/components/register-form.svelte'
 	import EmailIcon from '$lib/components/EmailIcon.svelte'
 	import PhoneIcon from '$lib/components/PhoneIcon.svelte'
 	import { onMount } from 'svelte'
-
-	console.log('isLoggedIn', $isLoggedIn)
-	onMount(() => {
-		addListener()
-	})
+	import {isLoggedInNetlify ,userStore} from '$lib/stores/netlifyStore'
 </script>
 
-{#if $isLoggedIn}
+{#if $isLoggedInNetlify}
 	<div class="wrapper">
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />

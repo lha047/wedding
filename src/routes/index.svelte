@@ -1,13 +1,11 @@
 <script context="module" lang="ts">
 	/** @type {import('./[slug]').Load} */
 	import { browser } from '$app/env'
-	import { addListener } from '$lib/stores/auth'
 	import { language } from '$lib/stores/language'
 	export const prerender = true
 
 	export async function load({ params }) {
 		if (browser) {
-			addListener()
 			if (params.lang === undefined) {
 				console.log('adds listerner', params)
 				language.set('nb')
@@ -27,7 +25,7 @@
 
 <script lang="ts">
 	import { translate } from '$lib/translate'
-	import { isLoggedIn } from '$lib/stores/auth'
+	import {isLoggedInNetlify ,userStore} from '$lib/stores/netlifyStore'
 	export let params
 
 	if (params.lang === undefined) {
@@ -35,7 +33,7 @@
 	}
 </script>
 
-{#if $isLoggedIn}
+{#if $isLoggedInNetlify}
 	<div class="wrapper">
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />

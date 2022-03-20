@@ -1,9 +1,9 @@
 <script>
 	import WeekendInfo from '$lib/components/WeekendInfo.svelte'
-	import { isLoggedIn } from '$lib/stores/auth'
+	import {isLoggedInNetlify} from '$lib/stores/netlifyStore'
 	$: console.log('program', $isLoggedIn)
 </script>
 
-{#if $isLoggedIn}
+{#if $isLoggedInNetlify}
 	<WeekendInfo />
 {/if}

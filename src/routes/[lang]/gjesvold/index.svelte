@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ADDRESS_GJESVOLD } from '$lib/constants'
-	import { isLoggedIn } from '$lib/stores/auth'
+	import {isLoggedInNetlify} from '$lib/stores/netlifyStore'
 	import Card from '$lib/components/Card.svelte'
 	import { translate } from '$lib/translate'
 
@@ -28,7 +28,7 @@
 	]
 </script>
 
-{#if $isLoggedIn}
+{#if $isLoggedInNetlify}
 	<div class="container">
 		<h1 class="color-primary script-medium backlash-alt m-b__0">{translate('gjesvold')}</h1>
 		<p>

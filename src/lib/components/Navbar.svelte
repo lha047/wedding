@@ -1,25 +1,49 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
 	import { translate } from '$lib/translate'
 	import { clickOutside } from '$lib/clickOutside'
 	import { slide } from 'svelte/transition'
 	import { language } from '$lib/stores/language'
-	import { isLoggedIn } from '$lib/stores/auth'
 	import CheersIcon from '$lib/components/CheersIcon.svelte'
+	import netlifyAuth from '$lib/stores/netlify'
+	import {isLoggedInNetlify,userStore} from '$lib/stores/netlifyStore'
 
-	$: console.log('nav ', $isLoggedIn)
+	$: console.log('nav logged in', $isLoggedInNetlify)
 	let showMenu = false
+
+	onMount(()=> {
+		netlifyAuth.initialize((user) => {
+			console.log('nav onmount init', user);
+			
+    		isLoggedInNetlify.set(!!user)
+ 		 })
+	})
 
 	function hideMenu() {
 		showMenu = false
 	}
+
+	function login() {
+		netlifyAuth.authenticate((user) => {
+			console.log('nav log in auth');
+			isLoggedInNetlify.set(!!user)
+			userStore.set(user)
+ 	 	})
+	}
+	function logout() {
+		netlifyAuth.signout(() => {
+			console.log('nav log out');
+			
+			isLoggedInNetlify.set(false)
+			userStore.set(null)
+  		})
+	}
 </script>
 
-{#if $isLoggedIn}
+{#if $isLoggedInNetlify}
 	<nav class="navbar navbar--divided">
 		<a class="home backlash" href="/{$language}">
-			<!--{translate('home')}-->
 			<CheersIcon />
-			<!--			L&S-->
 		</a>
 
 		<button
@@ -35,7 +59,10 @@
 			<li><a class="nav-item" href="/{$language}/gjesvold">{translate('gjesvold')}</a></li>
 			<li><a class="nav-item" href="/{$language}/registration">{translate('register')}</a></li>
 		</ul>
+		<button on:click|preventDefault={logout()}>Log out</button>
 	</nav>
+	{:else} 
+	<button on:click={login()}>Log in</button>
 {/if}
 
 <style lang="scss">

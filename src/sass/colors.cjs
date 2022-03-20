@@ -7,7 +7,8 @@ module.exports = [
 
 	},{
 		name: 'ivory',
-		color: 'hsl(37,43%,87%)'
+		color: 'hsl(37,43%,87%)',
+		onColor: 'hsl(17,35%,51%)'
 
 	},{
 		name: 'green',

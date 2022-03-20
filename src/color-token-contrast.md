@@ -17,7 +17,6 @@ title: Color Token Contrast
   - `color-on-text`
 
 ## color-ivory
-  - `color-on-ivory`
   - `color-green`
   - `color-green-50`
   - `color-medium-green`
@@ -27,14 +26,7 @@ title: Color Token Contrast
   - `color-on-text`
 
 ## color-on-ivory
-  - `color-ivory`
-  - `color-on-green`
-  - `color-on-green-50`
-  - `color-on-medium-green`
-  - `color-on-medium-green-50`
-  - `color-on-dark-green`
-  - `color-on-brown`
-  - `color-on-error`
+  - No safe options
 
 ## color-green
   - `color-on-primary`
@@ -49,7 +41,6 @@ title: Color Token Contrast
   - `color-text`
 
 ## color-on-green
-  - `color-on-ivory`
   - `color-green`
   - `color-green-50`
   - `color-medium-green`
@@ -72,7 +63,6 @@ title: Color Token Contrast
   - `color-text`
 
 ## color-on-green-50
-  - `color-on-ivory`
   - `color-green`
   - `color-green-50`
   - `color-medium-green`
@@ -95,7 +85,6 @@ title: Color Token Contrast
   - `color-text`
 
 ## color-on-medium-green
-  - `color-on-ivory`
   - `color-green`
   - `color-green-50`
   - `color-medium-green`
@@ -118,7 +107,6 @@ title: Color Token Contrast
   - `color-text`
 
 ## color-on-medium-green-50
-  - `color-on-ivory`
   - `color-green`
   - `color-green-50`
   - `color-medium-green`
@@ -141,7 +129,6 @@ title: Color Token Contrast
   - `color-text`
 
 ## color-on-dark-green
-  - `color-on-ivory`
   - `color-green`
   - `color-green-50`
   - `color-medium-green`
@@ -164,7 +151,6 @@ title: Color Token Contrast
   - `color-text`
 
 ## color-on-brown
-  - `color-on-ivory`
   - `color-green`
   - `color-green-50`
   - `color-medium-green`
@@ -184,7 +170,6 @@ title: Color Token Contrast
   - `color-on-error`
 
 ## color-on-error
-  - `color-on-ivory`
   - `color-green`
   - `color-green-50`
   - `color-medium-green`

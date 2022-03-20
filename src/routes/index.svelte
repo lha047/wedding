@@ -1,36 +1,31 @@
 <script context="module" lang="ts">
-	/** @type {import('./[slug]').Load} */
 	import { browser } from '$app/env'
-	import { language } from '$lib/stores/language'
 	export const prerender = true
 
-	export async function load({ params }) {
-		if (browser) {
-			if (params.lang === undefined) {
-				console.log('adds listerner', params)
-				language.set('nb')
-				return {
-					status: 300,
-					redirect: '/nb'
-				}
-			}
-		}
-		return {
-			props: {
-				params
+	export async function load({ params, fetch, session, stuff }) {
+		console.log('load param', params);
+		if(browser) {
+			if(params.lang === undefined) {
+				console.log('load param***', params);
+			return {
+				status: 300,
+				redirect: '/nb'
 			}
 		}
 	}
+    return {
+      status: 200,
+      props: {
+        
+      }
+    };
+  }
 </script>
 
 <script lang="ts">
 	import { translate } from '$lib/translate'
 	import {isLoggedInNetlify ,userStore} from '$lib/stores/netlifyStore'
-	export let params
 
-	if (params.lang === undefined) {
-		language.set('nb')
-	}
 </script>
 
 {#if $isLoggedInNetlify}

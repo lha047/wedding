@@ -151,12 +151,14 @@ select {
   Modify colors in src/sass/colors.cjs
  */
 /* 🚫 Contrast fails against primary */
+/* 🚫 Contrast fails against ivory */
 :root {
   --color-primary: #ae6f56;
   /* 🚫 Contrast fails against primary */
   --color-on-primary: #ede0c4;
   --color-ivory: #ece1d0;
-  --color-on-ivory: #6f6352;
+  /* 🚫 Contrast fails against ivory */
+  --color-on-ivory: #ae6f56;
   --color-green: #045d45;
   --color-on-green: white;
   --color-green-50: rgba(4, 93, 69, 0.5);
@@ -372,6 +374,14 @@ textarea:focus-visible {
 }
 .button:focus {
   box-shadow: 0 0 0 max(0.15em, 2px) var(--button-focus-inner, var(--button-color)), 0 0 0 max(0.3em, 2px) var(--button-focus-outer, var(--button-background));
+}
+.button--primary {
+  --button-background: var(--color-primary);
+  --button-color: var(--color-on-primary);
+}
+.button--ivory {
+  --button-background: var(--color-ivory);
+  --button-color: var(--color-on-ivory);
 }
 .button--error {
   --button-background: var(--color-error);

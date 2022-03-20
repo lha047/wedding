@@ -8,7 +8,12 @@
 	import { language } from '$lib/stores/language'
 	import { page } from '$app/stores'
 
-	language.set($page.params.lang)
+	// if (params.lang === undefined) {
+	// 	language.set('nb')
+	// }else {
+
+	// 	language.set(params?.lang)
+	// }
 </script>
 
 <main class="">

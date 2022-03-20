@@ -4,11 +4,7 @@
 	import { page } from '$app/stores'
 	export const prerender = true
 
-	if ($page.params.lang === undefined) {
-		language.set('nb')
-	} else {
-		language.set($page.params.lang)
-	}
+
 </script>
 
 <heading>

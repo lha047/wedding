@@ -23,14 +23,16 @@
 		showMenu = false
 	}
 
-	function login() {
+	const login = () => {
+		console.log('navbar login ');
+		
 		netlifyAuth.authenticate((user) => {
 			console.log('nav log in auth');
 			isLoggedInNetlify.set(!!user)
 			userStore.set(user)
  	 	})
 	}
-	function logout() {
+	const logout = () => {
 		netlifyAuth.signout(() => {
 			console.log('nav log out');
 			
@@ -40,8 +42,8 @@
 	}
 </script>
 
+<nav class="navbar navbar--divided">
 {#if $isLoggedInNetlify}
-	<nav class="navbar navbar--divided">
 		<a class="home backlash" href="/{$language}">
 			<CheersIcon />
 		</a>
@@ -59,12 +61,13 @@
 			<li><a class="nav-item" href="/{$language}/gjesvold">{translate('gjesvold')}</a></li>
 			<li><a class="nav-item" href="/{$language}/registration">{translate('register')}</a></li>
 		</ul>
-		<button on:click|preventDefault={logout()}>Log out</button>
-	</nav>
+		<button class="button button--ivory button--outlined" on:click|preventDefault={()=> logout()}>Log out</button>
 	{:else} 
-	<button on:click={login()}>Log in</button>
-{/if}
-
+		<span></span>
+		<button class="button button--primary button--outlined" on:click|preventDefault={() => login()}>Log in</button>
+	{/if}
+</nav>
+		
 <style lang="scss">
 	.navbar {
 		position: relative;

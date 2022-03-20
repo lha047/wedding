@@ -1,8 +1,5 @@
 <script context="module" lang="ts">
-	/** @type {import('./[slug]').Load} */
 	export const prerender = true
-
-
 </script>
 
 <script lang="ts">

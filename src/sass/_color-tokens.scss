@@ -7,7 +7,8 @@ $color-primary: hsl(17,35%,51%) !default;
 /* 🚫 Contrast fails against primary */
 $color-on-primary: hsl(40,54%,85%) !default;
 $color-ivory: hsl(37,43%,87%) !default;
-$color-on-ivory: hsl(35.19999999999999, 15%, 37.8%) !default;
+/* 🚫 Contrast fails against ivory */
+$color-on-ivory: hsl(17,35%,51%) !default;
 $color-green: hsl(164,92%,19%) !default;
 $color-on-green: hsl(0, 0%, 100%) !default;
 $color-green-50: hsla(164,92%,19%,0.5) !default;
@@ -32,7 +33,8 @@ $color-tokens: (
   /* 🚫 Contrast fails against primary */
 "color-on-primary": $color-on-primary,
   "color-ivory": $color-ivory,
-  "color-on-ivory": $color-on-ivory,
+  /* 🚫 Contrast fails against ivory */
+"color-on-ivory": $color-on-ivory,
   "color-green": $color-green,
   "color-on-green": $color-on-green,
   "color-green-50": $color-green-50,
@@ -56,7 +58,8 @@ $color-tokens: (
   /* 🚫 Contrast fails against primary */
 --color-on-primary: #{$color-on-primary};
   --color-ivory: #{$color-ivory};
-  --color-on-ivory: #{$color-on-ivory};
+  /* 🚫 Contrast fails against ivory */
+--color-on-ivory: #{$color-on-ivory};
   --color-green: #{$color-green};
   --color-on-green: #{$color-on-green};
   --color-green-50: #{$color-green-50};

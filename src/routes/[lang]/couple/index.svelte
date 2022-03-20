@@ -1,7 +1,8 @@
 <script>
+	import {isLoggedInNetlify} from '$lib/stores/netlifyStore'
 </script>
 
-{#if $isLoggedIn}
+{#if $isLoggedInNetlify}
 	<article>
 		<h1 class="color-primary">Lisa og Ståle</h1>
 		<section class="background-dark-green">

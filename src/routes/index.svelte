@@ -23,7 +23,8 @@
 
 <script lang="ts">
 	import { translate } from '$lib/translate'
-	import { isLoggedInNetlify, userStore } from '$lib/stores/netlifyStore'
+	import { isLoggedInNetlify } from '$lib/stores/netlifyStore'
+	import RegistrationForm from '$lib/components/register-form.svelte'
 </script>
 
 {#if $isLoggedInNetlify}
@@ -47,16 +48,13 @@
 		</div>
 	</div>
 {/if}
+<RegistrationForm class="inclusively-hidden" />
 
 <style lang="scss">
 	@use '../sass/theme' as *;
 	img {
 		object-position: center; /* Center the image within the element */
-		//height: 20rem;
 		width: 100%;
-		@media only screen and (min-width: $breakpoint) {
-			//height: 30rem;
-		}
 	}
 	.date {
 		font-size: large;
@@ -68,7 +66,6 @@
 		--text-border: 2px solid var(--color-dark-green);
 
 		background-color: rgba(75, 67, 64, 0.5);
-		//overflow: hidden;
 		width: 100%;
 		height: 100%;
 		z-index: 2;

@@ -3,9 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { onMount } from 'svelte'
 	import { translate } from '$lib/translate'
-	import RegistrationForm from '$lib/components/register-form.svelte'
 	import EmailIcon from '$lib/components/EmailIcon.svelte'
 	import PhoneIcon from '$lib/components/PhoneIcon.svelte'
 	import { isLoggedInNetlify } from '$lib/stores/netlifyStore'
@@ -124,7 +122,6 @@
 		</div>
 	</div>
 {/if}
-<RegistrationForm class="inclusively-hidden" />
 
 <style lang="scss">
 	@use '../../sass/theme' as *;

@@ -227,8 +227,8 @@ tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
 		en: '13:00'
 	},
 	ceremony: {
-		nb: 'Vielsen',
-		en: 'Wedding ceremony'
+		nb: 'Vielse. Møt opp på <a href="/nb/gjesvold">Gjesvold Gård</a> i god tid før vielsen.',
+		en: 'Wedding ceremony. Meet at <a href="/en/gjesvold">Gjesvold Gård</a> in due time.'
 	},
 	apretifTime: {
 		nb: 'kl. 14:00',

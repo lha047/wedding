@@ -24,7 +24,7 @@
 			<dt>{translate('breakfastTime')}</dt>
 			<dd>{translate('breakfast')}</dd>
 			<dt>{translate('ceremonyTime')}</dt>
-			<dd>{translate('ceremony')}</dd>
+			<dd>{@html translate('ceremony')}</dd>
 			<dt>{translate('apretifTime')}</dt>
 			<dd>{translate('apretif')}</dd>
 			<dt>{translate('dinnerTime')}</dt>

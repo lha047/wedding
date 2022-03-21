@@ -18,7 +18,6 @@
 	})
 
 	if ($page.params.lang === 'en') {
-		$: console.log('$page.params', $page.params)
 		language.set('en')
 	}
 

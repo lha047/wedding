@@ -11,7 +11,6 @@
 					redirect: '/nb'
 				}
 			} else if (params.lang === 'en') {
-				$: console.log('.params', params)
 				language.set('en')
 			}
 		}

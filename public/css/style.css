@@ -285,7 +285,7 @@ input,
 textarea {
   --outline-size: max(2px, 0.08em);
   --outline-style: solid;
-  --outline-color: currentColor;
+  --outline-color: var(--color-medium-green);
   border-radius: 0.1em;
 }
 a:focus,
@@ -470,7 +470,7 @@ form {
   --border-color: var(--grey-medium);
   --border-radius: 0.25em;
   --form-outline-style: dashed;
-  --form-outline-color: currentColor;
+  --form-outline-color: #004d3c;
   color: var(--form-text-color);
   display: flex;
   flex-direction: column;
@@ -648,7 +648,7 @@ form {
 }
 
 [type=radio]:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23075A78'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23AE6F56'/%3e%3c/svg%3e");
 }
 
 [type=checkbox]:checked {

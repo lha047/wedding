@@ -1,5 +1,6 @@
 // stylelint-disable no-descending-specificity
 @use "../theme" as *;
+@use "../color-tokens" as *;
 
 $form-group-spacer: $spacer-large !default;
 $form-field-width: 50ch !default;
@@ -7,7 +8,7 @@ $form-text-color: "var(--color-medium-green)" !default;
 $form-border-color: $color-primary !default;
 $form-border-radius: 0.25em !default;
 $form-outline-style: dashed !default;
-$form-outline-color: currentColor !default;
+$form-outline-color: var(--color-medium-green) !default;
 
 form {
   --form-group-spacer: #{$form-group-spacer};
@@ -16,7 +17,7 @@ form {
   --border-color: #{$form-border-color};
   --border-radius: #{$form-border-radius};
   --form-outline-style: #{$form-outline-style};
-  --form-outline-color: #{$form-outline-color};
+  --form-outline-color: #{$color-medium-green};
 
   color: var(--form-text-color);
 
@@ -235,7 +236,7 @@ form {
 }
 
 [type='radio']:checked {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23075A78'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2.5' fill='%23AE6F56'/%3e%3c/svg%3e");
 }
 
 [type='checkbox']:checked {

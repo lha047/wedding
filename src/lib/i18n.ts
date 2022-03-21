@@ -162,6 +162,10 @@ tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
 		nb: 'Vi gifter oss',
 		en: "We're getting married"
 	},
+	lisaAndStaalesWedding: {
+		nb: 'Lisa og Ståles bryllup',
+		en: 'Lisa and Ståles wedding'
+	},
 	lisaAndStaale: {
 		nb: 'Lisa og Ståle',
 		en: 'Lisa and Ståle'

@@ -27,6 +27,10 @@
 	import RegistrationForm from '$lib/components/register-form.svelte'
 </script>
 
+<svelte:head>
+	<title>{translate('lisaAndStaalesWedding')}</title>
+</svelte:head>
+
 {#if $isLoggedInNetlify}
 	<div class="wrapper">
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">

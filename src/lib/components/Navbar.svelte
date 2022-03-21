@@ -7,6 +7,7 @@
 	import CheersIcon from '$lib/components/CheersIcon.svelte'
 	import netlifyAuth from '$lib/stores/netlify'
 	import { isLoggedInNetlify, userStore } from '$lib/stores/netlifyStore'
+	import { page } from '$app/stores'
 
 	let showMenu = false
 
@@ -15,6 +16,11 @@
 			isLoggedInNetlify.set(!!user)
 		})
 	})
+
+	if ($page.params.lang === 'en') {
+		$: console.log('$page.params', $page.params)
+		language.set('en')
+	}
 
 	function hideMenu() {
 		showMenu = false

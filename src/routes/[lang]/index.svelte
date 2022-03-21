@@ -12,11 +12,12 @@
 	import { page } from '$app/stores'
 	import { language } from '$lib/stores/language'
 
-	onMount(() => {
-		if ($page.params.lang === 'en') {
-			language.set('en')
-		}
-	})
+	// onMount(() => {
+	if ($page.params.lang === 'en') {
+		$: console.log('$page.params', $page.params)
+		language.set('en')
+	}
+	// })
 </script>
 
 {#if $isLoggedInNetlify}

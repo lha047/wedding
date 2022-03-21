@@ -1,5 +1,6 @@
 <script context="module" lang="ts">
 	import { browser } from '$app/env'
+	import { language } from '$lib/stores/language'
 	export const prerender = true
 
 	export async function load({ params, fetch, session, stuff }) {
@@ -9,6 +10,9 @@
 					status: 300,
 					redirect: '/nb'
 				}
+			} else if (params.lang === 'en') {
+				$: console.log('.params', params)
+				language.set('en')
 			}
 		}
 		return {

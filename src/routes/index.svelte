@@ -3,29 +3,26 @@
 	export const prerender = true
 
 	export async function load({ params, fetch, session, stuff }) {
-		console.log('load param', params);
-		if(browser) {
-			if(params.lang === undefined) {
-				console.log('load param***', params);
-			return {
-				status: 300,
-				redirect: '/nb'
+		console.log('load param', params)
+		if (browser) {
+			if (params.lang === undefined) {
+				console.log('load param***', params)
+				return {
+					status: 300,
+					redirect: '/nb'
+				}
 			}
 		}
+		return {
+			status: 200,
+			props: {}
+		}
 	}
-    return {
-      status: 200,
-      props: {
-        
-      }
-    };
-  }
 </script>
 
 <script lang="ts">
 	import { translate } from '$lib/translate'
-	import {isLoggedInNetlify ,userStore} from '$lib/stores/netlifyStore'
-
+	import { isLoggedInNetlify, userStore } from '$lib/stores/netlifyStore'
 </script>
 
 {#if $isLoggedInNetlify}
@@ -51,11 +48,12 @@
 {/if}
 
 <style lang="scss">
+	@use '../sass/theme' as *;
 	img {
 		object-position: center; /* Center the image within the element */
 		//height: 20rem;
 		width: 100%;
-		@media only screen and (min-width: 768px) {
+		@media only screen and (min-width: $breakpoint) {
 			//height: 30rem;
 		}
 	}
@@ -80,7 +78,7 @@
 		padding: 1rem 1rem 2rem 1rem;
 		justify-content: center;
 
-		@media only screen and (min-width: 768px) {
+		@media only screen and (min-width: $breakpoint) {
 			padding: 3rem 12rem;
 		}
 	}

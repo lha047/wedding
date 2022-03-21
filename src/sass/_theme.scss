@@ -8,6 +8,8 @@ $color-grey-hue: hue($color-grey-hue);
 $font-family: "arial", sans-serif !default;
 $font-weight-bold: 700 !default;
 
+$breakpoint: 830px;
+
 $spacer-small: 1rem;
 $spacer-medium: 1.5rem;
 $spacer-large: 2rem;
@@ -23,6 +25,7 @@ $spacer-large: 2rem;
   --spacer-small: #{$spacer-small};
   --spacer-medium: #{$spacer-medium};
   --spacer-large: #{$spacer-large};
+  --breakpoint: #{$breakpoint};
 }
 
 body {

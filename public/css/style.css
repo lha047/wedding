@@ -183,6 +183,7 @@ select {
   --spacer-small: 1rem;
   --spacer-medium: 1.5rem;
   --spacer-large: 2rem;
+  --breakpoint: 830px;
 }
 
 body {

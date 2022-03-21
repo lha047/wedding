@@ -1,7 +1,8 @@
+@use '../../sass/theme' as *;
 .navbar {
   padding: 1rem;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: var(--breakpoint)) {
     //padding: 1rem;
   }
 

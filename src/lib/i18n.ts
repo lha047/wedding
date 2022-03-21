@@ -1,4 +1,12 @@
 export const i18n = {
+	login: {
+		nb: 'Logg inn',
+		en: 'Log in'
+	},
+	logout: {
+		nb: 'Logg ut',
+		en: 'Log out'
+	},
 	menu: {
 		nb: 'Meny',
 		en: 'Menu'

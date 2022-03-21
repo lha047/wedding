@@ -6,17 +6,17 @@
 	import { language } from '$lib/stores/language'
 	import CheersIcon from '$lib/components/CheersIcon.svelte'
 	import netlifyAuth from '$lib/stores/netlify'
-	import {isLoggedInNetlify,userStore} from '$lib/stores/netlifyStore'
+	import { isLoggedInNetlify, userStore } from '$lib/stores/netlifyStore'
 
 	$: console.log('nav logged in', $isLoggedInNetlify)
 	let showMenu = false
 
-	onMount(()=> {
+	onMount(() => {
 		netlifyAuth.initialize((user) => {
-			console.log('nav onmount init', user);
-			
-    		isLoggedInNetlify.set(!!user)
- 		 })
+			console.log('nav onmount init', user)
+
+			isLoggedInNetlify.set(!!user)
+		})
 	})
 
 	function hideMenu() {
@@ -24,26 +24,26 @@
 	}
 
 	const login = () => {
-		console.log('navbar login ');
-		
+		console.log('navbar login ')
+
 		netlifyAuth.authenticate((user) => {
-			console.log('nav log in auth');
+			console.log('nav log in auth')
 			isLoggedInNetlify.set(!!user)
 			userStore.set(user)
- 	 	})
+		})
 	}
 	const logout = () => {
 		netlifyAuth.signout(() => {
-			console.log('nav log out');
-			
+			console.log('nav log out')
+
 			isLoggedInNetlify.set(false)
 			userStore.set(null)
-  		})
+		})
 	}
 </script>
 
 <nav class="navbar navbar--divided">
-{#if $isLoggedInNetlify}
+	{#if $isLoggedInNetlify}
 		<a class="home backlash" href="/{$language}">
 			<CheersIcon />
 		</a>
@@ -61,14 +61,19 @@
 			<li><a class="nav-item" href="/{$language}/gjesvold">{translate('gjesvold')}</a></li>
 			<li><a class="nav-item" href="/{$language}/registration">{translate('register')}</a></li>
 		</ul>
-		<button class="button button--ivory button--outlined" on:click|preventDefault={()=> logout()}>Log out</button>
-	{:else} 
-		<span></span>
-		<button class="button button--primary button--outlined" on:click|preventDefault={() => login()}>Log in</button>
+		<button class="button button--ivory button--outlined" on:click|preventDefault={() => logout()}
+			>{translate('logout')}</button
+		>
+	{:else}
+		<span />
+		<button class="button button--primary button--outlined" on:click|preventDefault={() => login()}
+			>{translate('login')}</button
+		>
 	{/if}
 </nav>
-		
+
 <style lang="scss">
+	@use '../../sass/theme' as *;
 	.navbar {
 		position: relative;
 
@@ -79,9 +84,9 @@
 			text-decoration: none;
 			line-height: 2rem;
 		}
-		@media only screen and (min-width: 768px) {
+		@media only screen and (min-width: $breakpoint) {
 			position: initial;
-			button {
+			button.button__green {
 				display: none;
 			}
 		}
@@ -113,7 +118,7 @@
 		li {
 			padding: 0.3rem;
 		}
-		@media only screen and (min-width: 768px) {
+		@media only screen and (min-width: $breakpoint) {
 			width: 100%;
 			position: inherit;
 			display: flex;
@@ -130,7 +135,7 @@
 		}
 	}
 	.nav-item {
-		@media only screen and (min-width: 768px) {
+		@media only screen and (min-width: $breakpoint) {
 			text-decoration: none;
 			color: var(--color-on-primary);
 			background-color: var(--color-green);

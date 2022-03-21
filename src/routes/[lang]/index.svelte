@@ -8,7 +8,7 @@
 	import EmailIcon from '$lib/components/EmailIcon.svelte'
 	import PhoneIcon from '$lib/components/PhoneIcon.svelte'
 	import { onMount } from 'svelte'
-	import {isLoggedInNetlify ,userStore} from '$lib/stores/netlifyStore'
+	import { isLoggedInNetlify, userStore } from '$lib/stores/netlifyStore'
 </script>
 
 {#if $isLoggedInNetlify}
@@ -121,6 +121,7 @@
 <RegistrationForm class="inclusively-hidden" />
 
 <style lang="scss">
+	@use '../../sass/theme' as *;
 	.container {
 		h3 {
 			margin-top: 2rem;
@@ -179,7 +180,7 @@
 		//border-top: var(--text-border);
 		//border-bottom: var(--text-border);
 
-		@media only screen and (min-width: 768px) {
+		@media only screen and (min-width: $breakpoint) {
 			padding: 3rem 12rem;
 		}
 	}
@@ -193,7 +194,7 @@
 			object-position: center; /* Center the image within the element */
 			//height: 20rem;
 			width: 100%;
-			@media only screen and (min-width: 768px) {
+			@media only screen and (min-width: $breakpoint) {
 				//height: 30rem;
 			}
 		}

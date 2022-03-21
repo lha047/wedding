@@ -8,13 +8,10 @@
 	import netlifyAuth from '$lib/stores/netlify'
 	import { isLoggedInNetlify, userStore } from '$lib/stores/netlifyStore'
 
-	$: console.log('nav logged in', $isLoggedInNetlify)
 	let showMenu = false
 
 	onMount(() => {
 		netlifyAuth.initialize((user) => {
-			console.log('nav onmount init', user)
-
 			isLoggedInNetlify.set(!!user)
 		})
 	})
@@ -24,18 +21,13 @@
 	}
 
 	const login = () => {
-		console.log('navbar login ')
-
 		netlifyAuth.authenticate((user) => {
-			console.log('nav log in auth')
 			isLoggedInNetlify.set(!!user)
 			userStore.set(user)
 		})
 	}
 	const logout = () => {
 		netlifyAuth.signout(() => {
-			console.log('nav log out')
-
 			isLoggedInNetlify.set(false)
 			userStore.set(null)
 		})

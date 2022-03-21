@@ -3,12 +3,20 @@
 </script>
 
 <script lang="ts">
+	import { onMount } from 'svelte'
 	import { translate } from '$lib/translate'
 	import RegistrationForm from '$lib/components/register-form.svelte'
 	import EmailIcon from '$lib/components/EmailIcon.svelte'
 	import PhoneIcon from '$lib/components/PhoneIcon.svelte'
-	import { onMount } from 'svelte'
-	import { isLoggedInNetlify, userStore } from '$lib/stores/netlifyStore'
+	import { isLoggedInNetlify } from '$lib/stores/netlifyStore'
+	import { page } from '$app/stores'
+	import { language } from '$lib/stores/language'
+
+	onMount(() => {
+		if ($page.params.lang === 'en') {
+			language.set('en')
+		}
+	})
 </script>
 
 {#if $isLoggedInNetlify}
@@ -30,7 +38,7 @@
 				{translate('dressCodeText')}
 			</p>
 			<p class="rsvp">
-				<a href="/nb/registration">{translate('registration')}</a>
+				{@html translate('rsvpLink')}
 			</p>
 		</div>
 		<div class="card-wrapper m-t__large">
@@ -133,16 +141,11 @@
 			font-size: 3rem;
 		}
 		.image-wrapper {
-			//width: 100%;
-			//height: 100%;
-			//background-color: #000;
 			border-radius: 50%;
 			margin: 0;
 			padding: 0;
 		}
 		img {
-			//width: 100%;
-			//height: 100%;
 			margin: 0;
 			padding: 0;
 			display: block;
@@ -174,29 +177,21 @@
 		flex-direction: column;
 		align-items: center;
 		color: var(--color-ivory);
-		//color: var(--color-primary);
 		padding: 1rem 1rem 2rem 1rem;
 		justify-content: center;
-		//border-top: var(--text-border);
-		//border-bottom: var(--text-border);
 
 		@media only screen and (min-width: $breakpoint) {
 			padding: 3rem 12rem;
 		}
 	}
 	.hero {
-		//--text-border: 4px solid var(--color-dark-green);
 		--text-border: 4px solid var(--color-primary);
 		border-top: var(--text-border);
 		border-bottom: var(--text-border);
 
 		img {
 			object-position: center; /* Center the image within the element */
-			//height: 20rem;
 			width: 100%;
-			@media only screen and (min-width: $breakpoint) {
-				//height: 30rem;
-			}
 		}
 	}
 	.container {

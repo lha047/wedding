@@ -37,7 +37,6 @@
 			question: questions,
 			test: 'this is the test'
 		})
-		console.log('body', body)
 		let href = `/${$language}/success`
 		fetch('/', {
 			method: 'POST',

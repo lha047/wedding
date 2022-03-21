@@ -142,6 +142,10 @@ tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
 		nb: 'Svar på invitasjon',
 		en: 'RSVP'
 	},
+	rsvpLink: {
+		nb: `<a href="/nb/registration">Svar på invitasjon</a>`,
+		en: `<a href="/en/registration">RSVP</a>`
+	},
 	couple: {
 		nb: 'LiSt',
 		en: 'LiSt'

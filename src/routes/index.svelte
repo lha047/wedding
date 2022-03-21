@@ -3,10 +3,8 @@
 	export const prerender = true
 
 	export async function load({ params, fetch, session, stuff }) {
-		console.log('load param', params)
 		if (browser) {
 			if (params.lang === undefined) {
-				console.log('load param***', params)
 				return {
 					status: 300,
 					redirect: '/nb'

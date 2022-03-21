@@ -187,8 +187,8 @@ tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
 		en: 'All of the program on the wedding day will be at Gjesvold gård.'
 	},
 	dressCode: {
-		nb: 'Kleskode: pent, sommerlig',
-		en: 'Dress code: smart, casual, summer '
+		nb: 'Kleskode: Det er midt på sommeren og vi ønsker alt alle skal ha det komfortabelt. Pynt deg gjerne. Stikkord: Sommerlig, smart, uformelt.',
+		en: "Dress code: It's summer in Norway and we want you to be comfortable. It's ok to dress up. Key words: Summer, smart, unformal "
 	},
 	fridayBBQTime: {
 		nb: 'kl. 19:00',

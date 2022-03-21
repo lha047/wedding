@@ -139,7 +139,7 @@
 			text-decoration: none;
 			color: var(--color-on-primary);
 			background-color: var(--color-green);
-			padding: 0.5rem 1rem;
+			padding: 0.65rem 1rem;
 			border-radius: 4px;
 			border: 2px solid var(--color-green);
 

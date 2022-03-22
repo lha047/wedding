@@ -84,7 +84,7 @@
 					</div>
 					<div class="with-icon">
 						<PhoneIcon />
-						<a href="tel:+4741842894">+47 41 84 28 94</a>
+						<a href="tel:+4791534581">+47 91 53 45 81</a>
 					</div>
 				</div>
 				<div class="image-wrapper">

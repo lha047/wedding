@@ -62,15 +62,15 @@ more information about <a href="/en/program">the program for the weekend</a>.
 	},
 	accommodationText: {
 		nb: `<p>Under bryllupshelgen kommer vi til å bo på 
-<a href='https://www.'>Sundvolden hotel</a>, slik at vi kan tilbringe mest mulig tid sammen med dere.</p>
-<p>For de som ønsker har vi inngått en avtale med <a href='https://www.'>Sundvolden hotel</a>.</p>
+<a href='https://www.sundvolden.no/'>Sundvolden hotel</a>, slik at vi kan tilbringe mest mulig tid sammen med dere.</p>
+<p>For de som ønsker har vi inngått en avtale med <a href='https://www.sundvolden.no/'>Sundvolden hotel</a>.</p>
 <p>Hotellet har holdt av rom til oss frem til 31.05.2022. Bestiller dere før den tid er dere sikret rom.</p>
 <p>Dere kan booke direkte med hotellet, da har vi fått koden: <b>465563</b></p>
 `,
 		en: `
 		<p>Durring the wedding weeken we will be staying at 
-<a href='https://www.'>Sundvolden hotel</a>, so we can spend most of the time together with our guests.</p>
-<p>If you want to stay at the hotel we have deal with <a href='https://www.'>Sundvolden hotel</a>.</p>
+<a href='https://www.sundvolden.no/'>Sundvolden hotel</a>, so we can spend most of the time together with our guests.</p>
+<p>If you want to stay at the hotel we have deal with <a href='https://www.sundvolden.no/'>Sundvolden hotel</a>.</p>
 <p>The hotel has reserved rooms for our wedding guests until 31.05.2022. If you book a room before this date you will be guaranteed available room.</p>
 <p>You can book rooms directly with the hotel. Using the code: <b>465563</b></p>
 		`

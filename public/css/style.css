@@ -750,19 +750,33 @@ fieldset .form-control {
 }
 
 dl {
-  display: grid;
-  grid-template-columns: max-content auto;
+  display: flex;
+  flex-direction: column;
 }
 dl dt {
-  text-align: right;
-  margin-right: 1rem;
+  font-weight: 800;
 }
-dl dt::after {
-  content: ":";
-}
-dl dt,
 dl dd {
-  margin-top: 1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 400px) {
+  dl {
+    display: grid;
+    grid-template-columns: max-content auto;
+  }
+  dl dt {
+    text-align: right;
+    margin-right: 1rem;
+  }
+  dl dt::after {
+    content: ":";
+  }
+  dl dt,
+dl dd {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
 }
 
 .navbar {

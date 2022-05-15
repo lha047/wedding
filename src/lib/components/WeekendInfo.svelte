@@ -52,7 +52,11 @@
 
 <style lang="scss">
 	.weekend-info {
-		padding: 0 1rem;
+		padding: 0;
 		margin-bottom: 10rem;
+		@media screen and (min-width: 400px) {
+			padding: 0 1rem;
+
+		}
 	}
 </style>

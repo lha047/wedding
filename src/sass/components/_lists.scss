@@ -1,17 +1,32 @@
 dl {
-  display: grid;
-  grid-template-columns: max-content auto;
+  display: flex; 
+  flex-direction: column; 
 
   dt {
-    text-align: right;
-    margin-right: 1rem;
-    &::after {
-      content: ':';
+    font-weight: 800;
+  }
+  dd {
+    margin-top: 0.6rem;
+    margin-bottom: 2rem;
+  }
+  @media screen and (min-width: 400px) {
+
+    display: grid;
+    grid-template-columns: max-content auto;
+  
+    dt {
+      text-align: right;
+      margin-right: 1rem;
+      &::after {
+        content: ':';
+      }
+    }
+    dt,
+    dd {
+      margin-top: 1rem;
+      margin-bottom: 0;
     }
   }
-  dt,
-  dd {
-    margin-top: 1rem;
-  }
+
   
 }

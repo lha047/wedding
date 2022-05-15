@@ -470,6 +470,11 @@ textarea:focus-visible {
   flex-direction: column;
   gap: 1rem;
 }
+@media screen and (min-width: 400px) {
+  .card__person {
+    flex-direction: row;
+  }
+}
 .card.ivory {
   color: var(--color-medium-green);
   background-color: var(--color-ivory);

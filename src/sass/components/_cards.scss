@@ -10,16 +10,17 @@
 }
 .card {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   @media screen and (min-width: 400px) {
     flex-direction: row;
     justify-content: space-between;
   }
-
-
+  
+  
   flex-basis: 20rem;
   padding: 1rem;
   &__person {
+    flex-direction: column-reverse;
     grid-template-columns: 1fr max-content;
     flex-basis: 30rem;
     margin: 1rem;

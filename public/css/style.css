@@ -439,7 +439,7 @@ textarea:focus-visible {
 
 .card {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   flex-basis: 20rem;
   padding: 1rem;
 }
@@ -450,6 +450,7 @@ textarea:focus-visible {
   }
 }
 .card__person {
+  flex-direction: column-reverse;
   grid-template-columns: 1fr max-content;
   flex-basis: 30rem;
   margin: 1rem;

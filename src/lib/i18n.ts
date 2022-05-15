@@ -82,8 +82,12 @@ overnattingen der sammen med oss, se <a href="/nb/sleeping">informasjon om overn
 	},
 	giftlistText: {
 		nb: `Den største gaven dere kan gi er å bli med å feire sammen med oss. Som de fleste
-veletablerte par har vi det vi trenger, og har ingen store ønsker. Men hvis du føler at
-tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
+veletablerte par har vi det vi trenger, og har ingen store ønsker. 
+Men hvis du føler at du vil gi oss noe, så ønsker vi bidrag til bryllupsreisen som går til Scotland og Portugal. 
+Vil du finne på noe selv og ønsker tema så er vi glade i alt innenfor med mat (lokalmat, hjemmelaget, asiatisk m.m) og drikke, tur/friluftsliv, opplevelser og reise.
+Vi har samlet noen ting vi kan ønske oss i 
+<a href='https://app.klarna.com/wishlists/eu/Jrcrna2zqDwyhNwvnjDe3iYG6TQyF3ffbjMVglMh~4Q?source=share_link'>en ønskeliste her</a>. 
+Mari Halvorsen (<a href='tel:+4799359118'>+47 99 35 91 18</a>) koordinerer ønskelisten og tar mot eventuelle bidrag til bryllupsreisen på Vipps `,
 		en: `Our greatest wish is for you to join our celebrations.`
 	},
 	toastMasterText: {
@@ -199,7 +203,11 @@ tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
 		en: '19:00'
 	},
 	fridayBBQ: {
-		nb: 'BBQ - Vi håper å få til litt uformell grilling slik at vi kan møtes fredag kveld. Mer informasjon kommer.',
+		nb: `BBQ - Fredag kveld blir det grilling ved utescenen på Sundvollen. 
+		Da får vi litt mer tid sammen med dere og dere får mulighet til å bli kjent med hverandre.
+		Utescenen ligger ca. 500 meter fra hotellet. Vi fyrer opp grillen, og ordner litt tilbehør. 
+		Dere tar med hva dere ønsker å spise og drikke. Det ligger en Spar butikk ca 200 meter fra hotellet, 
+		der har de en fin ferksvaredisk`,
 		en: 'BBQ - We hope to organized a unformal BBQ friday evening. More information later.'
 	},
 	checkInTime: {
@@ -231,7 +239,8 @@ tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
 		en: '13:00'
 	},
 	ceremony: {
-		nb: 'Vielse. Møt opp på <a href="/nb/gjesvold">Gjesvold Gård</a> i god tid før vielsen.',
+		nb: `Vielse. <br/>
+		Møt opp på <a href="/nb/gjesvold">Gjesvold Gård</a> i god tid (12:30) før vielsen.`,
 		en: 'Wedding ceremony. Meet at <a href="/en/gjesvold">Gjesvold Gård</a> in due time.'
 	},
 	apretifTime: {
@@ -239,7 +248,8 @@ tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
 		en: '14:00'
 	},
 	apretif: {
-		nb: 'Apretif',
+		nb: `Apretif. <br/>
+		Det blir servert litt lett snacks og salami fra <a href="https://www.askgard.no">Ask Gård</a> sammen med apretifen.`,
 		en: 'Apretif'
 	},
 	dinnerTime: {
@@ -247,8 +257,14 @@ tradisjon tilsier at du må gi oss noe så kommer en liste etterhvert.`,
 		en: '16:00'
 	},
 	dinner: {
-		nb: 'Middag',
-		en: 'Dinner'
+		nb: `Middag. <br/>
+		Til middagen ønsker vi å dele med dere noen av de rettene vi er blitt mest glade i.
+		Vi serverer buffé med mat fra Korea, Portugal og Norge.
+		Det blir servert hjemmebrygget øl, vin og mineralvann til maten. 
+		Til festen lar vi resten av vinen fra middagen stå og holder oppe resten av de 8 tappekranene. 
+		Ønsker du noe annet å drikke så ta gjerne med til felles drinkbar.<br/>
+		`,
+		en: 'Dinner.'
 	},
 	cakeTime: {
 		nb: 'kl. 20:00',

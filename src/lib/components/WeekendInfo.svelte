@@ -26,9 +26,9 @@
 			<dt>{translate('ceremonyTime')}</dt>
 			<dd>{@html translate('ceremony')}</dd>
 			<dt>{translate('apretifTime')}</dt>
-			<dd>{translate('apretif')}</dd>
+			<dd>{@html translate('apretif')}</dd>
 			<dt>{translate('dinnerTime')}</dt>
-			<dd>{translate('dinner')}</dd>
+			<dd>{@html translate('dinner')}</dd>
 			<dt>{translate('cakeTime')}</dt>
 			<dd>{translate('cake')}</dd>
 			<dt>{translate('danceTime')}</dt>
@@ -53,5 +53,6 @@
 <style lang="scss">
 	.weekend-info {
 		padding: 0 1rem;
+		margin-bottom: 10rem;
 	}
 </style>

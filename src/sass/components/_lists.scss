@@ -1,6 +1,7 @@
 dl {
   display: grid;
-  grid-template-columns: max-content max-content;
+  grid-template-columns: max-content auto;
+
   dt {
     text-align: right;
     margin-right: 1rem;
@@ -12,4 +13,5 @@ dl {
   dd {
     margin-top: 1rem;
   }
+  
 }

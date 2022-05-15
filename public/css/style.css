@@ -429,13 +429,25 @@ textarea:focus-visible {
   display: flex;
   flex-wrap: wrap;
   background-color: var(--color-medium-green-50);
-  justify-content: center;
-  padding: 2rem;
+}
+@media screen and (min-width: 400px) {
+  .card-wrapper {
+    justify-content: center;
+    padding: 2rem;
+  }
 }
 
 .card {
+  display: flex;
+  flex-direction: column-reverse;
   flex-basis: 20rem;
   padding: 1rem;
+}
+@media screen and (min-width: 400px) {
+  .card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .card__person {
   grid-template-columns: 1fr max-content;
@@ -447,6 +459,15 @@ textarea:focus-visible {
 }
 .card__person img {
   width: 10rem;
+}
+.card__person .image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.card__person .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .card.ivory {
   color: var(--color-medium-green);
@@ -461,6 +482,16 @@ textarea:focus-visible {
 }
 .card li + li {
   margin-top: 0.5rem;
+}
+@media screen and (min-width: 400px) {
+  .card {
+    flex-basis: 20rem;
+    padding: 2rem;
+  }
+  .card__person {
+    flex-basis: 30rem;
+    margin: 1rem;
+  }
 }
 
 form {
@@ -1008,7 +1039,12 @@ h2 {
   gap: var(--gap);
 }
 .layout-grid--column {
-  grid-auto-flow: column;
+  grid-auto-flow: row;
+}
+@media screen and (min-width: 400px) {
+  .layout-grid--column {
+    grid-auto-flow: column;
+  }
 }
 .layout-grid--auto-fit {
   --min: 20ch;

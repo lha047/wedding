@@ -38,8 +38,8 @@
 			</p>
 		</div>
 		<div class="card-wrapper m-t__large">
-			<div class="card card__person ivory layout-grid layout-grid--column">
-				<div class="layout-grid">
+			<div class="card card__person ivory">
+				<div class="layout-grid card-text">
 					<h3 class="card-person__title backlash-alt">{translate('bride')}</h3>
 					<span>Lisa Halvorsen</span>
 					<div class="with-icon">
@@ -55,13 +55,13 @@
 					<img src="/lisa.jpg" alt="Lisa Halvorsen" />
 				</div>
 			</div>
-			<div class="card card__person ivory layout-grid layout-grid--column">
-				<div class="layout-grid" style="row-gap: 0">
+			<div class="card card__person ivory">
+				<div class="layout-grid card-text">
 					<h3 class="card-person__title backlash-alt">{translate('groom')}</h3>
 					<span>Ståle Berg</span>
 					<div class="with-icon">
 						<EmailIcon />
-						<a href="mailto:staabe2@live.no">staabe2@live.no</a>
+						<a class="email" href="mailto:staabe2@live.no">staabe2@live.no</a>
 					</div>
 					<div class="with-icon">
 						<PhoneIcon />
@@ -72,8 +72,8 @@
 					<img src="/staale.jpg" alt="Ståle Berg" />
 				</div>
 			</div>
-			<div class="card card__person ivory layout-grid layout-grid--column">
-				<div class="layout-grid" style="row-gap: 0">
+			<div class="card card__person ivory">
+				<div class="layout-grid card-text">
 					<h3 class="card-person__title backlash-alt">Toastmaster</h3>
 					<span>Torbjørn Tessem</span>
 					<div class="with-icon">

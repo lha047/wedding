@@ -5,7 +5,10 @@
 	gap: var(--gap);
 
 	&--column {
-		grid-auto-flow: column;
+		grid-auto-flow: row;
+		@media screen and (min-width: 400px) {
+			grid-auto-flow: column;
+		}
 	}
 
 	&--auto-fit {

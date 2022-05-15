@@ -99,7 +99,7 @@
 			</p>
 			<h3>{translate('giftlist')}</h3>
 			<p class="gifts">
-				{translate('giftlistText')}
+				{@html translate('giftlistText')}
 			</p>
 			<h3>{translate('speech')}</h3>
 			<p class="toastmaster">

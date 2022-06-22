@@ -33,6 +33,10 @@
 			<p class="dresscode">
 				{translate('dressCodeText')}
 			</p>
+
+			<h3>Bilder</h3>
+			<p>Hvis dere tar noen fine, morsomme, rare eller kule bilder dere har lyst til å dele med oss <a href="https://photos.google.com/album/AF1QipP7gVdYwkQ1V9_J9Ik_16KDIj6ZMojCqUtpixg9">last de opp her</a></p>
+
 			<p class="rsvp">
 				{@html translate('rsvpLink')}
 			</p>

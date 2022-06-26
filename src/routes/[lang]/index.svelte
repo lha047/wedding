@@ -15,7 +15,6 @@
 	}
 </script>
 
-{#if $isLoggedInNetlify}
 	<div class="wrapper">
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />
@@ -34,13 +33,10 @@
 				{translate('dressCodeText')}
 			</p>
 
-			<h3>Bilder</h3>
-			<p>Hvis dere tar noen fine, morsomme, rare eller kule bilder dere har lyst til å dele med oss <a href="https://photos.google.com/album/AF1QipP7gVdYwkQ1V9_J9Ik_16KDIj6ZMojCqUtpixg9">last de opp her</a></p>
+			<h3>Bilder - Del med oss på <a href="https://bilder.lisaogståle.no">bilder.lisaogståle.no</a></h3>
+			<p>Hvis dere tar noen fine, morsomme, rare eller kule bilder dere har lyst til å dele med oss <a href="https://bilder.lisaogståle.no">last de opp her.</a>
 
-			<p class="rsvp">
-				{@html translate('rsvpLink')}
-			</p>
-		</div>
+		 </div>
 		<div class="card-wrapper m-t__large">
 			<div class="card card__person ivory">
 				<div class="layout-grid card-text">
@@ -117,15 +113,6 @@
 
 		<img id="korea-portrait" class="m-t__large" src="/korea_portrait.jpg" alt="Lisa og ståle" />
 	</div>
-{:else}
-	<div class="wrapper">
-		<div class="text">
-			<h1 class="getting h3 type-writer">{translate('gettingMarried')}</h1>
-			<p class="lisa-staale script-large backlash-alt">{translate('lisaAndStaale')}</p>
-			<p class="date h4 type-writer">{translate('theDate')}</p>
-		</div>
-	</div>
-{/if}
 
 <style lang="scss">
 	@use '../../sass/theme' as *;

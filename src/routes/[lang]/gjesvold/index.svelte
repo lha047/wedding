@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { ADDRESS_GJESVOLD } from '$lib/constants'
-	import {isLoggedInNetlify} from '$lib/stores/netlifyStore'
 	import Card from '$lib/components/Card.svelte'
 	import { translate } from '$lib/translate'
 
@@ -28,7 +27,6 @@
 	]
 </script>
 
-{#if $isLoggedInNetlify}
 	<div class="container">
 		<h1 class="color-primary script-medium backlash-alt m-b__0">{translate('gjesvold')}</h1>
 		<p>
@@ -61,7 +59,6 @@
 			<Card {card} />
 		{/each}
 	</div>
-{/if}
 
 <style lang="scss">
 	.mapouter {

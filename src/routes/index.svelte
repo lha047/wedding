@@ -23,15 +23,12 @@
 
 <script lang="ts">
 	import { translate } from '$lib/translate'
-	import { isLoggedInNetlify } from '$lib/stores/netlifyStore'
-	import RegistrationForm from '$lib/components/register-form.svelte'
 </script>
 
 <svelte:head>
 	<title>{translate('lisaAndStaalesWedding')}</title>
 </svelte:head>
 
-{#if $isLoggedInNetlify}
 	<div class="wrapper">
 		<div class="layout-grid layout-grid--stack hero hero--image-stack ">
 			<img src="/hart.jpg" alt="Lisa og ståle" />
@@ -41,18 +38,7 @@
 				<p class="date">{translate('theDate')}</p>
 			</div>
 		</div>
-		<div class="container" />
 	</div>
-{:else}
-	<div class="wrapper">
-		<div class="text">
-			<h1>Vi gifter oss</h1>
-			<p>Lisa og Ståle</p>
-			<p>02.07.2022</p>
-		</div>
-	</div>
-{/if}
-<RegistrationForm class="inclusively-hidden" />
 
 <style lang="scss">
 	@use '../sass/theme' as *;

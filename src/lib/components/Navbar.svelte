@@ -40,7 +40,6 @@
 </script>
 
 <nav class="navbar navbar--divided">
-	{#if $isLoggedInNetlify}
 		<a class="home backlash" href="/{$language}">
 			<CheersIcon />
 		</a>
@@ -56,17 +55,7 @@
 			<li><a class="nav-item" href="/{$language}/program">{translate('program')}</a></li>
 			<li><a class="nav-item" href="/{$language}/sleeping">{translate('accommodation')}</a></li>
 			<li><a class="nav-item" href="/{$language}/gjesvold">{translate('gjesvold')}</a></li>
-			<li><a class="nav-item" href="/{$language}/registration">{translate('register')}</a></li>
 		</ul>
-		<button class="button button--ivory button--outlined" on:click|preventDefault={() => logout()}
-			>{translate('logout')}</button
-		>
-	{:else}
-		<span />
-		<button class="button button--primary button--outlined" on:click|preventDefault={() => login()}
-			>{translate('login')}</button
-		>
-	{/if}
 </nav>
 
 <style lang="scss">
